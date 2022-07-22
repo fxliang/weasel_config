@@ -1,0 +1,50 @@
+patch:
+  switches/@next:
+    name: emoji_suggestion
+    reset: 1
+    states: [ "🈶️", "🈚️" ]
+  "engine/filters/@before 0":
+    simplifier@emoji_suggestion
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion
+    tips: all
+  ###########################################################################
+  menu/page_size: 6
+  style/horizontal: true
+  #增加几个translators
+  engine/translators/+:
+  # 使用 custom_phrase 表
+  - table_translator@custom_phrase
+  - lua_translator@date_translator
+  - lua_translator@daxie_translator
+  - lua_translator@Emoji_Translator
+  - lua_translator@UnicodeTranslator
+  ###########################################################################
+  # 用户词典规则设定
+  custom_phrase:
+    dictionary: ""
+    user_dict: custom_phrase
+    db_class: stabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+  ###########################################################################
+  # 使用用户词典
+  translator/enable_user_dict: true 
+  # 允许句子
+  translator/enable_sentence: false
+  translator/enable_encoder: false
+  translator/encode_commit_history: true
+
+    #speller/max_code_length: 4
+  speller/auto_select: true
+  speller/auto_select_unique_candidate: true
+  speller/delimiter: "/"  #因为用了;'来做23词选择，所以原来的分词键要改成/
+
+  punctuator/import_preset: symbols
+  recognizer/patterns/punct: '^/([A-Za-z]+|\d{0,8}((h|q)\d+)?|sz\d?|sz10|dx\d+\.?(\d+)?|\d+(h|q)|[1-7](s|x|z))$'
+
+  key_binder/bindings:
+    - { accept: semicolon, send: 2, when: has_menu}  #打字时，冒号选中第2个候选字发送
+    - { accept: apostrophe, send: 3, when: has_menu} #打字时，引号选中第3个候选字发送
