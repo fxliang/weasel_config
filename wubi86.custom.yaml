@@ -43,7 +43,7 @@ patch:
   speller/delimiter: "/"  #因为用了;'来做23词选择，所以原来的分词键要改成/
 
   punctuator/import_preset: symbols
-  recognizer/patterns/punct: '^/([A-Za-z]+|\d{0,8}((h|q)\d+)?|sz\d?|sz10|dx\d+\.?(\d+)?|\d+(h|q)|[1-7](s|x|z))$'
+  recognizer/patterns/punct: '^/(([a-z]+)|(uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*|\d{0,8}[hq]?(\d+)?[^0-9]?|1?\d|dx\d+(\.\d{0,2})?|\d+[hq]|[1-7][sxz]))$'
 
   key_binder/bindings:
     - { accept: semicolon, send: 2, when: has_menu}  #打字时，冒号选中第2个候选字发送
