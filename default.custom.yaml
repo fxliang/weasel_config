@@ -13,5 +13,6 @@ patch:
     - {schema: wubi_pinyin}
     - {schema: jyut6ping3}
     - {schema: luna_pinyin}
+    - {schema: double_pinyin}
     - {schema: wubi091}
     - {schema: english}

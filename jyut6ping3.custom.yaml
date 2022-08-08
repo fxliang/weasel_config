@@ -1,4 +1,5 @@
 patch:
+  __include: base:/patch
   style/horizontal: false
   switches:
     - name: ascii_mode

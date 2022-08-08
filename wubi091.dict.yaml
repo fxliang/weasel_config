@@ -19,6 +19,7 @@ encoder:
     - length_in_range: [4, 10]
       formula: "AaBaCaZa"
 ...
+abcd\refgh\rkkkk	aaaa
 或	a
 七	a
 花	a
