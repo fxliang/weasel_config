@@ -1860,62 +1860,33 @@ local function emoji()
 		{order=1858, cand="🦲", comment="秃顶"}
 	}
 	function Emoji_Translator(input, seg)
-		local _start = 1
-		local _end = 0
-		if string.match(input, "^/emqi$") then
-			_start = 1581
-			_end = 1849
-		elseif string.match(input, "^/emshou$") then
-			_start = 164
-			_end = 201
-		elseif string.match(input, "^/emren$") then
-			_start = 223
-			_end = 519
-		elseif string.match(input, "^/emjiating$") then
-			_start = 494
-			_end = 519
-		elseif string.match(input, "^/emdw$") then
-			_start = 525
-			_end = 642
-		elseif string.match(input, "^/emzw$") then
-			_start = 643
-			_end = 703
-		elseif string.match(input, "^/emsw$") then
-			_start = 704
-			_end = 800
-		elseif string.match(input, "^/emlx$") then
-			_start = 801
-			_end = 1018
-		elseif string.match(input, "^/emche$") then
-			_start = 867
-			_end = 933
-		elseif string.match(input, "^/emxz$") then
-			_start = 1419
-			_end = 1431
-		elseif string.match(input, "^/emwp$") then
-			_start = 1105
-			_end = 1359
-		elseif string.match(input, "^/emall$") then
-			_start = 1
-			_end = #emoji_candidate_info
-		elseif string.match(input, "^/emhd$") then
-			_start = 1019
-			_end = 1104
-		elseif string.match(input, "^/emfh$") then
-			_start = 1360
-			_end = 1580
-		elseif string.match(input, "^/emrl$") then
-			_start = 164
-			_end = 524
-		elseif string.match(input, "^/emxl$") then
-			_start = 1
-			_end = 163
-		elseif string.match(input, "^/emfs$") then
-			_start = 1850
-			_end = 1858
-		end
-		for idx = _start, _end do
-			yield(Candidate("emoji", seg.start, seg._end, emoji_candidate_info[idx].cand, emoji_candidate_info[idx].comment))	
+		local ranges = {
+			{pattern = "^/emqi$", _start = 1581, _end = 1849},	-- 旗帜
+			{pattern = "^/emshou$", _start = 164, _end = 201},	-- 手
+			{pattern = "^/emren$", _start = 223, _end = 519},	-- 人
+			{pattern = "^/emjt$", _start = 494, _end = 519},	-- 家庭
+			{pattern = "^/emdw$", _start = 525, _end = 642},	-- 动物
+			{pattern = "^/emzw$", _start = 643, _end = 703},	-- 植物
+			{pattern = "^/emsw$", _start = 704, _end = 800},	-- 食物
+			{pattern = "^/emlx$", _start = 801, _end = 1018},	-- 旅行
+			{pattern = "^/emche$", _start = 867, _end = 933},	-- 车&交通
+			{pattern = "^/emxz$", _start = 1419, _end = 1431},	-- 星座
+			{pattern = "^/emwp$", _start = 1105, _end = 1359},	-- 物品
+			{pattern = "^/em$", _start = 1, _end = 1858},		-- 全部Emoji
+			{pattern = "^/emall$", _start = 1, _end = 1858},	-- 全部Emoji
+			{pattern = "^/emhd$", _start = 1019, _end = 1104},	-- 活动
+			{pattern = "^/emfh$", _start = 1360, _end = 1580},	-- 符号
+			{pattern = "^/emrl$", _start = 164, _end = 524},	-- 人类
+			{pattern = "^/emxl$", _start = 1, _end = 163},		-- 笑脸
+			{pattern = "^/emfs$", _start = 1850, _end = 1858}	-- 肤色
+		}
+		for i = 1, #ranges do
+			if string.match(input, ranges[i].pattern) then
+				for idx = ranges[i]._start, ranges[i]._end do
+					yield(Candidate("emoji", seg.start, seg._end, emoji_candidate_info[idx].cand, emoji_candidate_info[idx].comment))	
+				end
+				break
+			end
 		end
 	end
 end
