@@ -14,10 +14,10 @@ local function unicode()
 				if(tonumber(s, 16) >= 0x20 and tonumber(s, 16) <= 0x10ffff) then
 					cand = cand .. utf8.char(tonumber(s, 16))
 					cmt = cmt .. '\\u+' .. string.upper(s)
+					local cc = Candidate("Unicode", seg.start, seg._end, cand, cmt)
+					yield(cc)
 				end
 			end
-			local cc = Candidate("Unicode", seg.start, seg._end, cand, cmt)
-			yield(cc)
 		end
 	end
 end
