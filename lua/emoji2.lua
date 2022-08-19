@@ -1859,28 +1859,58 @@ local function emoji()
 		{order=1857, cand="🦳", comment="白发"},
 		{order=1858, cand="🦲", comment="秃顶"}
 	}
-	function Emoji_Translator(input, seg)
-		local ranges = {
-			{pattern = "^/emqi$", _start = 1581, _end = 1849},	-- 旗帜
-			{pattern = "^/emshou$", _start = 164, _end = 201},	-- 手
-			{pattern = "^/emren$", _start = 223, _end = 519},	-- 人
-			{pattern = "^/emjt$", _start = 494, _end = 519},	-- 家庭
-			{pattern = "^/emdw$", _start = 525, _end = 642},	-- 动物
-			{pattern = "^/emzw$", _start = 643, _end = 703},	-- 植物
-			{pattern = "^/emsw$", _start = 704, _end = 800},	-- 食物
-			{pattern = "^/emlx$", _start = 801, _end = 1018},	-- 旅行
-			{pattern = "^/emche$", _start = 867, _end = 933},	-- 车&交通
-			{pattern = "^/emxz$", _start = 1419, _end = 1431},	-- 星座
-			{pattern = "^/emwp$", _start = 1105, _end = 1359},	-- 物品
-			{pattern = "^/em$", _start = 1, _end = 1858},		-- 全部Emoji
-			{pattern = "^/emall$", _start = 1, _end = 1858},	-- 全部Emoji
-			{pattern = "^/emhd$", _start = 1019, _end = 1104},	-- 活动
-			{pattern = "^/emfh$", _start = 1360, _end = 1580},	-- 符号
-			{pattern = "^/emrl$", _start = 164, _end = 524},	-- 人类
-			{pattern = "^/emxl$", _start = 1, _end = 163},		-- 笑脸
-			{pattern = "^/emfs$", _start = 1850, _end = 1858}	-- 肤色
-		}
+	local ranges = {
+		{pattern = "^/em$", _start = 1, _end = 1858, tip = "全部Emoji"},
+		--{pattern = "^/emall$", _start = 1, _end = 1858, tip = "全部Emoji"},
+		{pattern = "^/emche$", _start = 867, _end = 933, tip = "车&交通"},
+		{pattern = "^/emdw$", _start = 525, _end = 642, tip = "动物"},
+		{pattern = "^/emfh$", _start = 1360, _end = 1580, tip = "符号"},
+		{pattern = "^/emfs$", _start = 1850, _end = 1858, tip = "肤色"},
+		{pattern = "^/emhd$", _start = 1019, _end = 1104, tip = "活动"},
+		{pattern = "^/emjt$", _start = 494, _end = 519, tip = "家庭"},
+		{pattern = "^/emlx$", _start = 801, _end = 1018, tip = "旅行"},
+		{pattern = "^/emqi$", _start = 1581, _end = 1849, tip = "旗帜"},
+		{pattern = "^/emshou$", _start = 164, _end = 201, tip = "手"},
+		{pattern = "^/emren$", _start = 223, _end = 519, tip = "人"},
+		{pattern = "^/emrl$", _start = 164, _end = 524, tip = "人类"},
+		{pattern = "^/emsw$", _start = 704, _end = 800, tip = "食物"},
+		{pattern = "^/emwp$", _start = 1105, _end = 1359, tip = "物品"},
+		{pattern = "^/emxl$", _start = 1, _end = 163, tip = "笑脸"},
+		{pattern = "^/emxz$", _start = 1419, _end = 1431, tip = "星座"},
+		{pattern = "^/emzw$", _start = 643, _end = 703, tip = "植物"}
+	}
+	function Emoji_Translator(input, seg, env)
+		local engine = env.engine
+		local context = engine.context
+		local schema = engine.schema
+		local composition = context.composition
+		local segment = composition:back()
+		local page_size = env.engine.schema.page_size
+		local prompt = ""
+		local cnt = 0
+		-- starts with /em
+		if string.len(input) >=2 and string.sub(input, 1, 3) == "/em" then
+			for i=1, #ranges do
+				if string.match(ranges[i].pattern, input) then
+					if string.len(input) + 2 < string.len(ranges[i].pattern) then
+						local t = string.sub(ranges[i].pattern, string.len(input)+2, string.len(ranges[i].pattern)-1) .. emoji_candidate_info[ranges[i]._start].cand
+						prompt = prompt .. "~" .. t .. "  "
+						cnt = cnt + 1
+						if cnt > page_size then break end
+					end
+				end
+			end
+		end
 		for i = 1, #ranges do
+			-- starts with /em
+			if string.len(input) >=2 and string.sub(input, 1, 3) == "/em" then
+				for j = 1, #ranges do
+					if string.match(ranges[j].pattern, input) then
+						segment.prompt = context.caret_pos == context.input:len() and " " .. prompt
+					end
+				end
+			end
+
 			if string.match(input, ranges[i].pattern) then
 				for idx = ranges[i]._start, ranges[i]._end do
 					yield(Candidate("emoji", seg.start, seg._end, emoji_candidate_info[idx].cand, emoji_candidate_info[idx].comment))	
