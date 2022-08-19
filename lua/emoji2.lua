@@ -1922,3 +1922,12 @@ local function emoji()
 end
 
 return emoji
+
+-- how to use this
+-- in rime.lua
+--local emoji2 = require("emoji2")()
+--Emoji_Translator = emoji2.Emoji_Translator
+--
+-- in schema
+--  engine/translators/+:
+--  - lua_translator@Emoji_Translator
