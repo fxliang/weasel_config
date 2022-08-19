@@ -1899,6 +1899,9 @@ local function emoji()
 						if cnt > page_size then break end
 					end
 				end
+				if input == string.sub(ranges[i].pattern, 2, string.len(ranges[i].pattern)-1) then
+					prompt = "[" .. ranges[i].tip .. emoji_candidate_info[ranges[i]._start].cand .. "] " .. prompt
+				end
 			end
 		end
 		for i = 1, #ranges do
