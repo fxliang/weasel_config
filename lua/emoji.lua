@@ -1915,8 +1915,8 @@ return Emoji_Translator
 
 -- how to use this
 -- in rime.lua
---Emoji_Translator = require("emoji2")
+-- Emoji_Translator = require("emoji")
 --
--- in schema
---  engine/translators/+:
---  - lua_translator@Emoji_Translator
+-- in schema custom.yaml
+--   engine/translators/+:
+--   - lua_translator@Emoji_Translator
