@@ -1859,7 +1859,7 @@ local emoji_candidate_info = {
 	{--[[order=1857,]] cand="🦳", comment="白发"},
 	{--[[order=1858,]] cand="🦲", comment="秃顶"}
 }
--- key as input punct, /em[key] to yield from _start to _end 
+-- key as input punct, input prefix and [key] to yield from _start to _end 
 local ranges = {
 	[""] = {_start = 1, _end = 1858, tip = "全部"},
 	jt = { _start = 494, _end = 519, tip = "家庭"},
@@ -1879,32 +1879,36 @@ local ranges = {
 	xz = { _start = 1419, _end = 1431, tip = "星座"},
 	zw = { _start = 643, _end = 703, tip = "植物"}
 }
-
-local function Emoji_Translator(input, seg, env)
-	-- not start with /em return 
-	if not input:match("^/em") then return end
-	local segment = env.engine.context.composition:back()
-	local page_size = env.engine.schema.page_size
+-- punct start prefix
+local prefix = "/em"
+-- calc prompt
+local function prompt_str(input, limit)
 	local prompt = ""
 	local cnt = 0
-	-- calc prompt
 	for k, v in pairs(ranges) do
-		if ("/em"..k):match(input .. "(.*)$") then
-			local cmpl = (("/em"..k):match(input .. "(.*)$"))
-			if cmpl ~= "" then prompt = prompt .. "~" .. cmpl .. emoji_candidate_info[ranges[k]._start].cand .. " " end
+		if ( prefix .. k ):match(input .. "(.*)$") then
+			local cmpl = ((prefix..k):match(input .. "(.*)$"))
+			if cmpl and #cmpl > 0 then
+				if cmpl ~= "" then prompt = prompt .. "~" .. cmpl .. emoji_candidate_info[ranges[k]._start].cand .. " " end
+			end
 			cnt = cnt + 1
-			if cnt >= page_size then break end
+			if cnt >= limit then break end
 		end
 	end
-	-- calc prompt end
-	local datas = ranges[ input:match("/em(.*)$") ]
+	return prompt
+end
+
+local function Emoji_Translator(input, seg, env)
+	-- not start with prefix return 
+	if not input:match("^" .. prefix) then return end
+	local segment = env.engine.context.composition:back()
+	local page_size = env.engine.schema.page_size
+	-- prompt string
+	local prompt = prompt_str(input, page_size)
+	local datas = ranges[ input:match(prefix .. "(.*)$") ]
+	segment.prompt = datas and "[" .. datas.tip .. "] " .. prompt or prompt
 	-- not matched, return
-	if not datas then
-		segment.prompt = prompt
-		return
-	end
-	-- if matched add current group tip
-	segment.prompt = "[" .. datas.tip .. "] " .. prompt
+	if not datas then return end
 	-- yield candidates
 	for idx = datas._start, datas._end do
 		yield(Candidate("emoji", seg.start, seg._end, emoji_candidate_info[idx].cand, emoji_candidate_info[idx].comment))	
