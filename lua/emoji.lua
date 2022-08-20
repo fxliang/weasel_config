@@ -1,1890 +1,1922 @@
-local function emoji()
-	function Emoji_Translator(input, seg)
-		if string.match(input, "^/emxl$") then
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😀", "嘿嘿"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😃", "哈哈"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😄", "大笑"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😁", "嘻嘻"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😆", "斜眼笑"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😅", "苦笑"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤣", "笑得满地打滚"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😂", "笑哭了"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🙂", "呵呵"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🙃", "倒脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🫠", "融化"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😉", "眨眼"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😊", "羞涩微笑"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😇", "微笑天使"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥰", "喜笑颜开"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😍", "花痴"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤩", "好崇拜哦"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😘", "飞吻"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😗", "亲亲"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "☺", "微笑"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😚", "羞涩亲亲"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😙", "微笑亲亲"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥲", "含泪的笑脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😋", "好吃"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😛", "吐舌"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😜", "单眼吐舌"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤪", "滑稽"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😝", "眯眼吐舌"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤑", "发财"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤗", "抱抱"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤭", "不说"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🫢", "睁眼捂嘴"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🫣", "偷看"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤫", "安静的脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤔", "想一想"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🫡", "致敬"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤐", "闭嘴"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤨", "挑眉"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😐", "冷漠"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😑", "无语"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😶", "沉默"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🫥", "虚线脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😶‍🌫️", "迷茫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😏", "得意"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😒", "不高兴"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🙄", "翻白眼"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😬", "龇牙咧嘴"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😮‍💨", "呼气"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤥", "说谎"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😌", "松了口气"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😔", "沉思"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😪", "困"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤤", "流口水"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😴", "睡着了"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😷", "感冒"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤒", "发烧"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤕", "受伤"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤢", "恶心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤮", "呕吐"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤧", "打喷嚏"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥵", "脸发烧"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥶", "冷脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥴", "头昏眼花"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😵", "晕头转向"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😵‍💫", "晕"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤯", "爆炸头"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤠", "牛仔帽脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥳", "聚会笑脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥸", "伪装的脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😎", "墨镜笑脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤓", "书呆子脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🧐", "带单片眼镜的脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😕", "困扰"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🫤", "郁闷"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😟", "担心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🙁", "微微不满"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "☹", "不满"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😮", "吃惊"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😯", "缄默"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😲", "震惊"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😳", "脸红"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥺", "恳求的脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥹", "忍住泪水"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😦", "啊"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😧", "极度痛苦"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😨", "害怕"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😰", "冷汗"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😥", "失望但如释重负"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😢", "哭"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😭", "放声大哭"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😱", "吓死了"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😖", "困惑"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😣", "痛苦"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😞", "失望"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😓", "汗"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😩", "累死了"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😫", "累"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🥱", "打呵欠"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😤", "傲慢"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😡", "怒火中烧"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😠", "生气"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤬", "嘴上有符号的脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😈", "恶魔微笑"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "👿", "生气的恶魔"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💀", "头骨"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "☠", "骷髅"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💩", "大便"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤡", "小丑脸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "👹", "食人魔"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "👺", "小妖精"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "👻", "鬼"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "👽", "外星人"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "👾", "外星怪物"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤖", "机器人"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😺", "大笑的猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😸", "微笑的猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😹", "笑出眼泪的猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😻", "花痴的猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😼", "奸笑的猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😽", "亲亲猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🙀", "疲倦的猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😿", "哭泣的猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "😾", "生气的猫"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🙈", "非礼勿视"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🙉", "非礼勿听"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🙊", "非礼勿言"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💋", "唇印"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💌", "情书"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💘", "心中箭了"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💝", "系有缎带的心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💖", "闪亮的心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💗", "搏动的心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💓", "心跳"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💞", "舞动的心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💕", "两颗心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💟", "心型装饰"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "❣", "心叹号"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💔", "心碎"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "❤️‍🔥", "火上之心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "❤️‍🩹", "修复受伤的心灵"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "❤", "红心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🧡", "橙心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💛", "黄心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💚", "绿心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💙", "蓝心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💜", "紫心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤎", "棕心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🖤", "黑心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🤍", "白心"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💯", "一百分"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💢", "怒"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💥", "爆炸"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💫", "头晕"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💦", "汗滴"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💨", "尾气"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🕳", "洞"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💣", "炸弹"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💬", "话语气泡"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "👁️‍🗨️", "讲话泡泡中的眼睛"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🗨", "朝左的话语气泡"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "🗯", "愤怒话语气泡"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💭", "内心活动气泡"))
-			yield(Candidate("😂笑脸和情感", seg.start, seg._end, "💤", "睡着"))
-		elseif string.match(input, "/emrl") then
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👋", "挥手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤚", "立起的手背"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🖐", "手掌"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "✋", "举起手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🖖", "瓦肯举手礼"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫱", "向右的手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫲", "向左的手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫳", "掌心向下的手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫴", "掌心向上的手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👌", "OK"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤌", "捏手指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤏", "捏合的手势"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "✌", "胜利手势"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤞", "交叉的手指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫰", "食指与拇指交叉的手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤟", "爱你的手势"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤘", "摇滚"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤙", "给我打电话"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👈", "反手食指向左指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👉", "反手食指向右指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👆", "反手食指向上指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🖕", "竖中指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👇", "反手食指向下指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "☝", "食指向上指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫵", "指向观察者的食指"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👍", "拇指向上"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👎", "拇指向下"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "✊", "举起拳头"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👊", "出拳"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤛", "朝左的拳头"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤜", "朝右的拳头"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👏", "鼓掌"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙌", "举双手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫶", "做成心形的双手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👐", "张开双手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤲", "掌心向上托起"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤝", "握手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙏", "双手合十"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "✍", "写字"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💅", "涂指甲油"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤳", "自拍"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💪", "肌肉"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦾", "机械手臂"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦿", "机械腿"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦵", "腿"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦶", "脚"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👂", "耳朵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦻", "戴助听器的耳朵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👃", "鼻子"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧠", "脑"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫀", "心脏器官"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫁", "肺"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦷", "牙齿"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦴", "骨头"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👀", "双眼"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👁", "眼睛"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👅", "舌头"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👄", "嘴"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫦", "咬住嘴唇"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👶", "小宝贝"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧒", "儿童"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👦", "男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👧", "女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑", "成人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👱", "金色头发的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨", "男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧔", "有胡子的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧔‍♂️", "有络腮胡子的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧔‍♀️", "有络腮胡子的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🦰", "男人: 红发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🦱", "男人: 卷发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🦳", "男人: 白发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🦲", "男人: 秃顶"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩", "女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🦰", "女人: 红发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🦰", "成人: 红发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🦱", "女人: 卷发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🦱", "成人: 卷发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🦳", "女人: 白发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🦳", "成人: 白发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🦲", "女人: 秃顶"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🦲", "成人: 秃顶"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👱‍♀️", "女人：金色的头发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👱‍♂️", "男人：金色的头发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧓", "老年人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👴", "老爷爷"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👵", "老奶奶"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙍", "皱眉"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙍‍♂️", "皱眉的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙍‍♀️", "女人皱着眉头"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙎", "撅嘴"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙎‍♂️", "噘嘴的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙎‍♀️", "噘嘴的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙅", "禁止手势"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙅‍♂️", "男人打手势不同意"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙅‍♀️", "女人打手势不同意"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙆", "OK手势"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙆‍♂️", "男人打手势同意"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙆‍♀️", "女人打手势同意"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💁", "前台"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💁‍♂️", "男子举起的手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💁‍♀️", "女人举起的手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙋", "举手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙋‍♂️", "举手的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙋‍♀️", "举手的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧏", "失聪者"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧏‍♂️", "聋哑男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧏‍♀️", "聋哑女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙇", "鞠躬"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙇‍♂️", "男人鞠躬"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🙇‍♀️", "女人鞠躬"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤦", "捂脸"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤦‍♂️", "男人捂脸"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤦‍♀️", "女人捂脸"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤷", "耸肩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤷‍♂️", "男人耸肩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤷‍♀️", "女人耸肩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍⚕️", "卫生工作者"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍⚕️", "男子健康工作者"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍⚕️", "女卫生工作者"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🎓", "学生"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🎓", "男学生"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🎓", "女学生"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🏫", "老师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🏫", "男老师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🏫", "女老师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍⚖️", "法官"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍⚖️", "男子法官"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍⚖️", "女法官"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🌾", "农民"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🌾", "农夫"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🌾", "农妇"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🍳", "厨师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🍳", "男厨师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🍳", "女厨师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🔧", "技工"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🔧", "男技工"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🔧", "女技工"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🏭", "工人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🏭", "男工人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🏭", "女工人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍💼", "白领"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍💼", "男白领"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍💼", "女白领"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🔬", "科学家"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🔬", "男科学家"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🔬", "女科学家"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍💻", "程序员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍💻", "男程序员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍💻", "女程序员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🎤", "歌手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🎤", "男歌手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🎤", "女歌手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🎨", "艺术家"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🎨", "男艺术家"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🎨", "女艺术家"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍✈️", "飞行员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍✈️", "男子飞行员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍✈️", "女飞行员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🚀", "宇航员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🚀", "男宇航员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🚀", "女宇航员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🚒", "消防员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🚒", "男消防员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🚒", "女消防员"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👮", "警察"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👮‍♂️", "男警官"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👮‍♀️", "女警官"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🕵", "侦探"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🕵️‍♂️", "男侦探"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🕵️‍♀️", "女侦探"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💂", "卫兵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💂‍♂️", "男警卫"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💂‍♀️", "女警卫"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🥷", "忍者"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👷", "建筑工人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👷‍♂️", "男子建筑工人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👷‍♀️", "女建筑工人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫅", "戴王冠的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤴", "王子"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👸", "公主"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👳", "戴头巾的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👳‍♂️", "男子戴着头巾"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👳‍♀️", "女人戴着头巾"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👲", "戴瓜皮帽的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧕", "带头饰的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤵", "穿燕尾服的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤵‍♂️", "穿礼服的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤵‍♀️", "穿礼服的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👰", "戴头纱的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👰‍♂️", "戴头纱的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👰‍♀️", "戴头纱的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤰", "孕妇"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫃", "怀孕的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫄", "怀孕的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤱", "母乳喂养"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🍼", "哺乳的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🍼", "哺乳的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🍼", "哺乳的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👼", "小天使"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🎅", "圣诞老人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤶", "圣诞奶奶"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🎄", "圣诞人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦸", "超级英雄"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦸‍♂️", "男超级英雄"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦸‍♀️", "女超级英雄"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦹", "超级大坏蛋"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦹‍♂️", "男超级反派"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🦹‍♀️", "女超级反派"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧙", "法师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧙‍♂️", "男法师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧙‍♀️", "女法师"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧚", "精灵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧚‍♂️", "男仙子"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧚‍♀️", "女仙子"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧛", "吸血鬼"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧛‍♂️", "男吸血鬼"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧛‍♀️", "女吸血鬼"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧜", "人鱼"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧜‍♂️", "男人鱼"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧜‍♀️", "美人鱼"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧝", "小精灵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧝‍♂️", "男精灵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧝‍♀️", "女精灵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧞", "妖怪"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧞‍♂️", "男人精灵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧞‍♀️", "女人精灵"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧟", "僵尸"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧟‍♂️", "男人僵尸"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧟‍♀️", "女人僵尸"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧌", "穴居巨怪"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💆", "按摩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💆‍♂️", "男人接受按摩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💆‍♀️", "女人接受按摩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💇", "理发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💇‍♂️", "男人理发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💇‍♀️", "女人理发"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚶", "行人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚶‍♂️", "男人走路"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚶‍♀️", "女人走路"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧍", "站立者"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧍‍♂️", "男人站立"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧍‍♀️", "女人站立"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧎", "下跪者"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧎‍♂️", "男人跪着"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧎‍♀️", "女人跪着"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🦯", "拄盲杖的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🦯", "拄盲杖的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🦯", "拄盲杖的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🦼", "坐电动轮椅的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🦼", "坐电动轮椅的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🦼", "坐电动轮椅的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🦽", "坐手动轮椅的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍🦽", "坐手动轮椅的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍🦽", "坐手动轮椅的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏃", "跑步者"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏃‍♂️", "跑步的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏃‍♀️", "跑步的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💃", "跳舞的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🕺", "跳舞的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🕴", "西装革履的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👯", "戴兔耳朵的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👯‍♂️", "戴兔子耳朵的男人们"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👯‍♀️", "戴兔子耳朵的女人们"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧖", "蒸房里的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧖‍♂️", "蒸汽房间里的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧖‍♀️", "蒸汽房间里的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧗", "攀爬的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧗‍♂️", "男子攀爬"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧗‍♀️", "女人攀爬"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤺", "击剑选手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏇", "赛马"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "⛷", "滑雪的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏂", "滑雪板"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏌", "打高尔夫的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏌️‍♂️", "男子高尔夫球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏌️‍♀️", "女子高尔夫球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏄", "冲浪"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏄‍♂️", "冲浪的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏄‍♀️", "冲浪的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚣", "划艇"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚣‍♂️", "男子划艇"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚣‍♀️", "女子划艇"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏊", "游泳"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏊‍♂️", "游泳的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏊‍♀️", "游泳的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "⛹", "玩球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "⛹️‍♂️", "拍球的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "⛹️‍♀️", "拍球的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏋", "举重"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏋️‍♂️", "男子举重"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🏋️‍♀️", "女子举重"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚴", "骑自行车"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚴‍♂️", "骑自行车的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚴‍♀️", "骑自行车的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚵", "骑山地车"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚵‍♂️", "男子山地自行车"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🚵‍♀️", "女子山地自行车"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤸", "侧手翻"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤸‍♂️", "男人翻筋斗"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤸‍♀️", "女人翻筋斗"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤼", "摔跤选手"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤼‍♂️", "男子摔跤"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤼‍♀️", "女子摔跤"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤽", "水球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤽‍♂️", "男子玩水球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤽‍♀️", "女人玩水球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤾", "手球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤾‍♂️", "男子玩手球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤾‍♀️", "女人玩手球"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤹", "抛接杂耍"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤹‍♂️", "男人玩杂耍"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🤹‍♀️", "女人玩杂耍"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧘", "盘腿的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧘‍♂️", "打坐的男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧘‍♀️", "打坐的女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🛀", "洗澡的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🛌", "躺在床上的人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🧑‍🤝‍🧑", "手拉手的两个人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👭", "手拉手的两个女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👫", "手拉手的一男一女"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👬", "手拉手的两个男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💏", "亲吻"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍❤️‍💋‍👨", "吻：女人和男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍❤️‍💋‍👨", "亲吻：男人和男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍❤️‍💋‍👩", "亲吻: 女人女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "💑", "情侣"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍❤️‍👨", "带心的夫妇：女人和男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍❤️‍👨", "带心的夫妇：男人和男人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍❤️‍👩", "情侣: 女人女人"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👪", "家庭"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👩‍👦", "家庭: 男人女人男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👩‍👧", "家庭: 男人女人女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👩‍👧‍👦", "家庭: 男人女人女孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👩‍👦‍👦", "家庭: 男人女人男孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👩‍👧‍👧", "家庭: 男人女人女孩女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👨‍👦", "家庭: 男人男人男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👨‍👧", "家庭: 男人男人女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👨‍👧‍👦", "家庭: 男人男人女孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👨‍👦‍👦", "家庭: 男人男人男孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👨‍👧‍👧", "家庭: 男人男人女孩女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👩‍👦", "家庭: 女人女人男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👩‍👧", "家庭: 女人女人女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👩‍👧‍👦", "家庭: 女人女人女孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👩‍👦‍👦", "家庭: 女人女人男孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👩‍👧‍👧", "家庭: 女人女人女孩女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👦", "家庭: 男人男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👦‍👦", "家庭: 男人男孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👧", "家庭: 男人女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👧‍👦", "家庭: 男人女孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👨‍👧‍👧", "家庭: 男人女孩女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👦", "家庭: 女人男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👦‍👦", "家庭: 女人男孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👧", "家庭: 女人女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👧‍👦", "家庭: 女人女孩男孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👩‍👧‍👧", "家庭: 女人女孩女孩"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🗣", "说话"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👤", "人像"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👥", "双人像"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "🫂", "人的拥抱"))
-			yield(Candidate("👌人类和身体", seg.start, seg._end, "👣", "脚印"))
-		elseif string.match(input, '/emdw') then 
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐵", "猴头"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐒", "猴子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦍", "大猩猩"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦧", "红毛猩猩"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐶", "狗脸"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐕", "狗"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦮", "导盲犬"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐕‍🦺", "服务犬"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐩", "贵宾犬"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐺", "狼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦊", "狐狸"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦝", "浣熊"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐱", "猫脸"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐈", "猫"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐈‍⬛", "黑猫"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦁", "狮子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐯", "老虎头"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐅", "老虎"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐆", "豹子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐴", "马头"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐎", "马"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦄", "独角兽"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦓", "斑马"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦌", "鹿"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦬", "大野牛"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐮", "奶牛头"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐂", "公牛"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐃", "水牛"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐄", "奶牛"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐷", "猪头"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐖", "猪"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐗", "野猪"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐽", "猪鼻子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐏", "公羊"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐑", "母羊"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐐", "山羊"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐪", "骆驼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐫", "双峰骆驼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦙", "美洲鸵"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦒", "长颈鹿"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐘", "大象"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦣", "猛犸"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦏", "犀牛"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦛", "河马"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐭", "老鼠头"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐁", "老鼠"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐀", "耗子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐹", "仓鼠"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐰", "兔子头"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐇", "兔子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐿", "松鼠"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦫", "海狸"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦔", "刺猬"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦇", "蝙蝠"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐻", "熊"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐻‍❄️", "北极熊"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐨", "考拉"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐼", "熊猫"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦥", "树懒"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦦", "水獭"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦨", "臭鼬"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦘", "袋鼠"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦡", "獾"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐾", "爪印"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦃", "火鸡"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐔", "鸡"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐓", "公鸡"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐣", "小鸡破壳"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐤", "小鸡"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐥", "正面朝向的小鸡"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐦", "鸟"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐧", "企鹅"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🕊", "鸽"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦅", "鹰"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦆", "鸭子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦢", "天鹅"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦉", "猫头鹰"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦤", "渡渡鸟"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪶", "羽毛"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦩", "火烈鸟"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦚", "孔雀"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦜", "鹦鹉"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐸", "青蛙"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐊", "鳄鱼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐢", "龟"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦎", "蜥蜴"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐍", "蛇"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐲", "龙头"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐉", "龙"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦕", "蜥蜴类"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦖", "霸王龙"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐳", "喷水的鲸"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐋", "鲸鱼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐬", "海豚"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦭", "海豹"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐟", "鱼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐠", "热带鱼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐡", "河豚"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦈", "鲨鱼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐙", "章鱼"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐚", "海螺"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪸", "珊瑚"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐌", "蜗牛"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦋", "蝴蝶"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐛", "毛毛虫"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐜", "蚂蚁"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐝", "蜜蜂"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪲", "甲虫"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🐞", "瓢虫"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦗", "蟋蟀"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪳", "蟑螂"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🕷", "蜘蛛"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🕸", "蜘蛛网"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦂", "蝎子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦟", "蚊子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪰", "苍蝇"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪱", "蠕虫"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🦠", "细菌"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "💐", "花束"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌸", "樱花"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "💮", "白花"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪷", "莲花"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🏵", "圆形花饰"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌹", "玫瑰"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🥀", "枯萎的花"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌺", "芙蓉"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌻", "向日葵"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌼", "开花"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌷", "郁金香"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌱", "幼苗"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪴", "盆栽植物"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌲", "松树"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌳", "落叶树"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌴", "棕榈树"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌵", "仙人掌"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌾", "稻子"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🌿", "药草"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "☘", "三叶草"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🍀", "四叶草"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🍁", "枫叶"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🍂", "落叶"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🍃", "风吹叶落"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪹", "空巢"))
-			yield(Candidate("🐵动物和自然", seg.start, seg._end, "🪺", "有蛋的巢"))
-		elseif string.match(input, '/emsw') then
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍇", "葡萄"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍈", "甜瓜"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍉", "西瓜"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍊", "橘子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍋", "柠檬"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍌", "香蕉"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍍", "菠萝"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥭", "芒果"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍎", "红苹果"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍏", "青苹果"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍐", "梨"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍑", "桃"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍒", "樱桃"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍓", "草莓"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫐", "蓝莓"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥝", "猕猴桃"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍅", "西红柿"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫒", "橄榄"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥥", "椰子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥑", "鳄梨"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍆", "茄子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥔", "土豆"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥕", "胡萝卜"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🌽", "玉米"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🌶", "红辣椒"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫑", "灯笼椒"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥒", "黄瓜"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥬", "绿叶蔬菜"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥦", "西兰花"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧄", "蒜"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧅", "洋葱"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍄", "蘑菇"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥜", "花生"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫘", "豆"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🌰", "栗子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍞", "面包"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥐", "羊角面包"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥖", "法式长棍面包"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫓", "扁面包"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥨", "椒盐卷饼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥯", "面包圈"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥞", "烙饼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧇", "华夫饼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧀", "芝士"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍖", "排骨"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍗", "家禽的腿"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥩", "肉块"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥓", "培根"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍔", "汉堡"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍟", "薯条"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍕", "披萨"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🌭", "热狗"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥪", "三明治"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🌮", "墨西哥卷饼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🌯", "墨西哥玉米煎饼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫔", "墨西哥粽子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥙", "夹心饼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧆", "炸豆丸子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥚", "蛋"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍳", "煎蛋"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥘", "装有食物的浅底锅"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍲", "一锅食物"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫕", "奶酪火锅"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥣", "碗勺"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥗", "绿色沙拉"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍿", "爆米花"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧈", "黄油"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧂", "盐"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥫", "罐头食品"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍱", "盒饭"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍘", "米饼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍙", "饭团"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍚", "米饭"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍛", "咖喱饭"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍜", "面条"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍝", "意粉"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍠", "烤红薯"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍢", "关东煮"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍣", "寿司"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍤", "天妇罗"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍥", "鱼板"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥮", "月饼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍡", "团子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥟", "饺子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥠", "幸运饼干"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥡", "外卖盒"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🦀", "蟹"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🦞", "龙虾"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🦐", "虾"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🦑", "乌贼"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🦪", "牡蛎"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍦", "圆筒冰激凌"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍧", "刨冰"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍨", "冰淇淋"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍩", "甜甜圈"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍪", "饼干"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🎂", "生日蛋糕"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍰", "水果蛋糕"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧁", "纸杯蛋糕"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥧", "派"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍫", "巧克力"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍬", "糖"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍭", "棒棒糖"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍮", "奶黄"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍯", "蜂蜜"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍼", "奶瓶"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥛", "一杯奶"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "☕", "热饮"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫖", "茶壶"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍵", "热茶"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍶", "清酒"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍾", "开香槟"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍷", "葡萄酒"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍸", "鸡尾酒"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍹", "热带水果饮料"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍺", "啤酒"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍻", "干杯"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥂", "碰杯"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥃", "平底杯"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫗", "倾倒液体"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥤", "带吸管杯"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧋", "珍珠奶茶"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧃", "饮料盒"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧉", "马黛茶"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🧊", "冰块"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥢", "筷子"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍽", "餐具"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🍴", "刀叉"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🥄", "匙"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🔪", "菜刀"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🫙", "罐"))
-			yield(Candidate("🍓食物和饮料", seg.start, seg._end, "🏺", "双耳瓶"))
-		elseif string.match(input, '/emlx') then
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌍", "地球上的欧洲非洲"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌎", "地球上的美洲"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌏", "地球上的亚洲澳洲"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌐", "带经纬线的地球"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🗺", "世界地图"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🗾", "日本地图"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🧭", "指南针"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏔", "雪山"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛰", "山"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌋", "火山"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🗻", "富士山"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏕", "露营"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏖", "沙滩伞"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏜", "沙漠"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏝", "无人荒岛"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏞", "国家公园"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏟", "体育馆"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏛", "古典建筑"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏗", "施工"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🧱", "砖"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🪨", "岩石"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🪵", "木头"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛖", "小屋"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏘", "房屋建筑"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏚", "废墟"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏠", "房子"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏡", "别墅"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏢", "办公楼"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏣", "日本邮局"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏤", "邮局"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏥", "医院"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏦", "银行"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏨", "酒店"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏩", "情人酒店"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏪", "便利店"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏫", "学校"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏬", "商场"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏭", "工厂"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏯", "日本城堡"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏰", "欧洲城堡"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "💒", "婚礼"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🗼", "东京塔"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🗽", "自由女神像"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛪", "教堂"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕌", "清真寺"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛕", "印度寺庙"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕍", "犹太教堂"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛩", "神社"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕋", "克尔白"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛲", "喷泉"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛺", "帐篷"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌁", "有雾"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌃", "夜晚"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏙", "城市风光"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌄", "山顶日出"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌅", "日出"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌆", "城市黄昏"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌇", "日落"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌉", "夜幕下的桥"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "♨", "温泉"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🎠", "旋转木马"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛝", "游乐场滑梯"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🎡", "摩天轮"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🎢", "过山车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "💈", "理发店"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🎪", "马戏团帐篷"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚂", "蒸汽火车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚃", "轨道车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚄", "高速列车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚅", "子弹头高速列车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚆", "火车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚇", "地铁"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚈", "轻轨"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚉", "车站"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚊", "路面电车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚝", "单轨"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚞", "山区铁路"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚋", "有轨电车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚌", "公交车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚍", "迎面驶来的公交车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚎", "无轨电车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚐", "小巴"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚑", "救护车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚒", "消防车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚓", "警车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚔", "迎面驶来的警车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚕", "出租车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚖", "迎面驶来的出租车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚗", "汽车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚘", "迎面驶来的汽车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚙", "运动型多用途车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛻", "敞蓬小型载货卡车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚚", "货车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚛", "铰接式货车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚜", "拖拉机"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏎", "赛车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🏍", "摩托车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛵", "小型摩托车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🦽", "手动轮椅"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🦼", "电动轮椅"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛺", "三轮摩托车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚲", "自行车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛴", "滑板车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛹", "滑板"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛼", "四轮滑冰鞋"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚏", "公交车站"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛣", "高速公路"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛤", "铁轨"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛢", "石油桶"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛽", "油泵"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛞", "车轮"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚨", "警车灯"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚥", "横向的红绿灯"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚦", "纵向的红绿灯"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛑", "停止标志"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚧", "路障"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⚓", "锚"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛟", "救生圈"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛵", "帆船"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛶", "独木舟"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚤", "快艇"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛳", "客轮"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛴", "渡轮"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛥", "摩托艇"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚢", "船"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "✈", "飞机"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛩", "小型飞机"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛫", "航班起飞"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛬", "航班降落"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🪂", "降落伞"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "💺", "座位"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚁", "直升机"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚟", "空轨"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚠", "缆车"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚡", "索道"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛰", "卫星"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🚀", "火箭"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛸", "飞碟"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🛎", "服务铃"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🧳", "行李箱"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⌛", "沙漏"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⏳", "沙正往下流的沙漏"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⌚", "手表"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⏰", "闹钟"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⏱", "秒表"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⏲", "定时器"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕰", "座钟"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕛", "十二点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕧", "十二点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕐", "一点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕜", "一点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕑", "两点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕝", "两点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕒", "三点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕞", "三点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕓", "四点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕟", "四点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕔", "五点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕠", "五点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕕", "六点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕡", "六点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕖", "七点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕢", "七点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕗", "八点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕣", "八点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕘", "九点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕤", "九点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕙", "十点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕥", "十点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕚", "十一点"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🕦", "十一点半"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌑", "朔月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌒", "娥眉月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌓", "上弦月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌔", "盈凸月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌕", "满月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌖", "亏凸月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌗", "下弦月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌘", "残月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌙", "弯月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌚", "微笑的朔月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌛", "微笑的上弦月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌜", "微笑的下弦月"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌡", "温度计"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "☀", "太阳"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌝", "微笑的月亮"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌞", "微笑的太阳"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🪐", "有环行星"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⭐", "星星"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌟", "闪亮的星星"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌠", "流星"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌌", "银河"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "☁", "云"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛅", "阴"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛈", "雷阵雨"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌤", "晴偶有云"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌥", "多云"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌦", "晴转雨"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌧", "下雨"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌨", "下雪"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌩", "打雷"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌪", "龙卷风"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌫", "雾"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌬", "大风"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌀", "台风"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌈", "彩虹"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌂", "收起的伞"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "☂", "伞"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "☔", "雨伞"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛱", "阳伞"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⚡", "高压"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "❄", "雪花"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "☃", "雪与雪人"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "⛄", "雪人"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "☄", "彗星"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🔥", "火焰"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "💧", "水滴"))
-			yield(Candidate("🚌旅行和地点", seg.start, seg._end, "🌊", "浪花"))
-		elseif string.match(input, '/emhd') then
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎃", "南瓜灯"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎄", "圣诞树"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎆", "焰火"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎇", "烟花"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🧨", "爆竹"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "✨", "闪亮"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎈", "气球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎉", "拉炮彩带"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎊", "五彩纸屑球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎋", "七夕树"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎍", "门松"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎎", "日本人形"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎏", "鲤鱼旗"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎐", "风铃"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎑", "赏月"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🧧", "红包"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎀", "蝴蝶结"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎁", "礼物"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎗", "提示丝带"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎟", "入场券"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎫", "票"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎖", "军功章"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏆", "奖杯"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏅", "奖牌"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥇", "金牌"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥈", "银牌"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥉", "铜牌"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "⚽", "足球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "⚾", "棒球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥎", "垒球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏀", "篮球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏐", "排球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏈", "美式橄榄球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏉", "英式橄榄球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎾", "网球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥏", "飞盘"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎳", "保龄球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏏", "板球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏑", "曲棍球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏒", "冰球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥍", "袋棍球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏓", "乒乓球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🏸", "羽毛球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥊", "拳击手套"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥋", "练武服"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥅", "球门"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "⛳", "高尔夫球洞"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "⛸", "滑冰"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎣", "钓鱼竿"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🤿", "潜水面罩"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎽", "运动背心"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎿", "滑雪"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🛷", "雪橇"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🥌", "冰壶"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎯", "正中靶心的飞镖"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪀", "悠悠球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪁", "风筝"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎱", "台球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🔮", "水晶球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪄", "魔棒"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🧿", "纳扎尔护身符"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪬", "法蒂玛之手"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎮", "游戏手柄"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🕹", "游戏操控杆"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎰", "老虎机"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎲", "骰子"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🧩", "拼图"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🧸", "泰迪熊"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪅", "彩罐"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪩", "镜球"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪆", "套娃"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "♠", "黑桃"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "♥", "红桃"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "♦", "方片"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "♣", "梅花"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "♟", "兵"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🃏", "大小王"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🀄", "红中"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎴", "花札"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎭", "表演艺术"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🖼", "带框的画"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🎨", "调色盘"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🧵", "线"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪡", "缝合针"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🧶", "毛线"))
-			yield(Candidate("⚽活动", seg.start, seg._end, "🪢", "结"))
-		elseif string.match(input, '/emwp') then
-			yield(Candidate("⌚物品", seg.start, seg._end, "👓", "眼镜"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🕶", "墨镜"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🥽", "护目镜"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🥼", "白大褂"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🦺", "救生衣"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👔", "领带"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👕", "T恤"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👖", "牛仔裤"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧣", "围巾"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧤", "手套"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧥", "外套"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧦", "袜子"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👗", "连衣裙"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👘", "和服"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🥻", "纱丽"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩱", "连体泳衣"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩲", "三角裤"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩳", "短裤"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👙", "比基尼"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👚", "女装"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👛", "钱包"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👜", "手提包"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👝", "手袋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🛍", "购物袋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎒", "书包"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩴", "夹趾凉鞋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👞", "男鞋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👟", "跑鞋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🥾", "登山鞋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🥿", "平底鞋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👠", "高跟鞋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👡", "女式凉鞋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩰", "芭蕾舞鞋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👢", "女靴"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👑", "皇冠"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "👒", "女帽"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎩", "礼帽"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎓", "毕业帽"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧢", "鸭舌帽"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪖", "军用头盔"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⛑", "白十字头盔"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📿", "念珠"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💄", "唇膏"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💍", "戒指"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💎", "宝石"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔇", "已静音的扬声器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔈", "低音量的扬声器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔉", "中等音量的扬声器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔊", "高音量的扬声器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📢", "喇叭"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📣", "扩音器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📯", "邮号"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔔", "铃铛"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔕", "禁止响铃"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎼", "乐谱"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎵", "音符"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎶", "多个音符"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎙", "录音室麦克风"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎚", "电平滑块"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎛", "控制旋钮"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎤", "麦克风"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎧", "耳机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📻", "收音机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎷", "萨克斯管"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪗", "手风琴"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎸", "吉他"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎹", "音乐键盘"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎺", "小号"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎻", "小提琴"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪕", "班卓琴"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🥁", "鼓"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪘", "长鼓"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📱", "手机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📲", "带有箭头的手机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "☎", "电话"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📞", "电话听筒"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📟", "寻呼机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📠", "传真机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔋", "电池"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪫", "电池电量不足"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔌", "电源插头"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💻", "笔记本电脑"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖥", "台式电脑"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖨", "打印机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⌨", "键盘"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖱", "电脑鼠标"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖲", "轨迹球"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💽", "电脑光盘"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💾", "软盘"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💿", "光盘"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📀", "DVD"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧮", "算盘"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎥", "电影摄影机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎞", "影片帧"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📽", "电影放映机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🎬", "场记板"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📺", "电视机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📷", "相机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📸", "开闪光灯的相机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📹", "摄像机"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📼", "录像带"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔍", "左斜的放大镜"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔎", "右斜的放大镜"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🕯", "蜡烛"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💡", "灯泡"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔦", "手电筒"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🏮", "红灯笼"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪔", "印度油灯"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📔", "精装笔记本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📕", "合上的书本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📖", "打开的书本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📗", "绿色书本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📘", "蓝色书本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📙", "橙色书本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📚", "书"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📓", "笔记本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📒", "账本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📃", "带卷边的页面"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📜", "卷轴"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📄", "文件"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📰", "报纸"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗞", "报纸卷"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📑", "标签页"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔖", "书签"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🏷", "标签"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💰", "钱袋"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪙", "硬币"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💴", "日元"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💵", "美元"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💶", "欧元"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💷", "英镑"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💸", "长翅膀的钱"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💳", "信用卡"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧾", "收据"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💹", "趋势向上且带有日元符号的图表"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "✉", "信封"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📧", "电子邮件"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📨", "来信"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📩", "收邮件"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📤", "发件箱"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📥", "收件箱"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📦", "包裹"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📫", "有待收信件"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📪", "无待收信件"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📬", "有新信件"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📭", "无新信件"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📮", "邮筒"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗳", "投票箱"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "✏", "铅笔"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "✒", "钢笔尖"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖋", "钢笔"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖊", "笔"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖌", "画笔"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖍", "蜡笔"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📝", "备忘录"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💼", "公文包"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📁", "文件夹"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📂", "打开的文件夹"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗂", "索引分隔文件夹"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📅", "日历"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📆", "手撕日历"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗒", "线圈本"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗓", "线圈日历"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📇", "卡片索引"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📈", "趋势向上的图表"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📉", "趋势向下的图表"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📊", "条形图"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📋", "剪贴板"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📌", "图钉"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📍", "圆图钉"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📎", "回形针"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🖇", "连起来的两个回形针"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📏", "直尺"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📐", "三角尺"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "✂", "剪刀"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗃", "卡片盒"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗄", "文件柜"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗑", "垃圾桶"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔒", "合上的锁"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔓", "打开的锁"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔏", "墨水笔和锁"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔐", "钥匙和锁"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔑", "钥匙"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗝", "老式钥匙"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔨", "锤子"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪓", "斧头"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⛏", "铁镐"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⚒", "锤子与镐"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🛠", "锤子与扳手"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗡", "匕首"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⚔", "交叉放置的剑"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔫", "水枪"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪃", "回旋镖"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🏹", "弓和箭"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🛡", "盾牌"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪚", "木工锯"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔧", "扳手"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪛", "螺丝刀"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔩", "螺母与螺栓"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⚙", "齿轮"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗜", "夹钳"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⚖", "天平"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🦯", "盲杖"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔗", "链接"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⛓", "链条"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪝", "挂钩"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧰", "工具箱"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧲", "磁铁"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪜", "梯子"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⚗", "蒸馏器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧪", "试管"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧫", "培养皿"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧬", "DNA"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔬", "显微镜"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🔭", "望远镜"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "📡", "卫星天线"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💉", "注射器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩸", "血滴"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "💊", "药丸"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩹", "创可贴"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩼", "拐杖"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩺", "听诊器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🩻", "X射线"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🚪", "门"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🛗", "电梯"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪞", "镜子"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪟", "窗户"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🛏", "床"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🛋", "沙发和灯"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪑", "椅子"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🚽", "马桶"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪠", "活塞"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🚿", "淋浴"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🛁", "浴缸"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪤", "捕鼠器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪒", "剃须刀"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧴", "乳液瓶"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧷", "安全别针"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧹", "扫帚"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧺", "筐"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧻", "卷纸"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪣", "桶"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧼", "皂"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🫧", "气泡"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪥", "牙刷"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧽", "海绵"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🧯", "灭火器"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🛒", "购物车"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🚬", "香烟"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⚰", "棺材"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪦", "墓碑"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "⚱", "骨灰缸"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🗿", "摩埃"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪧", "标语牌"))
-			yield(Candidate("⌚物品", seg.start, seg._end, "🪪", "身份证"))
-		elseif string.match(input, '/emfh') then
-			yield(Candidate("🛑符号", seg.start, seg._end, "🏧", "取款机"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚮", "倒垃圾"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚰", "饮用水"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♿", "轮椅标识"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚹", "男厕"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚺", "女厕"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚻", "卫生间"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚼", "宝宝"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚾", "厕所"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🛂", "护照检查"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🛃", "海关"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🛄", "提取行李"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🛅", "寄存行李"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⚠", "警告"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚸", "儿童过街"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⛔", "禁止通行"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚫", "禁止"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚳", "禁止自行车"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚭", "禁止吸烟"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚯", "禁止乱扔垃圾"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚱", "非饮用水"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🚷", "禁止行人通行"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "📵", "禁止使用手机"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔞", "18禁"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "☢", "辐射"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "☣", "生物危害"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⬆", "向上箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "↗", "右上箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "➡", "向右箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "↘", "右下箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⬇", "向下箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "↙", "左下箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⬅", "向左箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "↖", "左上箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "↕", "上下箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "↔", "左右箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "↩", "右转弯箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "↪", "左转弯箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⤴", "右上弯箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⤵", "右下弯箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔃", "顺时针垂直箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔄", "逆时针箭头按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔙", "返回箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔚", "结束箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔛", "ON! 箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔜", "SOON 箭头"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔝", "置顶"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🛐", "宗教场所"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⚛", "原子符号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🕉", "奥姆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "✡", "六芒星"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "☸", "法轮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "☯", "阴阳"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "✝", "十字架"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "☦", "东正教十字架"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "☪", "星月"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "☮", "和平符号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🕎", "烛台"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔯", "带中间点的六芒星"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♈", "白羊座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♉", "金牛座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♊", "双子座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♋", "巨蟹座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♌", "狮子座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♍", "处女座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♎", "天秤座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♏", "天蝎座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♐", "射手座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♑", "摩羯座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♒", "水瓶座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♓", "双鱼座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⛎", "蛇夫座"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔀", "随机播放音轨按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔁", "重复按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔂", "重复一次按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "▶", "播放按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏩", "快进按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏭", "下一个音轨按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏯", "播放或暂停按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "◀", "倒退按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏪", "快退按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏮", "上一个音轨按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔼", "向上三角形按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏫", "快速上升按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔽", "向下三角形按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏬", "快速下降按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏸", "暂停按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏹", "停止按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏺", "录制按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⏏", "推出按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🎦", "电影院"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔅", "低亮度按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔆", "高亮度按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "📶", "信号强度条"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "📳", "振动模式"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "📴", "手机关机"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♀", "女性符号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♂", "男性符号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⚧", "跨性别符号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "✖", "乘"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "➕", "加"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "➖", "减"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "➗", "除"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟰", "粗等号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♾", "无穷大"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "‼", "双感叹号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⁉", "感叹疑问号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "❓", "红色问号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "❔", "白色问号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "❕", "白色感叹号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "❗", "红色感叹号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "〰", "波浪型破折号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "💱", "货币兑换"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "💲", "粗美元符号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⚕", "医疗标志"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "♻", "回收标志"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⚜", "百合花饰"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔱", "三叉戟徽章"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "📛", "姓名牌"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔰", "日本新手驾驶标志"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⭕", "红色空心圆圈"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "✅", "勾号按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "☑", "勾选框"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "✔", "勾号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "❌", "叉号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "❎", "叉号按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "➰", "卷曲环"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "➿", "双卷曲环"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "〽", "庵点"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "✳", "八轮辐星号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "✴", "八角星"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "❇", "火花"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "©", "版权"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "®", "注册"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "™", "商标"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "#️⃣", "按键: #"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "*️⃣", "键帽：*"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "0️⃣", "键帽：0"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "1️⃣", "键帽：1"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "2️⃣", "键帽：2"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "3️⃣", "键帽：3"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "4️⃣", "键帽：4"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "5️⃣", "键帽：5"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "6️⃣", "键帽：6"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "7️⃣", "键帽：7"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "8️⃣", "键帽：8"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "9️⃣", "键帽：9"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔟", "按键: 10"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔠", "输入大写拉丁字母"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔡", "输入小写拉丁字母"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔢", "输入数字"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔣", "输入符号"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔤", "输入拉丁字母"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🅰", "A型血"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆎", "AB型血"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🅱", "B型血"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆑", "CL按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆒", "cool按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆓", "免费按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "ℹ", "信息"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆔", "ID按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "Ⓜ", "圆圈包围的M"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆕", "new按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆖", "NG按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🅾", "O 型血"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆗", "OK按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🅿", "停车按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆘", "SOS按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆙", "up按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🆚", "VS按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈁", "日文的“这里”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈂", "日文的“服务费”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈷", "日文的“月总量”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈶", "日文的“收费”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈯", "日文的“预留”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🉐", "日文的“议价”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈹", "日文的“打折”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈚", "日文的“免费”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈲", "日文的“禁止”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🉑", "日文的“可接受”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈸", "日文的“申请”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈴", "日文的“合格”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈳", "日文的“有空位”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "㊗", "日文的“祝贺”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "㊙", "日文的“秘密”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈺", "日文的“开始营业”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🈵", "日文的“没有空位”按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔴", "红色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟠", "橙色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟡", "黄色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟢", "绿色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔵", "蓝色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟣", "紫色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟤", "棕色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⚫", "黑色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⚪", "白色圆"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟥", "红色方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟧", "橙色方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟨", "黄色方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟩", "绿色方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟦", "蓝色方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟪", "紫色方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🟫", "棕色方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⬛", "黑线大方框"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "⬜", "白线大方框"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "◼", "黑色中方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "◻", "白色中方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "◾", "黑色中小方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "◽", "白色中小方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "▪", "黑色小方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "▫", "白色小方块"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔶", "橙色大菱形"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔷", "蓝色大菱形"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔸", "橙色小菱形"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔹", "蓝色小菱形"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔺", "红色正三角"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔻", "红色倒三角"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "💠", "带圆点的菱形"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔘", "单选按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔳", "白色方形按钮"))
-			yield(Candidate("🛑符号", seg.start, seg._end, "🔲", "黑色方形按钮"))
-		elseif string.match(input, '/emqc') then
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏁", "终点旗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🚩", "三角旗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🎌", "交叉旗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏴", "举黑旗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏳", "举白旗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏳️‍🌈", "彩虹旗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏳️‍⚧️", "跨性别旗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏴‍☠️", "海盗旗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇨", "旗: 阿森松岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇩", "旗: 安道尔"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇪", "旗: 阿拉伯联合酋长国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇫", "旗: 阿富汗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇬", "旗: 安提瓜和巴布达"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇮", "旗: 安圭拉"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇱", "旗: 阿尔巴尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇲", "旗: 亚美尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇴", "旗: 安哥拉"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇶", "旗: 南极洲"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇷", "旗: 阿根廷"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇸", "旗: 美属萨摩亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇹", "旗: 奥地利"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇺", "旗: 澳大利亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇼", "旗: 阿鲁巴"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇽", "旗: 奥兰群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇦🇿", "旗: 阿塞拜疆"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇦", "旗: 波斯尼亚和黑塞哥维那"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇧", "旗: 巴巴多斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇩", "旗: 孟加拉国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇪", "旗: 比利时"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇫", "旗: 布基纳法索"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇬", "旗: 保加利亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇭", "旗: 巴林"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇮", "旗: 布隆迪"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇯", "旗: 贝宁"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇱", "旗: 圣巴泰勒米"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇲", "旗: 百慕大"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇳", "旗: 文莱"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇴", "旗: 玻利维亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇶", "旗: 荷属加勒比区"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇷", "旗: 巴西"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇸", "旗: 巴哈马"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇹", "旗: 不丹"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇻", "旗: 布韦岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇼", "旗: 博茨瓦纳"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇾", "旗: 白俄罗斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇧🇿", "旗: 伯利兹"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇦", "旗: 加拿大"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇨", "旗: 科科斯（基林）群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇩", "旗: 刚果（金）"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇫", "旗: 中非共和国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇬", "旗: 刚果（布）"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇭", "旗: 瑞士"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇮", "旗: 科特迪瓦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇰", "旗: 库克群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇱", "旗: 智利"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇲", "旗: 喀麦隆"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇳", "旗: 中国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇴", "旗: 哥伦比亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇵", "旗: 克利珀顿岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇷", "旗: 哥斯达黎加"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇺", "旗: 古巴"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇻", "旗: 佛得角"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇼", "旗: 库拉索"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇽", "旗: 圣诞岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇾", "旗: 塞浦路斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇨🇿", "旗: 捷克"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇩🇪", "旗: 德国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇩🇬", "旗: 迪戈加西亚岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇩🇯", "旗: 吉布提"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇩🇰", "旗: 丹麦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇩🇲", "旗: 多米尼克"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇩🇴", "旗: 多米尼加共和国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇩🇿", "旗: 阿尔及利亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇦", "旗: 休达及梅利利亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇨", "旗: 厄瓜多尔"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇪", "旗: 爱沙尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇬", "旗: 埃及"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇭", "旗: 西撒哈拉"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇷", "旗: 厄立特里亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇸", "旗: 西班牙"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇹", "旗: 埃塞俄比亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇪🇺", "旗: 欧盟"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇫🇮", "旗: 芬兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇫🇯", "旗: 斐济"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇫🇰", "旗: 福克兰群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇫🇲", "旗: 密克罗尼西亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇫🇴", "旗: 法罗群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇫🇷", "旗: 法国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇦", "旗: 加蓬"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇧", "旗: 英国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇩", "旗: 格林纳达"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇪", "旗: 格鲁吉亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇫", "旗: 法属圭亚那"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇬", "旗: 根西岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇭", "旗: 加纳"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇮", "旗: 直布罗陀"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇱", "旗: 格陵兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇲", "旗: 冈比亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇳", "旗: 几内亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇵", "旗: 瓜德罗普"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇶", "旗: 赤道几内亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇷", "旗: 希腊"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇸", "旗: 南乔治亚和南桑威奇群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇹", "旗: 危地马拉"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇺", "旗: 关岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇼", "旗: 几内亚比绍"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇬🇾", "旗: 圭亚那"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇭🇰", "旗: 中国香港特别行政区"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇭🇲", "旗: 赫德岛和麦克唐纳群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇭🇳", "旗: 洪都拉斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇭🇷", "旗: 克罗地亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇭🇹", "旗: 海地"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇭🇺", "旗: 匈牙利"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇨", "旗: 加纳利群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇩", "旗: 印度尼西亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇪", "旗: 爱尔兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇱", "旗: 以色列"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇲", "旗: 马恩岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇳", "旗: 印度"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇴", "旗: 英属印度洋领地"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇶", "旗: 伊拉克"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇷", "旗: 伊朗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇸", "旗: 冰岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇮🇹", "旗: 意大利"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇯🇪", "旗: 泽西岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇯🇲", "旗: 牙买加"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇯🇴", "旗: 约旦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇯🇵", "旗: 日本"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇪", "旗: 肯尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇬", "旗: 吉尔吉斯斯坦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇭", "旗: 柬埔寨"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇮", "旗: 基里巴斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇲", "旗: 科摩罗"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇳", "旗: 圣基茨和尼维斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇵", "旗: 朝鲜"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇷", "旗: 韩国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇼", "旗: 科威特"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇾", "旗: 开曼群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇰🇿", "旗: 哈萨克斯坦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇦", "旗: 老挝"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇧", "旗: 黎巴嫩"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇨", "旗: 圣卢西亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇮", "旗: 列支敦士登"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇰", "旗: 斯里兰卡"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇷", "旗: 利比里亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇸", "旗: 莱索托"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇹", "旗: 立陶宛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇺", "旗: 卢森堡"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇻", "旗: 拉脱维亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇱🇾", "旗: 利比亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇦", "旗: 摩洛哥"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇨", "旗: 摩纳哥"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇩", "旗: 摩尔多瓦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇪", "旗: 黑山"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇫", "旗: 法属圣马丁"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇬", "旗: 马达加斯加"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇭", "旗: 马绍尔群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇰", "旗: 北马其顿"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇱", "旗: 马里"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇲", "旗: 缅甸"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇳", "旗: 蒙古"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇴", "旗: 中国澳门特别行政区"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇵", "旗: 北马里亚纳群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇶", "旗: 马提尼克"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇷", "旗: 毛里塔尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇸", "旗: 蒙特塞拉特"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇹", "旗: 马耳他"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇺", "旗: 毛里求斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇻", "旗: 马尔代夫"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇼", "旗: 马拉维"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇽", "旗: 墨西哥"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇾", "旗: 马来西亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇲🇿", "旗: 莫桑比克"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇦", "旗: 纳米比亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇨", "旗: 新喀里多尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇪", "旗: 尼日尔"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇫", "旗: 诺福克岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇬", "旗: 尼日利亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇮", "旗: 尼加拉瓜"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇱", "旗: 荷兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇴", "旗: 挪威"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇵", "旗: 尼泊尔"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇷", "旗: 瑙鲁"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇺", "旗: 纽埃"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇳🇿", "旗: 新西兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇴🇲", "旗: 阿曼"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇦", "旗: 巴拿马"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇪", "旗: 秘鲁"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇫", "旗: 法属波利尼西亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇬", "旗: 巴布亚新几内亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇭", "旗: 菲律宾"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇰", "旗: 巴基斯坦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇱", "旗: 波兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇲", "旗: 圣皮埃尔和密克隆群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇳", "旗: 皮特凯恩群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇷", "旗: 波多黎各"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇸", "旗: 巴勒斯坦领土"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇹", "旗: 葡萄牙"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇼", "旗: 帕劳"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇵🇾", "旗: 巴拉圭"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇶🇦", "旗: 卡塔尔"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇷🇪", "旗: 留尼汪"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇷🇴", "旗: 罗马尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇷🇸", "旗: 塞尔维亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇷🇺", "旗: 俄罗斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇷🇼", "旗: 卢旺达"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇦", "旗: 沙特阿拉伯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇧", "旗: 所罗门群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇨", "旗: 塞舌尔"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇩", "旗: 苏丹"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇪", "旗: 瑞典"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇬", "旗: 新加坡"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇭", "旗: 圣赫勒拿"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇮", "旗: 斯洛文尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇯", "旗: 斯瓦尔巴和扬马延"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇰", "旗: 斯洛伐克"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇱", "旗: 塞拉利昂"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇲", "旗: 圣马力诺"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇳", "旗: 塞内加尔"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇴", "旗: 索马里"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇷", "旗: 苏里南"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇸", "旗: 南苏丹"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇹", "旗: 圣多美和普林西比"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇻", "旗: 萨尔瓦多"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇽", "旗: 荷属圣马丁"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇾", "旗: 叙利亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇸🇿", "旗: 斯威士兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇦", "旗: 特里斯坦-达库尼亚群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇨", "旗: 特克斯和凯科斯群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇩", "旗: 乍得"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇫", "旗: 法属南部领地"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇬", "旗: 多哥"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇭", "旗: 泰国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇯", "旗: 塔吉克斯坦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇰", "旗: 托克劳"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇱", "旗: 东帝汶"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇲", "旗: 土库曼斯坦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇳", "旗: 突尼斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇴", "旗: 汤加"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇷", "旗: 土耳其"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇹", "旗: 特立尼达和多巴哥"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇻", "旗: 图瓦卢"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇼", "旗: 台湾"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇹🇿", "旗: 坦桑尼亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇺🇦", "旗: 乌克兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇺🇬", "旗: 乌干达"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇺🇲", "旗: 美国本土外小岛屿"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇺🇳", "旗: 联合国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇺🇸", "旗: 美国"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇺🇾", "旗: 乌拉圭"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇺🇿", "旗: 乌兹别克斯坦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇻🇦", "旗: 梵蒂冈"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇻🇨", "旗: 圣文森特和格林纳丁斯"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇻🇪", "旗: 委内瑞拉"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇻🇬", "旗: 英属维尔京群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇻🇮", "旗: 美属维尔京群岛"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇻🇳", "旗: 越南"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇻🇺", "旗: 瓦努阿图"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇼🇫", "旗: 瓦利斯和富图纳"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇼🇸", "旗: 萨摩亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇽🇰", "旗: 科索沃"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇾🇪", "旗: 也门"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇾🇹", "旗: 马约特"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇿🇦", "旗: 南非"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇿🇲", "旗: 赞比亚"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🇿🇼", "旗: 津巴布韦"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "旗: 英格兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "旗: 苏格兰"))
-			yield(Candidate("🏁旗帜", seg.start, seg._end, "🏴󠁧󠁢󠁷󠁬󠁳󠁿", "旗: 威尔士"))
-		elseif string.match(input, '/emfs') then
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🏻", "较浅肤色"))
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🏼", "中等-浅肤色"))
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🏽", "中等肤色"))
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🏾", "中等-深肤色"))
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🏿", "较深肤色"))
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🦰", "红发"))
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🦱", "卷发"))
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🦳", "白发"))
-			yield(Candidate("🏼肤色和发型", seg.start, seg._end, "🦲", "秃顶"))
+local emoji_candidate_info = {
+	-- keep order info as comment for easy reworks
+	{--[[order=1,]] cand="😀", comment="嘿嘿"},
+	{--[[order=2,]] cand="😃", comment="哈哈"},
+	{--[[order=3,]] cand="😄", comment="大笑"},
+	{--[[order=4,]] cand="😁", comment="嘻嘻"},
+	{--[[order=5,]] cand="😆", comment="斜眼笑"},
+	{--[[order=6,]] cand="😅", comment="苦笑"},
+	{--[[order=7,]] cand="🤣", comment="笑得满地打滚"},
+	{--[[order=8,]] cand="😂", comment="笑哭了"},
+	{--[[order=9,]] cand="🙂", comment="呵呵"},
+	{--[[order=10,]] cand="🙃", comment="倒脸"},
+	{--[[order=11,]] cand="🫠", comment="融化"},
+	{--[[order=12,]] cand="😉", comment="眨眼"},
+	{--[[order=13,]] cand="😊", comment="羞涩微笑"},
+	{--[[order=14,]] cand="😇", comment="微笑天使"},
+	{--[[order=15,]] cand="🥰", comment="喜笑颜开"},
+	{--[[order=16,]] cand="😍", comment="花痴"},
+	{--[[order=17,]] cand="🤩", comment="好崇拜哦"},
+	{--[[order=18,]] cand="😘", comment="飞吻"},
+	{--[[order=19,]] cand="😗", comment="亲亲"},
+	{--[[order=20,]] cand="☺", comment="微笑"},
+	{--[[order=21,]] cand="😚", comment="羞涩亲亲"},
+	{--[[order=22,]] cand="😙", comment="微笑亲亲"},
+	{--[[order=23,]] cand="🥲", comment="含泪的笑脸"},
+	{--[[order=24,]] cand="😋", comment="好吃"},
+	{--[[order=25,]] cand="😛", comment="吐舌"},
+	{--[[order=26,]] cand="😜", comment="单眼吐舌"},
+	{--[[order=27,]] cand="🤪", comment="滑稽"},
+	{--[[order=28,]] cand="😝", comment="眯眼吐舌"},
+	{--[[order=29,]] cand="🤑", comment="发财"},
+	{--[[order=30,]] cand="🤗", comment="抱抱"},
+	{--[[order=31,]] cand="🤭", comment="不说"},
+	{--[[order=32,]] cand="🫢", comment="睁眼捂嘴"},
+	{--[[order=33,]] cand="🫣", comment="偷看"},
+	{--[[order=34,]] cand="🤫", comment="安静的脸"},
+	{--[[order=35,]] cand="🤔", comment="想一想"},
+	{--[[order=36,]] cand="🫡", comment="致敬"},
+	{--[[order=37,]] cand="🤐", comment="闭嘴"},
+	{--[[order=38,]] cand="🤨", comment="挑眉"},
+	{--[[order=39,]] cand="😐", comment="冷漠"},
+	{--[[order=40,]] cand="😑", comment="无语"},
+	{--[[order=41,]] cand="😶", comment="沉默"},
+	{--[[order=42,]] cand="🫥", comment="虚线脸"},
+	{--[[order=43,]] cand="😶‍🌫️", comment="迷茫"},
+	{--[[order=44,]] cand="😏", comment="得意"},
+	{--[[order=45,]] cand="😒", comment="不高兴"},
+	{--[[order=46,]] cand="🙄", comment="翻白眼"},
+	{--[[order=47,]] cand="😬", comment="龇牙咧嘴"},
+	{--[[order=48,]] cand="😮‍💨", comment="呼气"},
+	{--[[order=49,]] cand="🤥", comment="说谎"},
+	{--[[order=50,]] cand="😌", comment="松了口气"},
+	{--[[order=51,]] cand="😔", comment="沉思"},
+	{--[[order=52,]] cand="😪", comment="困"},
+	{--[[order=53,]] cand="🤤", comment="流口水"},
+	{--[[order=54,]] cand="😴", comment="睡着了"},
+	{--[[order=55,]] cand="😷", comment="感冒"},
+	{--[[order=56,]] cand="🤒", comment="发烧"},
+	{--[[order=57,]] cand="🤕", comment="受伤"},
+	{--[[order=58,]] cand="🤢", comment="恶心"},
+	{--[[order=59,]] cand="🤮", comment="呕吐"},
+	{--[[order=60,]] cand="🤧", comment="打喷嚏"},
+	{--[[order=61,]] cand="🥵", comment="脸发烧"},
+	{--[[order=62,]] cand="🥶", comment="冷脸"},
+	{--[[order=63,]] cand="🥴", comment="头昏眼花"},
+	{--[[order=64,]] cand="😵", comment="晕头转向"},
+	{--[[order=65,]] cand="😵‍💫", comment="晕"},
+	{--[[order=66,]] cand="🤯", comment="爆炸头"},
+	{--[[order=67,]] cand="🤠", comment="牛仔帽脸"},
+	{--[[order=68,]] cand="🥳", comment="聚会笑脸"},
+	{--[[order=69,]] cand="🥸", comment="伪装的脸"},
+	{--[[order=70,]] cand="😎", comment="墨镜笑脸"},
+	{--[[order=71,]] cand="🤓", comment="书呆子脸"},
+	{--[[order=72,]] cand="🧐", comment="带单片眼镜的脸"},
+	{--[[order=73,]] cand="😕", comment="困扰"},
+	{--[[order=74,]] cand="🫤", comment="郁闷"},
+	{--[[order=75,]] cand="😟", comment="担心"},
+	{--[[order=76,]] cand="🙁", comment="微微不满"},
+	{--[[order=77,]] cand="☹", comment="不满"},
+	{--[[order=78,]] cand="😮", comment="吃惊"},
+	{--[[order=79,]] cand="😯", comment="缄默"},
+	{--[[order=80,]] cand="😲", comment="震惊"},
+	{--[[order=81,]] cand="😳", comment="脸红"},
+	{--[[order=82,]] cand="🥺", comment="恳求的脸"},
+	{--[[order=83,]] cand="🥹", comment="忍住泪水"},
+	{--[[order=84,]] cand="😦", comment="啊"},
+	{--[[order=85,]] cand="😧", comment="极度痛苦"},
+	{--[[order=86,]] cand="😨", comment="害怕"},
+	{--[[order=87,]] cand="😰", comment="冷汗"},
+	{--[[order=88,]] cand="😥", comment="失望但如释重负"},
+	{--[[order=89,]] cand="😢", comment="哭"},
+	{--[[order=90,]] cand="😭", comment="放声大哭"},
+	{--[[order=91,]] cand="😱", comment="吓死了"},
+	{--[[order=92,]] cand="😖", comment="困惑"},
+	{--[[order=93,]] cand="😣", comment="痛苦"},
+	{--[[order=94,]] cand="😞", comment="失望"},
+	{--[[order=95,]] cand="😓", comment="汗"},
+	{--[[order=96,]] cand="😩", comment="累死了"},
+	{--[[order=97,]] cand="😫", comment="累"},
+	{--[[order=98,]] cand="🥱", comment="打呵欠"},
+	{--[[order=99,]] cand="😤", comment="傲慢"},
+	{--[[order=100,]] cand="😡", comment="怒火中烧"},
+	{--[[order=101,]] cand="😠", comment="生气"},
+	{--[[order=102,]] cand="🤬", comment="嘴上有符号的脸"},
+	{--[[order=103,]] cand="😈", comment="恶魔微笑"},
+	{--[[order=104,]] cand="👿", comment="生气的恶魔"},
+	{--[[order=105,]] cand="💀", comment="头骨"},
+	{--[[order=106,]] cand="☠", comment="骷髅"},
+	{--[[order=107,]] cand="💩", comment="大便"},
+	{--[[order=108,]] cand="🤡", comment="小丑脸"},
+	{--[[order=109,]] cand="👹", comment="食人魔"},
+	{--[[order=110,]] cand="👺", comment="小妖精"},
+	{--[[order=111,]] cand="👻", comment="鬼"},
+	{--[[order=112,]] cand="👽", comment="外星人"},
+	{--[[order=113,]] cand="👾", comment="外星怪物"},
+	{--[[order=114,]] cand="🤖", comment="机器人"},
+	{--[[order=115,]] cand="😺", comment="大笑的猫"},
+	{--[[order=116,]] cand="😸", comment="微笑的猫"},
+	{--[[order=117,]] cand="😹", comment="笑出眼泪的猫"},
+	{--[[order=118,]] cand="😻", comment="花痴的猫"},
+	{--[[order=119,]] cand="😼", comment="奸笑的猫"},
+	{--[[order=120,]] cand="😽", comment="亲亲猫"},
+	{--[[order=121,]] cand="🙀", comment="疲倦的猫"},
+	{--[[order=122,]] cand="😿", comment="哭泣的猫"},
+	{--[[order=123,]] cand="😾", comment="生气的猫"},
+	{--[[order=124,]] cand="🙈", comment="非礼勿视"},
+	{--[[order=125,]] cand="🙉", comment="非礼勿听"},
+	{--[[order=126,]] cand="🙊", comment="非礼勿言"},
+	{--[[order=127,]] cand="💋", comment="唇印"},
+	{--[[order=128,]] cand="💌", comment="情书"},
+	{--[[order=129,]] cand="💘", comment="心中箭了"},
+	{--[[order=130,]] cand="💝", comment="系有缎带的心"},
+	{--[[order=131,]] cand="💖", comment="闪亮的心"},
+	{--[[order=132,]] cand="💗", comment="搏动的心"},
+	{--[[order=133,]] cand="💓", comment="心跳"},
+	{--[[order=134,]] cand="💞", comment="舞动的心"},
+	{--[[order=135,]] cand="💕", comment="两颗心"},
+	{--[[order=136,]] cand="💟", comment="心型装饰"},
+	{--[[order=137,]] cand="❣", comment="心叹号"},
+	{--[[order=138,]] cand="💔", comment="心碎"},
+	{--[[order=139,]] cand="❤️‍🔥", comment="火上之心"},
+	{--[[order=140,]] cand="❤️‍🩹", comment="修复受伤的心灵"},
+	{--[[order=141,]] cand="❤", comment="红心"},
+	{--[[order=142,]] cand="🧡", comment="橙心"},
+	{--[[order=143,]] cand="💛", comment="黄心"},
+	{--[[order=144,]] cand="💚", comment="绿心"},
+	{--[[order=145,]] cand="💙", comment="蓝心"},
+	{--[[order=146,]] cand="💜", comment="紫心"},
+	{--[[order=147,]] cand="🤎", comment="棕心"},
+	{--[[order=148,]] cand="🖤", comment="黑心"},
+	{--[[order=149,]] cand="🤍", comment="白心"},
+	{--[[order=150,]] cand="💯", comment="一百分"},
+	{--[[order=151,]] cand="💢", comment="怒"},
+	{--[[order=152,]] cand="💥", comment="爆炸"},
+	{--[[order=153,]] cand="💫", comment="头晕"},
+	{--[[order=154,]] cand="💦", comment="汗滴"},
+	{--[[order=155,]] cand="💨", comment="尾气"},
+	{--[[order=156,]] cand="🕳", comment="洞"},
+	{--[[order=157,]] cand="💣", comment="炸弹"},
+	{--[[order=158,]] cand="💬", comment="话语气泡"},
+	{--[[order=159,]] cand="👁️‍🗨️", comment="讲话泡泡中的眼睛"},
+	{--[[order=160,]] cand="🗨", comment="朝左的话语气泡"},
+	{--[[order=161,]] cand="🗯", comment="愤怒话语气泡"},
+	{--[[order=162,]] cand="💭", comment="内心活动气泡"},
+	{--[[order=163,]] cand="💤", comment="睡着"},
+	{--[[order=164,]] cand="👋", comment="挥手"},
+	{--[[order=165,]] cand="🤚", comment="立起的手背"},
+	{--[[order=166,]] cand="🖐", comment="手掌"},
+	{--[[order=167,]] cand="✋", comment="举起手"},
+	{--[[order=168,]] cand="🖖", comment="瓦肯举手礼"},
+	{--[[order=169,]] cand="🫱", comment="向右的手"},
+	{--[[order=170,]] cand="🫲", comment="向左的手"},
+	{--[[order=171,]] cand="🫳", comment="掌心向下的手"},
+	{--[[order=172,]] cand="🫴", comment="掌心向上的手"},
+	{--[[order=173,]] cand="👌", comment="OK"},
+	{--[[order=174,]] cand="🤌", comment="捏手指"},
+	{--[[order=175,]] cand="🤏", comment="捏合的手势"},
+	{--[[order=176,]] cand="✌", comment="胜利手势"},
+	{--[[order=177,]] cand="🤞", comment="交叉的手指"},
+	{--[[order=178,]] cand="🫰", comment="食指与拇指交叉的手"},
+	{--[[order=179,]] cand="🤟", comment="爱你的手势"},
+	{--[[order=180,]] cand="🤘", comment="摇滚"},
+	{--[[order=181,]] cand="🤙", comment="给我打电话"},
+	{--[[order=182,]] cand="👈", comment="反手食指向左指"},
+	{--[[order=183,]] cand="👉", comment="反手食指向右指"},
+	{--[[order=184,]] cand="👆", comment="反手食指向上指"},
+	{--[[order=185,]] cand="🖕", comment="竖中指"},
+	{--[[order=186,]] cand="👇", comment="反手食指向下指"},
+	{--[[order=187,]] cand="☝", comment="食指向上指"},
+	{--[[order=188,]] cand="🫵", comment="指向观察者的食指"},
+	{--[[order=189,]] cand="👍", comment="拇指向上"},
+	{--[[order=190,]] cand="👎", comment="拇指向下"},
+	{--[[order=191,]] cand="✊", comment="举起拳头"},
+	{--[[order=192,]] cand="👊", comment="出拳"},
+	{--[[order=193,]] cand="🤛", comment="朝左的拳头"},
+	{--[[order=194,]] cand="🤜", comment="朝右的拳头"},
+	{--[[order=195,]] cand="👏", comment="鼓掌"},
+	{--[[order=196,]] cand="🙌", comment="举双手"},
+	{--[[order=197,]] cand="🫶", comment="做成心形的双手"},
+	{--[[order=198,]] cand="👐", comment="张开双手"},
+	{--[[order=199,]] cand="🤲", comment="掌心向上托起"},
+	{--[[order=200,]] cand="🤝", comment="握手"},
+	{--[[order=201,]] cand="🙏", comment="双手合十"},
+	{--[[order=202,]] cand="✍", comment="写字"},
+	{--[[order=203,]] cand="💅", comment="涂指甲油"},
+	{--[[order=204,]] cand="🤳", comment="自拍"},
+	{--[[order=205,]] cand="💪", comment="肌肉"},
+	{--[[order=206,]] cand="🦾", comment="机械手臂"},
+	{--[[order=207,]] cand="🦿", comment="机械腿"},
+	{--[[order=208,]] cand="🦵", comment="腿"},
+	{--[[order=209,]] cand="🦶", comment="脚"},
+	{--[[order=210,]] cand="👂", comment="耳朵"},
+	{--[[order=211,]] cand="🦻", comment="戴助听器的耳朵"},
+	{--[[order=212,]] cand="👃", comment="鼻子"},
+	{--[[order=213,]] cand="🧠", comment="脑"},
+	{--[[order=214,]] cand="🫀", comment="心脏器官"},
+	{--[[order=215,]] cand="🫁", comment="肺"},
+	{--[[order=216,]] cand="🦷", comment="牙齿"},
+	{--[[order=217,]] cand="🦴", comment="骨头"},
+	{--[[order=218,]] cand="👀", comment="双眼"},
+	{--[[order=219,]] cand="👁", comment="眼睛"},
+	{--[[order=220,]] cand="👅", comment="舌头"},
+	{--[[order=221,]] cand="👄", comment="嘴"},
+	{--[[order=222,]] cand="🫦", comment="咬住嘴唇"},
+	{--[[order=223,]] cand="👶", comment="小宝贝"},
+	{--[[order=224,]] cand="🧒", comment="儿童"},
+	{--[[order=225,]] cand="👦", comment="男孩"},
+	{--[[order=226,]] cand="👧", comment="女孩"},
+	{--[[order=227,]] cand="🧑", comment="成人"},
+	{--[[order=228,]] cand="👱", comment="金色头发的人"},
+	{--[[order=229,]] cand="👨", comment="男人"},
+	{--[[order=230,]] cand="🧔", comment="有胡子的人"},
+	{--[[order=231,]] cand="🧔‍♂️", comment="有络腮胡子的男人"},
+	{--[[order=232,]] cand="🧔‍♀️", comment="有络腮胡子的女人"},
+	{--[[order=233,]] cand="👨‍🦰", comment="男人: 红发"},
+	{--[[order=234,]] cand="👨‍🦱", comment="男人: 卷发"},
+	{--[[order=235,]] cand="👨‍🦳", comment="男人: 白发"},
+	{--[[order=236,]] cand="👨‍🦲", comment="男人: 秃顶"},
+	{--[[order=237,]] cand="👩", comment="女人"},
+	{--[[order=238,]] cand="👩‍🦰", comment="女人: 红发"},
+	{--[[order=239,]] cand="🧑‍🦰", comment="成人: 红发"},
+	{--[[order=240,]] cand="👩‍🦱", comment="女人: 卷发"},
+	{--[[order=241,]] cand="🧑‍🦱", comment="成人: 卷发"},
+	{--[[order=242,]] cand="👩‍🦳", comment="女人: 白发"},
+	{--[[order=243,]] cand="🧑‍🦳", comment="成人: 白发"},
+	{--[[order=244,]] cand="👩‍🦲", comment="女人: 秃顶"},
+	{--[[order=245,]] cand="🧑‍🦲", comment="成人: 秃顶"},
+	{--[[order=246,]] cand="👱‍♀️", comment="女人：金色的头发"},
+	{--[[order=247,]] cand="👱‍♂️", comment="男人：金色的头发"},
+	{--[[order=248,]] cand="🧓", comment="老年人"},
+	{--[[order=249,]] cand="👴", comment="老爷爷"},
+	{--[[order=250,]] cand="👵", comment="老奶奶"},
+	{--[[order=251,]] cand="🙍", comment="皱眉"},
+	{--[[order=252,]] cand="🙍‍♂️", comment="皱眉的男人"},
+	{--[[order=253,]] cand="🙍‍♀️", comment="女人皱着眉头"},
+	{--[[order=254,]] cand="🙎", comment="撅嘴"},
+	{--[[order=255,]] cand="🙎‍♂️", comment="噘嘴的男人"},
+	{--[[order=256,]] cand="🙎‍♀️", comment="噘嘴的女人"},
+	{--[[order=257,]] cand="🙅", comment="禁止手势"},
+	{--[[order=258,]] cand="🙅‍♂️", comment="男人打手势不同意"},
+	{--[[order=259,]] cand="🙅‍♀️", comment="女人打手势不同意"},
+	{--[[order=260,]] cand="🙆", comment="OK手势"},
+	{--[[order=261,]] cand="🙆‍♂️", comment="男人打手势同意"},
+	{--[[order=262,]] cand="🙆‍♀️", comment="女人打手势同意"},
+	{--[[order=263,]] cand="💁", comment="前台"},
+	{--[[order=264,]] cand="💁‍♂️", comment="男子举起的手"},
+	{--[[order=265,]] cand="💁‍♀️", comment="女人举起的手"},
+	{--[[order=266,]] cand="🙋", comment="举手"},
+	{--[[order=267,]] cand="🙋‍♂️", comment="举手的男人"},
+	{--[[order=268,]] cand="🙋‍♀️", comment="举手的女人"},
+	{--[[order=269,]] cand="🧏", comment="失聪者"},
+	{--[[order=270,]] cand="🧏‍♂️", comment="聋哑男人"},
+	{--[[order=271,]] cand="🧏‍♀️", comment="聋哑女人"},
+	{--[[order=272,]] cand="🙇", comment="鞠躬"},
+	{--[[order=273,]] cand="🙇‍♂️", comment="男人鞠躬"},
+	{--[[order=274,]] cand="🙇‍♀️", comment="女人鞠躬"},
+	{--[[order=275,]] cand="🤦", comment="捂脸"},
+	{--[[order=276,]] cand="🤦‍♂️", comment="男人捂脸"},
+	{--[[order=277,]] cand="🤦‍♀️", comment="女人捂脸"},
+	{--[[order=278,]] cand="🤷", comment="耸肩"},
+	{--[[order=279,]] cand="🤷‍♂️", comment="男人耸肩"},
+	{--[[order=280,]] cand="🤷‍♀️", comment="女人耸肩"},
+	{--[[order=281,]] cand="🧑‍⚕️", comment="卫生工作者"},
+	{--[[order=282,]] cand="👨‍⚕️", comment="男子健康工作者"},
+	{--[[order=283,]] cand="👩‍⚕️", comment="女卫生工作者"},
+	{--[[order=284,]] cand="🧑‍🎓", comment="学生"},
+	{--[[order=285,]] cand="👨‍🎓", comment="男学生"},
+	{--[[order=286,]] cand="👩‍🎓", comment="女学生"},
+	{--[[order=287,]] cand="🧑‍🏫", comment="老师"},
+	{--[[order=288,]] cand="👨‍🏫", comment="男老师"},
+	{--[[order=289,]] cand="👩‍🏫", comment="女老师"},
+	{--[[order=290,]] cand="🧑‍⚖️", comment="法官"},
+	{--[[order=291,]] cand="👨‍⚖️", comment="男子法官"},
+	{--[[order=292,]] cand="👩‍⚖️", comment="女法官"},
+	{--[[order=293,]] cand="🧑‍🌾", comment="农民"},
+	{--[[order=294,]] cand="👨‍🌾", comment="农夫"},
+	{--[[order=295,]] cand="👩‍🌾", comment="农妇"},
+	{--[[order=296,]] cand="🧑‍🍳", comment="厨师"},
+	{--[[order=297,]] cand="👨‍🍳", comment="男厨师"},
+	{--[[order=298,]] cand="👩‍🍳", comment="女厨师"},
+	{--[[order=299,]] cand="🧑‍🔧", comment="技工"},
+	{--[[order=300,]] cand="👨‍🔧", comment="男技工"},
+	{--[[order=301,]] cand="👩‍🔧", comment="女技工"},
+	{--[[order=302,]] cand="🧑‍🏭", comment="工人"},
+	{--[[order=303,]] cand="👨‍🏭", comment="男工人"},
+	{--[[order=304,]] cand="👩‍🏭", comment="女工人"},
+	{--[[order=305,]] cand="🧑‍💼", comment="白领"},
+	{--[[order=306,]] cand="👨‍💼", comment="男白领"},
+	{--[[order=307,]] cand="👩‍💼", comment="女白领"},
+	{--[[order=308,]] cand="🧑‍🔬", comment="科学家"},
+	{--[[order=309,]] cand="👨‍🔬", comment="男科学家"},
+	{--[[order=310,]] cand="👩‍🔬", comment="女科学家"},
+	{--[[order=311,]] cand="🧑‍💻", comment="程序员"},
+	{--[[order=312,]] cand="👨‍💻", comment="男程序员"},
+	{--[[order=313,]] cand="👩‍💻", comment="女程序员"},
+	{--[[order=314,]] cand="🧑‍🎤", comment="歌手"},
+	{--[[order=315,]] cand="👨‍🎤", comment="男歌手"},
+	{--[[order=316,]] cand="👩‍🎤", comment="女歌手"},
+	{--[[order=317,]] cand="🧑‍🎨", comment="艺术家"},
+	{--[[order=318,]] cand="👨‍🎨", comment="男艺术家"},
+	{--[[order=319,]] cand="👩‍🎨", comment="女艺术家"},
+	{--[[order=320,]] cand="🧑‍✈️", comment="飞行员"},
+	{--[[order=321,]] cand="👨‍✈️", comment="男子飞行员"},
+	{--[[order=322,]] cand="👩‍✈️", comment="女飞行员"},
+	{--[[order=323,]] cand="🧑‍🚀", comment="宇航员"},
+	{--[[order=324,]] cand="👨‍🚀", comment="男宇航员"},
+	{--[[order=325,]] cand="👩‍🚀", comment="女宇航员"},
+	{--[[order=326,]] cand="🧑‍🚒", comment="消防员"},
+	{--[[order=327,]] cand="👨‍🚒", comment="男消防员"},
+	{--[[order=328,]] cand="👩‍🚒", comment="女消防员"},
+	{--[[order=329,]] cand="👮", comment="警察"},
+	{--[[order=330,]] cand="👮‍♂️", comment="男警官"},
+	{--[[order=331,]] cand="👮‍♀️", comment="女警官"},
+	{--[[order=332,]] cand="🕵", comment="侦探"},
+	{--[[order=333,]] cand="🕵️‍♂️", comment="男侦探"},
+	{--[[order=334,]] cand="🕵️‍♀️", comment="女侦探"},
+	{--[[order=335,]] cand="💂", comment="卫兵"},
+	{--[[order=336,]] cand="💂‍♂️", comment="男警卫"},
+	{--[[order=337,]] cand="💂‍♀️", comment="女警卫"},
+	{--[[order=338,]] cand="🥷", comment="忍者"},
+	{--[[order=339,]] cand="👷", comment="建筑工人"},
+	{--[[order=340,]] cand="👷‍♂️", comment="男子建筑工人"},
+	{--[[order=341,]] cand="👷‍♀️", comment="女建筑工人"},
+	{--[[order=342,]] cand="🫅", comment="戴王冠的人"},
+	{--[[order=343,]] cand="🤴", comment="王子"},
+	{--[[order=344,]] cand="👸", comment="公主"},
+	{--[[order=345,]] cand="👳", comment="戴头巾的人"},
+	{--[[order=346,]] cand="👳‍♂️", comment="男子戴着头巾"},
+	{--[[order=347,]] cand="👳‍♀️", comment="女人戴着头巾"},
+	{--[[order=348,]] cand="👲", comment="戴瓜皮帽的人"},
+	{--[[order=349,]] cand="🧕", comment="带头饰的女人"},
+	{--[[order=350,]] cand="🤵", comment="穿燕尾服的人"},
+	{--[[order=351,]] cand="🤵‍♂️", comment="穿礼服的男人"},
+	{--[[order=352,]] cand="🤵‍♀️", comment="穿礼服的女人"},
+	{--[[order=353,]] cand="👰", comment="戴头纱的人"},
+	{--[[order=354,]] cand="👰‍♂️", comment="戴头纱的男人"},
+	{--[[order=355,]] cand="👰‍♀️", comment="戴头纱的女人"},
+	{--[[order=356,]] cand="🤰", comment="孕妇"},
+	{--[[order=357,]] cand="🫃", comment="怀孕的男人"},
+	{--[[order=358,]] cand="🫄", comment="怀孕的人"},
+	{--[[order=359,]] cand="🤱", comment="母乳喂养"},
+	{--[[order=360,]] cand="👩‍🍼", comment="哺乳的女人"},
+	{--[[order=361,]] cand="👨‍🍼", comment="哺乳的男人"},
+	{--[[order=362,]] cand="🧑‍🍼", comment="哺乳的人"},
+	{--[[order=363,]] cand="👼", comment="小天使"},
+	{--[[order=364,]] cand="🎅", comment="圣诞老人"},
+	{--[[order=365,]] cand="🤶", comment="圣诞奶奶"},
+	{--[[order=366,]] cand="🧑‍🎄", comment="圣诞人"},
+	{--[[order=367,]] cand="🦸", comment="超级英雄"},
+	{--[[order=368,]] cand="🦸‍♂️", comment="男超级英雄"},
+	{--[[order=369,]] cand="🦸‍♀️", comment="女超级英雄"},
+	{--[[order=370,]] cand="🦹", comment="超级大坏蛋"},
+	{--[[order=371,]] cand="🦹‍♂️", comment="男超级反派"},
+	{--[[order=372,]] cand="🦹‍♀️", comment="女超级反派"},
+	{--[[order=373,]] cand="🧙", comment="法师"},
+	{--[[order=374,]] cand="🧙‍♂️", comment="男法师"},
+	{--[[order=375,]] cand="🧙‍♀️", comment="女法师"},
+	{--[[order=376,]] cand="🧚", comment="精灵"},
+	{--[[order=377,]] cand="🧚‍♂️", comment="男仙子"},
+	{--[[order=378,]] cand="🧚‍♀️", comment="女仙子"},
+	{--[[order=379,]] cand="🧛", comment="吸血鬼"},
+	{--[[order=380,]] cand="🧛‍♂️", comment="男吸血鬼"},
+	{--[[order=381,]] cand="🧛‍♀️", comment="女吸血鬼"},
+	{--[[order=382,]] cand="🧜", comment="人鱼"},
+	{--[[order=383,]] cand="🧜‍♂️", comment="男人鱼"},
+	{--[[order=384,]] cand="🧜‍♀️", comment="美人鱼"},
+	{--[[order=385,]] cand="🧝", comment="小精灵"},
+	{--[[order=386,]] cand="🧝‍♂️", comment="男精灵"},
+	{--[[order=387,]] cand="🧝‍♀️", comment="女精灵"},
+	{--[[order=388,]] cand="🧞", comment="妖怪"},
+	{--[[order=389,]] cand="🧞‍♂️", comment="男人精灵"},
+	{--[[order=390,]] cand="🧞‍♀️", comment="女人精灵"},
+	{--[[order=391,]] cand="🧟", comment="僵尸"},
+	{--[[order=392,]] cand="🧟‍♂️", comment="男人僵尸"},
+	{--[[order=393,]] cand="🧟‍♀️", comment="女人僵尸"},
+	{--[[order=394,]] cand="🧌", comment="穴居巨怪"},
+	{--[[order=395,]] cand="💆", comment="按摩"},
+	{--[[order=396,]] cand="💆‍♂️", comment="男人接受按摩"},
+	{--[[order=397,]] cand="💆‍♀️", comment="女人接受按摩"},
+	{--[[order=398,]] cand="💇", comment="理发"},
+	{--[[order=399,]] cand="💇‍♂️", comment="男人理发"},
+	{--[[order=400,]] cand="💇‍♀️", comment="女人理发"},
+	{--[[order=401,]] cand="🚶", comment="行人"},
+	{--[[order=402,]] cand="🚶‍♂️", comment="男人走路"},
+	{--[[order=403,]] cand="🚶‍♀️", comment="女人走路"},
+	{--[[order=404,]] cand="🧍", comment="站立者"},
+	{--[[order=405,]] cand="🧍‍♂️", comment="男人站立"},
+	{--[[order=406,]] cand="🧍‍♀️", comment="女人站立"},
+	{--[[order=407,]] cand="🧎", comment="下跪者"},
+	{--[[order=408,]] cand="🧎‍♂️", comment="男人跪着"},
+	{--[[order=409,]] cand="🧎‍♀️", comment="女人跪着"},
+	{--[[order=410,]] cand="🧑‍🦯", comment="拄盲杖的人"},
+	{--[[order=411,]] cand="👨‍🦯", comment="拄盲杖的男人"},
+	{--[[order=412,]] cand="👩‍🦯", comment="拄盲杖的女人"},
+	{--[[order=413,]] cand="🧑‍🦼", comment="坐电动轮椅的人"},
+	{--[[order=414,]] cand="👨‍🦼", comment="坐电动轮椅的男人"},
+	{--[[order=415,]] cand="👩‍🦼", comment="坐电动轮椅的女人"},
+	{--[[order=416,]] cand="🧑‍🦽", comment="坐手动轮椅的人"},
+	{--[[order=417,]] cand="👨‍🦽", comment="坐手动轮椅的男人"},
+	{--[[order=418,]] cand="👩‍🦽", comment="坐手动轮椅的女人"},
+	{--[[order=419,]] cand="🏃", comment="跑步者"},
+	{--[[order=420,]] cand="🏃‍♂️", comment="跑步的男人"},
+	{--[[order=421,]] cand="🏃‍♀️", comment="跑步的女人"},
+	{--[[order=422,]] cand="💃", comment="跳舞的女人"},
+	{--[[order=423,]] cand="🕺", comment="跳舞的男人"},
+	{--[[order=424,]] cand="🕴", comment="西装革履的人"},
+	{--[[order=425,]] cand="👯", comment="戴兔耳朵的人"},
+	{--[[order=426,]] cand="👯‍♂️", comment="戴兔子耳朵的男人们"},
+	{--[[order=427,]] cand="👯‍♀️", comment="戴兔子耳朵的女人们"},
+	{--[[order=428,]] cand="🧖", comment="蒸房里的人"},
+	{--[[order=429,]] cand="🧖‍♂️", comment="蒸汽房间里的男人"},
+	{--[[order=430,]] cand="🧖‍♀️", comment="蒸汽房间里的女人"},
+	{--[[order=431,]] cand="🧗", comment="攀爬的人"},
+	{--[[order=432,]] cand="🧗‍♂️", comment="男子攀爬"},
+	{--[[order=433,]] cand="🧗‍♀️", comment="女人攀爬"},
+	{--[[order=434,]] cand="🤺", comment="击剑选手"},
+	{--[[order=435,]] cand="🏇", comment="赛马"},
+	{--[[order=436,]] cand="⛷", comment="滑雪的人"},
+	{--[[order=437,]] cand="🏂", comment="滑雪板"},
+	{--[[order=438,]] cand="🏌", comment="打高尔夫的人"},
+	{--[[order=439,]] cand="🏌️‍♂️", comment="男子高尔夫球"},
+	{--[[order=440,]] cand="🏌️‍♀️", comment="女子高尔夫球"},
+	{--[[order=441,]] cand="🏄", comment="冲浪"},
+	{--[[order=442,]] cand="🏄‍♂️", comment="冲浪的男人"},
+	{--[[order=443,]] cand="🏄‍♀️", comment="冲浪的女人"},
+	{--[[order=444,]] cand="🚣", comment="划艇"},
+	{--[[order=445,]] cand="🚣‍♂️", comment="男子划艇"},
+	{--[[order=446,]] cand="🚣‍♀️", comment="女子划艇"},
+	{--[[order=447,]] cand="🏊", comment="游泳"},
+	{--[[order=448,]] cand="🏊‍♂️", comment="游泳的男人"},
+	{--[[order=449,]] cand="🏊‍♀️", comment="游泳的女人"},
+	{--[[order=450,]] cand="⛹", comment="玩球"},
+	{--[[order=451,]] cand="⛹️‍♂️", comment="拍球的男人"},
+	{--[[order=452,]] cand="⛹️‍♀️", comment="拍球的女人"},
+	{--[[order=453,]] cand="🏋", comment="举重"},
+	{--[[order=454,]] cand="🏋️‍♂️", comment="男子举重"},
+	{--[[order=455,]] cand="🏋️‍♀️", comment="女子举重"},
+	{--[[order=456,]] cand="🚴", comment="骑自行车"},
+	{--[[order=457,]] cand="🚴‍♂️", comment="骑自行车的男人"},
+	{--[[order=458,]] cand="🚴‍♀️", comment="骑自行车的女人"},
+	{--[[order=459,]] cand="🚵", comment="骑山地车"},
+	{--[[order=460,]] cand="🚵‍♂️", comment="男子山地自行车"},
+	{--[[order=461,]] cand="🚵‍♀️", comment="女子山地自行车"},
+	{--[[order=462,]] cand="🤸", comment="侧手翻"},
+	{--[[order=463,]] cand="🤸‍♂️", comment="男人翻筋斗"},
+	{--[[order=464,]] cand="🤸‍♀️", comment="女人翻筋斗"},
+	{--[[order=465,]] cand="🤼", comment="摔跤选手"},
+	{--[[order=466,]] cand="🤼‍♂️", comment="男子摔跤"},
+	{--[[order=467,]] cand="🤼‍♀️", comment="女子摔跤"},
+	{--[[order=468,]] cand="🤽", comment="水球"},
+	{--[[order=469,]] cand="🤽‍♂️", comment="男子玩水球"},
+	{--[[order=470,]] cand="🤽‍♀️", comment="女人玩水球"},
+	{--[[order=471,]] cand="🤾", comment="手球"},
+	{--[[order=472,]] cand="🤾‍♂️", comment="男子玩手球"},
+	{--[[order=473,]] cand="🤾‍♀️", comment="女人玩手球"},
+	{--[[order=474,]] cand="🤹", comment="抛接杂耍"},
+	{--[[order=475,]] cand="🤹‍♂️", comment="男人玩杂耍"},
+	{--[[order=476,]] cand="🤹‍♀️", comment="女人玩杂耍"},
+	{--[[order=477,]] cand="🧘", comment="盘腿的人"},
+	{--[[order=478,]] cand="🧘‍♂️", comment="打坐的男人"},
+	{--[[order=479,]] cand="🧘‍♀️", comment="打坐的女人"},
+	{--[[order=480,]] cand="🛀", comment="洗澡的人"},
+	{--[[order=481,]] cand="🛌", comment="躺在床上的人"},
+	{--[[order=482,]] cand="🧑‍🤝‍🧑", comment="手拉手的两个人"},
+	{--[[order=483,]] cand="👭", comment="手拉手的两个女人"},
+	{--[[order=484,]] cand="👫", comment="手拉手的一男一女"},
+	{--[[order=485,]] cand="👬", comment="手拉手的两个男人"},
+	{--[[order=486,]] cand="💏", comment="亲吻"},
+	{--[[order=487,]] cand="👩‍❤️‍💋‍👨", comment="吻：女人和男人"},
+	{--[[order=488,]] cand="👨‍❤️‍💋‍👨", comment="亲吻：男人和男人"},
+	{--[[order=489,]] cand="👩‍❤️‍💋‍👩", comment="亲吻: 女人女人"},
+	{--[[order=490,]] cand="💑", comment="情侣"},
+	{--[[order=491,]] cand="👩‍❤️‍👨", comment="带心的夫妇：女人和男人"},
+	{--[[order=492,]] cand="👨‍❤️‍👨", comment="带心的夫妇：男人和男人"},
+	{--[[order=493,]] cand="👩‍❤️‍👩", comment="情侣: 女人女人"},
+	{--[[order=494,]] cand="👪", comment="家庭"},
+	{--[[order=495,]] cand="👨‍👩‍👦", comment="家庭: 男人女人男孩"},
+	{--[[order=496,]] cand="👨‍👩‍👧", comment="家庭: 男人女人女孩"},
+	{--[[order=497,]] cand="👨‍👩‍👧‍👦", comment="家庭: 男人女人女孩男孩"},
+	{--[[order=498,]] cand="👨‍👩‍👦‍👦", comment="家庭: 男人女人男孩男孩"},
+	{--[[order=499,]] cand="👨‍👩‍👧‍👧", comment="家庭: 男人女人女孩女孩"},
+	{--[[order=500,]] cand="👨‍👨‍👦", comment="家庭: 男人男人男孩"},
+	{--[[order=501,]] cand="👨‍👨‍👧", comment="家庭: 男人男人女孩"},
+	{--[[order=502,]] cand="👨‍👨‍👧‍👦", comment="家庭: 男人男人女孩男孩"},
+	{--[[order=503,]] cand="👨‍👨‍👦‍👦", comment="家庭: 男人男人男孩男孩"},
+	{--[[order=504,]] cand="👨‍👨‍👧‍👧", comment="家庭: 男人男人女孩女孩"},
+	{--[[order=505,]] cand="👩‍👩‍👦", comment="家庭: 女人女人男孩"},
+	{--[[order=506,]] cand="👩‍👩‍👧", comment="家庭: 女人女人女孩"},
+	{--[[order=507,]] cand="👩‍👩‍👧‍👦", comment="家庭: 女人女人女孩男孩"},
+	{--[[order=508,]] cand="👩‍👩‍👦‍👦", comment="家庭: 女人女人男孩男孩"},
+	{--[[order=509,]] cand="👩‍👩‍👧‍👧", comment="家庭: 女人女人女孩女孩"},
+	{--[[order=510,]] cand="👨‍👦", comment="家庭: 男人男孩"},
+	{--[[order=511,]] cand="👨‍👦‍👦", comment="家庭: 男人男孩男孩"},
+	{--[[order=512,]] cand="👨‍👧", comment="家庭: 男人女孩"},
+	{--[[order=513,]] cand="👨‍👧‍👦", comment="家庭: 男人女孩男孩"},
+	{--[[order=514,]] cand="👨‍👧‍👧", comment="家庭: 男人女孩女孩"},
+	{--[[order=515,]] cand="👩‍👦", comment="家庭: 女人男孩"},
+	{--[[order=516,]] cand="👩‍👦‍👦", comment="家庭: 女人男孩男孩"},
+	{--[[order=517,]] cand="👩‍👧", comment="家庭: 女人女孩"},
+	{--[[order=518,]] cand="👩‍👧‍👦", comment="家庭: 女人女孩男孩"},
+	{--[[order=519,]] cand="👩‍👧‍👧", comment="家庭: 女人女孩女孩"},
+	{--[[order=520,]] cand="🗣", comment="说话"},
+	{--[[order=521,]] cand="👤", comment="人像"},
+	{--[[order=522,]] cand="👥", comment="双人像"},
+	{--[[order=523,]] cand="🫂", comment="人的拥抱"},
+	{--[[order=524,]] cand="👣", comment="脚印"},
+	{--[[order=525,]] cand="🐵", comment="猴头"},
+	{--[[order=526,]] cand="🐒", comment="猴子"},
+	{--[[order=527,]] cand="🦍", comment="大猩猩"},
+	{--[[order=528,]] cand="🦧", comment="红毛猩猩"},
+	{--[[order=529,]] cand="🐶", comment="狗脸"},
+	{--[[order=530,]] cand="🐕", comment="狗"},
+	{--[[order=531,]] cand="🦮", comment="导盲犬"},
+	{--[[order=532,]] cand="🐕‍🦺", comment="服务犬"},
+	{--[[order=533,]] cand="🐩", comment="贵宾犬"},
+	{--[[order=534,]] cand="🐺", comment="狼"},
+	{--[[order=535,]] cand="🦊", comment="狐狸"},
+	{--[[order=536,]] cand="🦝", comment="浣熊"},
+	{--[[order=537,]] cand="🐱", comment="猫脸"},
+	{--[[order=538,]] cand="🐈", comment="猫"},
+	{--[[order=539,]] cand="🐈‍⬛", comment="黑猫"},
+	{--[[order=540,]] cand="🦁", comment="狮子"},
+	{--[[order=541,]] cand="🐯", comment="老虎头"},
+	{--[[order=542,]] cand="🐅", comment="老虎"},
+	{--[[order=543,]] cand="🐆", comment="豹子"},
+	{--[[order=544,]] cand="🐴", comment="马头"},
+	{--[[order=545,]] cand="🐎", comment="马"},
+	{--[[order=546,]] cand="🦄", comment="独角兽"},
+	{--[[order=547,]] cand="🦓", comment="斑马"},
+	{--[[order=548,]] cand="🦌", comment="鹿"},
+	{--[[order=549,]] cand="🦬", comment="大野牛"},
+	{--[[order=550,]] cand="🐮", comment="奶牛头"},
+	{--[[order=551,]] cand="🐂", comment="公牛"},
+	{--[[order=552,]] cand="🐃", comment="水牛"},
+	{--[[order=553,]] cand="🐄", comment="奶牛"},
+	{--[[order=554,]] cand="🐷", comment="猪头"},
+	{--[[order=555,]] cand="🐖", comment="猪"},
+	{--[[order=556,]] cand="🐗", comment="野猪"},
+	{--[[order=557,]] cand="🐽", comment="猪鼻子"},
+	{--[[order=558,]] cand="🐏", comment="公羊"},
+	{--[[order=559,]] cand="🐑", comment="母羊"},
+	{--[[order=560,]] cand="🐐", comment="山羊"},
+	{--[[order=561,]] cand="🐪", comment="骆驼"},
+	{--[[order=562,]] cand="🐫", comment="双峰骆驼"},
+	{--[[order=563,]] cand="🦙", comment="美洲鸵"},
+	{--[[order=564,]] cand="🦒", comment="长颈鹿"},
+	{--[[order=565,]] cand="🐘", comment="大象"},
+	{--[[order=566,]] cand="🦣", comment="猛犸"},
+	{--[[order=567,]] cand="🦏", comment="犀牛"},
+	{--[[order=568,]] cand="🦛", comment="河马"},
+	{--[[order=569,]] cand="🐭", comment="老鼠头"},
+	{--[[order=570,]] cand="🐁", comment="老鼠"},
+	{--[[order=571,]] cand="🐀", comment="耗子"},
+	{--[[order=572,]] cand="🐹", comment="仓鼠"},
+	{--[[order=573,]] cand="🐰", comment="兔子头"},
+	{--[[order=574,]] cand="🐇", comment="兔子"},
+	{--[[order=575,]] cand="🐿", comment="松鼠"},
+	{--[[order=576,]] cand="🦫", comment="海狸"},
+	{--[[order=577,]] cand="🦔", comment="刺猬"},
+	{--[[order=578,]] cand="🦇", comment="蝙蝠"},
+	{--[[order=579,]] cand="🐻", comment="熊"},
+	{--[[order=580,]] cand="🐻‍❄️", comment="北极熊"},
+	{--[[order=581,]] cand="🐨", comment="考拉"},
+	{--[[order=582,]] cand="🐼", comment="熊猫"},
+	{--[[order=583,]] cand="🦥", comment="树懒"},
+	{--[[order=584,]] cand="🦦", comment="水獭"},
+	{--[[order=585,]] cand="🦨", comment="臭鼬"},
+	{--[[order=586,]] cand="🦘", comment="袋鼠"},
+	{--[[order=587,]] cand="🦡", comment="獾"},
+	{--[[order=588,]] cand="🐾", comment="爪印"},
+	{--[[order=589,]] cand="🦃", comment="火鸡"},
+	{--[[order=590,]] cand="🐔", comment="鸡"},
+	{--[[order=591,]] cand="🐓", comment="公鸡"},
+	{--[[order=592,]] cand="🐣", comment="小鸡破壳"},
+	{--[[order=593,]] cand="🐤", comment="小鸡"},
+	{--[[order=594,]] cand="🐥", comment="正面朝向的小鸡"},
+	{--[[order=595,]] cand="🐦", comment="鸟"},
+	{--[[order=596,]] cand="🐧", comment="企鹅"},
+	{--[[order=597,]] cand="🕊", comment="鸽"},
+	{--[[order=598,]] cand="🦅", comment="鹰"},
+	{--[[order=599,]] cand="🦆", comment="鸭子"},
+	{--[[order=600,]] cand="🦢", comment="天鹅"},
+	{--[[order=601,]] cand="🦉", comment="猫头鹰"},
+	{--[[order=602,]] cand="🦤", comment="渡渡鸟"},
+	{--[[order=603,]] cand="🪶", comment="羽毛"},
+	{--[[order=604,]] cand="🦩", comment="火烈鸟"},
+	{--[[order=605,]] cand="🦚", comment="孔雀"},
+	{--[[order=606,]] cand="🦜", comment="鹦鹉"},
+	{--[[order=607,]] cand="🐸", comment="青蛙"},
+	{--[[order=608,]] cand="🐊", comment="鳄鱼"},
+	{--[[order=609,]] cand="🐢", comment="龟"},
+	{--[[order=610,]] cand="🦎", comment="蜥蜴"},
+	{--[[order=611,]] cand="🐍", comment="蛇"},
+	{--[[order=612,]] cand="🐲", comment="龙头"},
+	{--[[order=613,]] cand="🐉", comment="龙"},
+	{--[[order=614,]] cand="🦕", comment="蜥蜴类"},
+	{--[[order=615,]] cand="🦖", comment="霸王龙"},
+	{--[[order=616,]] cand="🐳", comment="喷水的鲸"},
+	{--[[order=617,]] cand="🐋", comment="鲸鱼"},
+	{--[[order=618,]] cand="🐬", comment="海豚"},
+	{--[[order=619,]] cand="🦭", comment="海豹"},
+	{--[[order=620,]] cand="🐟", comment="鱼"},
+	{--[[order=621,]] cand="🐠", comment="热带鱼"},
+	{--[[order=622,]] cand="🐡", comment="河豚"},
+	{--[[order=623,]] cand="🦈", comment="鲨鱼"},
+	{--[[order=624,]] cand="🐙", comment="章鱼"},
+	{--[[order=625,]] cand="🐚", comment="海螺"},
+	{--[[order=626,]] cand="🪸", comment="珊瑚"},
+	{--[[order=627,]] cand="🐌", comment="蜗牛"},
+	{--[[order=628,]] cand="🦋", comment="蝴蝶"},
+	{--[[order=629,]] cand="🐛", comment="毛毛虫"},
+	{--[[order=630,]] cand="🐜", comment="蚂蚁"},
+	{--[[order=631,]] cand="🐝", comment="蜜蜂"},
+	{--[[order=632,]] cand="🪲", comment="甲虫"},
+	{--[[order=633,]] cand="🐞", comment="瓢虫"},
+	{--[[order=634,]] cand="🦗", comment="蟋蟀"},
+	{--[[order=635,]] cand="🪳", comment="蟑螂"},
+	{--[[order=636,]] cand="🕷", comment="蜘蛛"},
+	{--[[order=637,]] cand="🕸", comment="蜘蛛网"},
+	{--[[order=638,]] cand="🦂", comment="蝎子"},
+	{--[[order=639,]] cand="🦟", comment="蚊子"},
+	{--[[order=640,]] cand="🪰", comment="苍蝇"},
+	{--[[order=641,]] cand="🪱", comment="蠕虫"},
+	{--[[order=642,]] cand="🦠", comment="细菌"},
+	{--[[order=643,]] cand="💐", comment="花束"},
+	{--[[order=644,]] cand="🌸", comment="樱花"},
+	{--[[order=645,]] cand="💮", comment="白花"},
+	{--[[order=646,]] cand="🪷", comment="莲花"},
+	{--[[order=647,]] cand="🏵", comment="圆形花饰"},
+	{--[[order=648,]] cand="🌹", comment="玫瑰"},
+	{--[[order=649,]] cand="🥀", comment="枯萎的花"},
+	{--[[order=650,]] cand="🌺", comment="芙蓉"},
+	{--[[order=651,]] cand="🌻", comment="向日葵"},
+	{--[[order=652,]] cand="🌼", comment="开花"},
+	{--[[order=653,]] cand="🌷", comment="郁金香"},
+	{--[[order=654,]] cand="🌱", comment="幼苗"},
+	{--[[order=655,]] cand="🪴", comment="盆栽植物"},
+	{--[[order=656,]] cand="🌲", comment="松树"},
+	{--[[order=657,]] cand="🌳", comment="落叶树"},
+	{--[[order=658,]] cand="🌴", comment="棕榈树"},
+	{--[[order=659,]] cand="🌵", comment="仙人掌"},
+	{--[[order=660,]] cand="🌾", comment="稻子"},
+	{--[[order=661,]] cand="🌿", comment="药草"},
+	{--[[order=662,]] cand="☘", comment="三叶草"},
+	{--[[order=663,]] cand="🍀", comment="四叶草"},
+	{--[[order=664,]] cand="🍁", comment="枫叶"},
+	{--[[order=665,]] cand="🍂", comment="落叶"},
+	{--[[order=666,]] cand="🍃", comment="风吹叶落"},
+	{--[[order=667,]] cand="🪹", comment="空巢"},
+	{--[[order=668,]] cand="🪺", comment="有蛋的巢"},
+	{--[[order=669,]] cand="🍇", comment="葡萄"},
+	{--[[order=670,]] cand="🍈", comment="甜瓜"},
+	{--[[order=671,]] cand="🍉", comment="西瓜"},
+	{--[[order=672,]] cand="🍊", comment="橘子"},
+	{--[[order=673,]] cand="🍋", comment="柠檬"},
+	{--[[order=674,]] cand="🍌", comment="香蕉"},
+	{--[[order=675,]] cand="🍍", comment="菠萝"},
+	{--[[order=676,]] cand="🥭", comment="芒果"},
+	{--[[order=677,]] cand="🍎", comment="红苹果"},
+	{--[[order=678,]] cand="🍏", comment="青苹果"},
+	{--[[order=679,]] cand="🍐", comment="梨"},
+	{--[[order=680,]] cand="🍑", comment="桃"},
+	{--[[order=681,]] cand="🍒", comment="樱桃"},
+	{--[[order=682,]] cand="🍓", comment="草莓"},
+	{--[[order=683,]] cand="🫐", comment="蓝莓"},
+	{--[[order=684,]] cand="🥝", comment="猕猴桃"},
+	{--[[order=685,]] cand="🍅", comment="西红柿"},
+	{--[[order=686,]] cand="🫒", comment="橄榄"},
+	{--[[order=687,]] cand="🥥", comment="椰子"},
+	{--[[order=688,]] cand="🥑", comment="鳄梨"},
+	{--[[order=689,]] cand="🍆", comment="茄子"},
+	{--[[order=690,]] cand="🥔", comment="土豆"},
+	{--[[order=691,]] cand="🥕", comment="胡萝卜"},
+	{--[[order=692,]] cand="🌽", comment="玉米"},
+	{--[[order=693,]] cand="🌶", comment="红辣椒"},
+	{--[[order=694,]] cand="🫑", comment="灯笼椒"},
+	{--[[order=695,]] cand="🥒", comment="黄瓜"},
+	{--[[order=696,]] cand="🥬", comment="绿叶蔬菜"},
+	{--[[order=697,]] cand="🥦", comment="西兰花"},
+	{--[[order=698,]] cand="🧄", comment="蒜"},
+	{--[[order=699,]] cand="🧅", comment="洋葱"},
+	{--[[order=700,]] cand="🍄", comment="蘑菇"},
+	{--[[order=701,]] cand="🥜", comment="花生"},
+	{--[[order=702,]] cand="🫘", comment="豆"},
+	{--[[order=703,]] cand="🌰", comment="栗子"},
+	{--[[order=704,]] cand="🍞", comment="面包"},
+	{--[[order=705,]] cand="🥐", comment="羊角面包"},
+	{--[[order=706,]] cand="🥖", comment="法式长棍面包"},
+	{--[[order=707,]] cand="🫓", comment="扁面包"},
+	{--[[order=708,]] cand="🥨", comment="椒盐卷饼"},
+	{--[[order=709,]] cand="🥯", comment="面包圈"},
+	{--[[order=710,]] cand="🥞", comment="烙饼"},
+	{--[[order=711,]] cand="🧇", comment="华夫饼"},
+	{--[[order=712,]] cand="🧀", comment="芝士"},
+	{--[[order=713,]] cand="🍖", comment="排骨"},
+	{--[[order=714,]] cand="🍗", comment="家禽的腿"},
+	{--[[order=715,]] cand="🥩", comment="肉块"},
+	{--[[order=716,]] cand="🥓", comment="培根"},
+	{--[[order=717,]] cand="🍔", comment="汉堡"},
+	{--[[order=718,]] cand="🍟", comment="薯条"},
+	{--[[order=719,]] cand="🍕", comment="披萨"},
+	{--[[order=720,]] cand="🌭", comment="热狗"},
+	{--[[order=721,]] cand="🥪", comment="三明治"},
+	{--[[order=722,]] cand="🌮", comment="墨西哥卷饼"},
+	{--[[order=723,]] cand="🌯", comment="墨西哥玉米煎饼"},
+	{--[[order=724,]] cand="🫔", comment="墨西哥粽子"},
+	{--[[order=725,]] cand="🥙", comment="夹心饼"},
+	{--[[order=726,]] cand="🧆", comment="炸豆丸子"},
+	{--[[order=727,]] cand="🥚", comment="蛋"},
+	{--[[order=728,]] cand="🍳", comment="煎蛋"},
+	{--[[order=729,]] cand="🥘", comment="装有食物的浅底锅"},
+	{--[[order=730,]] cand="🍲", comment="一锅食物"},
+	{--[[order=731,]] cand="🫕", comment="奶酪火锅"},
+	{--[[order=732,]] cand="🥣", comment="碗勺"},
+	{--[[order=733,]] cand="🥗", comment="绿色沙拉"},
+	{--[[order=734,]] cand="🍿", comment="爆米花"},
+	{--[[order=735,]] cand="🧈", comment="黄油"},
+	{--[[order=736,]] cand="🧂", comment="盐"},
+	{--[[order=737,]] cand="🥫", comment="罐头食品"},
+	{--[[order=738,]] cand="🍱", comment="盒饭"},
+	{--[[order=739,]] cand="🍘", comment="米饼"},
+	{--[[order=740,]] cand="🍙", comment="饭团"},
+	{--[[order=741,]] cand="🍚", comment="米饭"},
+	{--[[order=742,]] cand="🍛", comment="咖喱饭"},
+	{--[[order=743,]] cand="🍜", comment="面条"},
+	{--[[order=744,]] cand="🍝", comment="意粉"},
+	{--[[order=745,]] cand="🍠", comment="烤红薯"},
+	{--[[order=746,]] cand="🍢", comment="关东煮"},
+	{--[[order=747,]] cand="🍣", comment="寿司"},
+	{--[[order=748,]] cand="🍤", comment="天妇罗"},
+	{--[[order=749,]] cand="🍥", comment="鱼板"},
+	{--[[order=750,]] cand="🥮", comment="月饼"},
+	{--[[order=751,]] cand="🍡", comment="团子"},
+	{--[[order=752,]] cand="🥟", comment="饺子"},
+	{--[[order=753,]] cand="🥠", comment="幸运饼干"},
+	{--[[order=754,]] cand="🥡", comment="外卖盒"},
+	{--[[order=755,]] cand="🦀", comment="蟹"},
+	{--[[order=756,]] cand="🦞", comment="龙虾"},
+	{--[[order=757,]] cand="🦐", comment="虾"},
+	{--[[order=758,]] cand="🦑", comment="乌贼"},
+	{--[[order=759,]] cand="🦪", comment="牡蛎"},
+	{--[[order=760,]] cand="🍦", comment="圆筒冰激凌"},
+	{--[[order=761,]] cand="🍧", comment="刨冰"},
+	{--[[order=762,]] cand="🍨", comment="冰淇淋"},
+	{--[[order=763,]] cand="🍩", comment="甜甜圈"},
+	{--[[order=764,]] cand="🍪", comment="饼干"},
+	{--[[order=765,]] cand="🎂", comment="生日蛋糕"},
+	{--[[order=766,]] cand="🍰", comment="水果蛋糕"},
+	{--[[order=767,]] cand="🧁", comment="纸杯蛋糕"},
+	{--[[order=768,]] cand="🥧", comment="派"},
+	{--[[order=769,]] cand="🍫", comment="巧克力"},
+	{--[[order=770,]] cand="🍬", comment="糖"},
+	{--[[order=771,]] cand="🍭", comment="棒棒糖"},
+	{--[[order=772,]] cand="🍮", comment="奶黄"},
+	{--[[order=773,]] cand="🍯", comment="蜂蜜"},
+	{--[[order=774,]] cand="🍼", comment="奶瓶"},
+	{--[[order=775,]] cand="🥛", comment="一杯奶"},
+	{--[[order=776,]] cand="☕", comment="热饮"},
+	{--[[order=777,]] cand="🫖", comment="茶壶"},
+	{--[[order=778,]] cand="🍵", comment="热茶"},
+	{--[[order=779,]] cand="🍶", comment="清酒"},
+	{--[[order=780,]] cand="🍾", comment="开香槟"},
+	{--[[order=781,]] cand="🍷", comment="葡萄酒"},
+	{--[[order=782,]] cand="🍸", comment="鸡尾酒"},
+	{--[[order=783,]] cand="🍹", comment="热带水果饮料"},
+	{--[[order=784,]] cand="🍺", comment="啤酒"},
+	{--[[order=785,]] cand="🍻", comment="干杯"},
+	{--[[order=786,]] cand="🥂", comment="碰杯"},
+	{--[[order=787,]] cand="🥃", comment="平底杯"},
+	{--[[order=788,]] cand="🫗", comment="倾倒液体"},
+	{--[[order=789,]] cand="🥤", comment="带吸管杯"},
+	{--[[order=790,]] cand="🧋", comment="珍珠奶茶"},
+	{--[[order=791,]] cand="🧃", comment="饮料盒"},
+	{--[[order=792,]] cand="🧉", comment="马黛茶"},
+	{--[[order=793,]] cand="🧊", comment="冰块"},
+	{--[[order=794,]] cand="🥢", comment="筷子"},
+	{--[[order=795,]] cand="🍽", comment="餐具"},
+	{--[[order=796,]] cand="🍴", comment="刀叉"},
+	{--[[order=797,]] cand="🥄", comment="匙"},
+	{--[[order=798,]] cand="🔪", comment="菜刀"},
+	{--[[order=799,]] cand="🫙", comment="罐"},
+	{--[[order=800,]] cand="🏺", comment="双耳瓶"},
+	{--[[order=801,]] cand="🌍", comment="地球上的欧洲非洲"},
+	{--[[order=802,]] cand="🌎", comment="地球上的美洲"},
+	{--[[order=803,]] cand="🌏", comment="地球上的亚洲澳洲"},
+	{--[[order=804,]] cand="🌐", comment="带经纬线的地球"},
+	{--[[order=805,]] cand="🗺", comment="世界地图"},
+	{--[[order=806,]] cand="🗾", comment="日本地图"},
+	{--[[order=807,]] cand="🧭", comment="指南针"},
+	{--[[order=808,]] cand="🏔", comment="雪山"},
+	{--[[order=809,]] cand="⛰", comment="山"},
+	{--[[order=810,]] cand="🌋", comment="火山"},
+	{--[[order=811,]] cand="🗻", comment="富士山"},
+	{--[[order=812,]] cand="🏕", comment="露营"},
+	{--[[order=813,]] cand="🏖", comment="沙滩伞"},
+	{--[[order=814,]] cand="🏜", comment="沙漠"},
+	{--[[order=815,]] cand="🏝", comment="无人荒岛"},
+	{--[[order=816,]] cand="🏞", comment="国家公园"},
+	{--[[order=817,]] cand="🏟", comment="体育馆"},
+	{--[[order=818,]] cand="🏛", comment="古典建筑"},
+	{--[[order=819,]] cand="🏗", comment="施工"},
+	{--[[order=820,]] cand="🧱", comment="砖"},
+	{--[[order=821,]] cand="🪨", comment="岩石"},
+	{--[[order=822,]] cand="🪵", comment="木头"},
+	{--[[order=823,]] cand="🛖", comment="小屋"},
+	{--[[order=824,]] cand="🏘", comment="房屋建筑"},
+	{--[[order=825,]] cand="🏚", comment="废墟"},
+	{--[[order=826,]] cand="🏠", comment="房子"},
+	{--[[order=827,]] cand="🏡", comment="别墅"},
+	{--[[order=828,]] cand="🏢", comment="办公楼"},
+	{--[[order=829,]] cand="🏣", comment="日本邮局"},
+	{--[[order=830,]] cand="🏤", comment="邮局"},
+	{--[[order=831,]] cand="🏥", comment="医院"},
+	{--[[order=832,]] cand="🏦", comment="银行"},
+	{--[[order=833,]] cand="🏨", comment="酒店"},
+	{--[[order=834,]] cand="🏩", comment="情人酒店"},
+	{--[[order=835,]] cand="🏪", comment="便利店"},
+	{--[[order=836,]] cand="🏫", comment="学校"},
+	{--[[order=837,]] cand="🏬", comment="商场"},
+	{--[[order=838,]] cand="🏭", comment="工厂"},
+	{--[[order=839,]] cand="🏯", comment="日本城堡"},
+	{--[[order=840,]] cand="🏰", comment="欧洲城堡"},
+	{--[[order=841,]] cand="💒", comment="婚礼"},
+	{--[[order=842,]] cand="🗼", comment="东京塔"},
+	{--[[order=843,]] cand="🗽", comment="自由女神像"},
+	{--[[order=844,]] cand="⛪", comment="教堂"},
+	{--[[order=845,]] cand="🕌", comment="清真寺"},
+	{--[[order=846,]] cand="🛕", comment="印度寺庙"},
+	{--[[order=847,]] cand="🕍", comment="犹太教堂"},
+	{--[[order=848,]] cand="⛩", comment="神社"},
+	{--[[order=849,]] cand="🕋", comment="克尔白"},
+	{--[[order=850,]] cand="⛲", comment="喷泉"},
+	{--[[order=851,]] cand="⛺", comment="帐篷"},
+	{--[[order=852,]] cand="🌁", comment="有雾"},
+	{--[[order=853,]] cand="🌃", comment="夜晚"},
+	{--[[order=854,]] cand="🏙", comment="城市风光"},
+	{--[[order=855,]] cand="🌄", comment="山顶日出"},
+	{--[[order=856,]] cand="🌅", comment="日出"},
+	{--[[order=857,]] cand="🌆", comment="城市黄昏"},
+	{--[[order=858,]] cand="🌇", comment="日落"},
+	{--[[order=859,]] cand="🌉", comment="夜幕下的桥"},
+	{--[[order=860,]] cand="♨", comment="温泉"},
+	{--[[order=861,]] cand="🎠", comment="旋转木马"},
+	{--[[order=862,]] cand="🛝", comment="游乐场滑梯"},
+	{--[[order=863,]] cand="🎡", comment="摩天轮"},
+	{--[[order=864,]] cand="🎢", comment="过山车"},
+	{--[[order=865,]] cand="💈", comment="理发店"},
+	{--[[order=866,]] cand="🎪", comment="马戏团帐篷"},
+	{--[[order=867,]] cand="🚂", comment="蒸汽火车"},
+	{--[[order=868,]] cand="🚃", comment="轨道车"},
+	{--[[order=869,]] cand="🚄", comment="高速列车"},
+	{--[[order=870,]] cand="🚅", comment="子弹头高速列车"},
+	{--[[order=871,]] cand="🚆", comment="火车"},
+	{--[[order=872,]] cand="🚇", comment="地铁"},
+	{--[[order=873,]] cand="🚈", comment="轻轨"},
+	{--[[order=874,]] cand="🚉", comment="车站"},
+	{--[[order=875,]] cand="🚊", comment="路面电车"},
+	{--[[order=876,]] cand="🚝", comment="单轨"},
+	{--[[order=877,]] cand="🚞", comment="山区铁路"},
+	{--[[order=878,]] cand="🚋", comment="有轨电车"},
+	{--[[order=879,]] cand="🚌", comment="公交车"},
+	{--[[order=880,]] cand="🚍", comment="迎面驶来的公交车"},
+	{--[[order=881,]] cand="🚎", comment="无轨电车"},
+	{--[[order=882,]] cand="🚐", comment="小巴"},
+	{--[[order=883,]] cand="🚑", comment="救护车"},
+	{--[[order=884,]] cand="🚒", comment="消防车"},
+	{--[[order=885,]] cand="🚓", comment="警车"},
+	{--[[order=886,]] cand="🚔", comment="迎面驶来的警车"},
+	{--[[order=887,]] cand="🚕", comment="出租车"},
+	{--[[order=888,]] cand="🚖", comment="迎面驶来的出租车"},
+	{--[[order=889,]] cand="🚗", comment="汽车"},
+	{--[[order=890,]] cand="🚘", comment="迎面驶来的汽车"},
+	{--[[order=891,]] cand="🚙", comment="运动型多用途车"},
+	{--[[order=892,]] cand="🛻", comment="敞蓬小型载货卡车"},
+	{--[[order=893,]] cand="🚚", comment="货车"},
+	{--[[order=894,]] cand="🚛", comment="铰接式货车"},
+	{--[[order=895,]] cand="🚜", comment="拖拉机"},
+	{--[[order=896,]] cand="🏎", comment="赛车"},
+	{--[[order=897,]] cand="🏍", comment="摩托车"},
+	{--[[order=898,]] cand="🛵", comment="小型摩托车"},
+	{--[[order=899,]] cand="🦽", comment="手动轮椅"},
+	{--[[order=900,]] cand="🦼", comment="电动轮椅"},
+	{--[[order=901,]] cand="🛺", comment="三轮摩托车"},
+	{--[[order=902,]] cand="🚲", comment="自行车"},
+	{--[[order=903,]] cand="🛴", comment="滑板车"},
+	{--[[order=904,]] cand="🛹", comment="滑板"},
+	{--[[order=905,]] cand="🛼", comment="四轮滑冰鞋"},
+	{--[[order=906,]] cand="🚏", comment="公交车站"},
+	{--[[order=907,]] cand="🛣", comment="高速公路"},
+	{--[[order=908,]] cand="🛤", comment="铁轨"},
+	{--[[order=909,]] cand="🛢", comment="石油桶"},
+	{--[[order=910,]] cand="⛽", comment="油泵"},
+	{--[[order=911,]] cand="🛞", comment="车轮"},
+	{--[[order=912,]] cand="🚨", comment="警车灯"},
+	{--[[order=913,]] cand="🚥", comment="横向的红绿灯"},
+	{--[[order=914,]] cand="🚦", comment="纵向的红绿灯"},
+	{--[[order=915,]] cand="🛑", comment="停止标志"},
+	{--[[order=916,]] cand="🚧", comment="路障"},
+	{--[[order=917,]] cand="⚓", comment="锚"},
+	{--[[order=918,]] cand="🛟", comment="救生圈"},
+	{--[[order=919,]] cand="⛵", comment="帆船"},
+	{--[[order=920,]] cand="🛶", comment="独木舟"},
+	{--[[order=921,]] cand="🚤", comment="快艇"},
+	{--[[order=922,]] cand="🛳", comment="客轮"},
+	{--[[order=923,]] cand="⛴", comment="渡轮"},
+	{--[[order=924,]] cand="🛥", comment="摩托艇"},
+	{--[[order=925,]] cand="🚢", comment="船"},
+	{--[[order=926,]] cand="✈", comment="飞机"},
+	{--[[order=927,]] cand="🛩", comment="小型飞机"},
+	{--[[order=928,]] cand="🛫", comment="航班起飞"},
+	{--[[order=929,]] cand="🛬", comment="航班降落"},
+	{--[[order=930,]] cand="🪂", comment="降落伞"},
+	{--[[order=931,]] cand="💺", comment="座位"},
+	{--[[order=932,]] cand="🚁", comment="直升机"},
+	{--[[order=933,]] cand="🚟", comment="空轨"},
+	{--[[order=934,]] cand="🚠", comment="缆车"},
+	{--[[order=935,]] cand="🚡", comment="索道"},
+	{--[[order=936,]] cand="🛰", comment="卫星"},
+	{--[[order=937,]] cand="🚀", comment="火箭"},
+	{--[[order=938,]] cand="🛸", comment="飞碟"},
+	{--[[order=939,]] cand="🛎", comment="服务铃"},
+	{--[[order=940,]] cand="🧳", comment="行李箱"},
+	{--[[order=941,]] cand="⌛", comment="沙漏"},
+	{--[[order=942,]] cand="⏳", comment="沙正往下流的沙漏"},
+	{--[[order=943,]] cand="⌚", comment="手表"},
+	{--[[order=944,]] cand="⏰", comment="闹钟"},
+	{--[[order=945,]] cand="⏱", comment="秒表"},
+	{--[[order=946,]] cand="⏲", comment="定时器"},
+	{--[[order=947,]] cand="🕰", comment="座钟"},
+	{--[[order=948,]] cand="🕛", comment="十二点"},
+	{--[[order=949,]] cand="🕧", comment="十二点半"},
+	{--[[order=950,]] cand="🕐", comment="一点"},
+	{--[[order=951,]] cand="🕜", comment="一点半"},
+	{--[[order=952,]] cand="🕑", comment="两点"},
+	{--[[order=953,]] cand="🕝", comment="两点半"},
+	{--[[order=954,]] cand="🕒", comment="三点"},
+	{--[[order=955,]] cand="🕞", comment="三点半"},
+	{--[[order=956,]] cand="🕓", comment="四点"},
+	{--[[order=957,]] cand="🕟", comment="四点半"},
+	{--[[order=958,]] cand="🕔", comment="五点"},
+	{--[[order=959,]] cand="🕠", comment="五点半"},
+	{--[[order=960,]] cand="🕕", comment="六点"},
+	{--[[order=961,]] cand="🕡", comment="六点半"},
+	{--[[order=962,]] cand="🕖", comment="七点"},
+	{--[[order=963,]] cand="🕢", comment="七点半"},
+	{--[[order=964,]] cand="🕗", comment="八点"},
+	{--[[order=965,]] cand="🕣", comment="八点半"},
+	{--[[order=966,]] cand="🕘", comment="九点"},
+	{--[[order=967,]] cand="🕤", comment="九点半"},
+	{--[[order=968,]] cand="🕙", comment="十点"},
+	{--[[order=969,]] cand="🕥", comment="十点半"},
+	{--[[order=970,]] cand="🕚", comment="十一点"},
+	{--[[order=971,]] cand="🕦", comment="十一点半"},
+	{--[[order=972,]] cand="🌑", comment="朔月"},
+	{--[[order=973,]] cand="🌒", comment="娥眉月"},
+	{--[[order=974,]] cand="🌓", comment="上弦月"},
+	{--[[order=975,]] cand="🌔", comment="盈凸月"},
+	{--[[order=976,]] cand="🌕", comment="满月"},
+	{--[[order=977,]] cand="🌖", comment="亏凸月"},
+	{--[[order=978,]] cand="🌗", comment="下弦月"},
+	{--[[order=979,]] cand="🌘", comment="残月"},
+	{--[[order=980,]] cand="🌙", comment="弯月"},
+	{--[[order=981,]] cand="🌚", comment="微笑的朔月"},
+	{--[[order=982,]] cand="🌛", comment="微笑的上弦月"},
+	{--[[order=983,]] cand="🌜", comment="微笑的下弦月"},
+	{--[[order=984,]] cand="🌡", comment="温度计"},
+	{--[[order=985,]] cand="☀", comment="太阳"},
+	{--[[order=986,]] cand="🌝", comment="微笑的月亮"},
+	{--[[order=987,]] cand="🌞", comment="微笑的太阳"},
+	{--[[order=988,]] cand="🪐", comment="有环行星"},
+	{--[[order=989,]] cand="⭐", comment="星星"},
+	{--[[order=990,]] cand="🌟", comment="闪亮的星星"},
+	{--[[order=991,]] cand="🌠", comment="流星"},
+	{--[[order=992,]] cand="🌌", comment="银河"},
+	{--[[order=993,]] cand="☁", comment="云"},
+	{--[[order=994,]] cand="⛅", comment="阴"},
+	{--[[order=995,]] cand="⛈", comment="雷阵雨"},
+	{--[[order=996,]] cand="🌤", comment="晴偶有云"},
+	{--[[order=997,]] cand="🌥", comment="多云"},
+	{--[[order=998,]] cand="🌦", comment="晴转雨"},
+	{--[[order=999,]] cand="🌧", comment="下雨"},
+	{--[[order=1000,]] cand="🌨", comment="下雪"},
+	{--[[order=1001,]] cand="🌩", comment="打雷"},
+	{--[[order=1002,]] cand="🌪", comment="龙卷风"},
+	{--[[order=1003,]] cand="🌫", comment="雾"},
+	{--[[order=1004,]] cand="🌬", comment="大风"},
+	{--[[order=1005,]] cand="🌀", comment="台风"},
+	{--[[order=1006,]] cand="🌈", comment="彩虹"},
+	{--[[order=1007,]] cand="🌂", comment="收起的伞"},
+	{--[[order=1008,]] cand="☂", comment="伞"},
+	{--[[order=1009,]] cand="☔", comment="雨伞"},
+	{--[[order=1010,]] cand="⛱", comment="阳伞"},
+	{--[[order=1011,]] cand="⚡", comment="高压"},
+	{--[[order=1012,]] cand="❄", comment="雪花"},
+	{--[[order=1013,]] cand="☃", comment="雪与雪人"},
+	{--[[order=1014,]] cand="⛄", comment="雪人"},
+	{--[[order=1015,]] cand="☄", comment="彗星"},
+	{--[[order=1016,]] cand="🔥", comment="火焰"},
+	{--[[order=1017,]] cand="💧", comment="水滴"},
+	{--[[order=1018,]] cand="🌊", comment="浪花"},
+	{--[[order=1019,]] cand="🎃", comment="南瓜灯"},
+	{--[[order=1020,]] cand="🎄", comment="圣诞树"},
+	{--[[order=1021,]] cand="🎆", comment="焰火"},
+	{--[[order=1022,]] cand="🎇", comment="烟花"},
+	{--[[order=1023,]] cand="🧨", comment="爆竹"},
+	{--[[order=1024,]] cand="✨", comment="闪亮"},
+	{--[[order=1025,]] cand="🎈", comment="气球"},
+	{--[[order=1026,]] cand="🎉", comment="拉炮彩带"},
+	{--[[order=1027,]] cand="🎊", comment="五彩纸屑球"},
+	{--[[order=1028,]] cand="🎋", comment="七夕树"},
+	{--[[order=1029,]] cand="🎍", comment="门松"},
+	{--[[order=1030,]] cand="🎎", comment="日本人形"},
+	{--[[order=1031,]] cand="🎏", comment="鲤鱼旗"},
+	{--[[order=1032,]] cand="🎐", comment="风铃"},
+	{--[[order=1033,]] cand="🎑", comment="赏月"},
+	{--[[order=1034,]] cand="🧧", comment="红包"},
+	{--[[order=1035,]] cand="🎀", comment="蝴蝶结"},
+	{--[[order=1036,]] cand="🎁", comment="礼物"},
+	{--[[order=1037,]] cand="🎗", comment="提示丝带"},
+	{--[[order=1038,]] cand="🎟", comment="入场券"},
+	{--[[order=1039,]] cand="🎫", comment="票"},
+	{--[[order=1040,]] cand="🎖", comment="军功章"},
+	{--[[order=1041,]] cand="🏆", comment="奖杯"},
+	{--[[order=1042,]] cand="🏅", comment="奖牌"},
+	{--[[order=1043,]] cand="🥇", comment="金牌"},
+	{--[[order=1044,]] cand="🥈", comment="银牌"},
+	{--[[order=1045,]] cand="🥉", comment="铜牌"},
+	{--[[order=1046,]] cand="⚽", comment="足球"},
+	{--[[order=1047,]] cand="⚾", comment="棒球"},
+	{--[[order=1048,]] cand="🥎", comment="垒球"},
+	{--[[order=1049,]] cand="🏀", comment="篮球"},
+	{--[[order=1050,]] cand="🏐", comment="排球"},
+	{--[[order=1051,]] cand="🏈", comment="美式橄榄球"},
+	{--[[order=1052,]] cand="🏉", comment="英式橄榄球"},
+	{--[[order=1053,]] cand="🎾", comment="网球"},
+	{--[[order=1054,]] cand="🥏", comment="飞盘"},
+	{--[[order=1055,]] cand="🎳", comment="保龄球"},
+	{--[[order=1056,]] cand="🏏", comment="板球"},
+	{--[[order=1057,]] cand="🏑", comment="曲棍球"},
+	{--[[order=1058,]] cand="🏒", comment="冰球"},
+	{--[[order=1059,]] cand="🥍", comment="袋棍球"},
+	{--[[order=1060,]] cand="🏓", comment="乒乓球"},
+	{--[[order=1061,]] cand="🏸", comment="羽毛球"},
+	{--[[order=1062,]] cand="🥊", comment="拳击手套"},
+	{--[[order=1063,]] cand="🥋", comment="练武服"},
+	{--[[order=1064,]] cand="🥅", comment="球门"},
+	{--[[order=1065,]] cand="⛳", comment="高尔夫球洞"},
+	{--[[order=1066,]] cand="⛸", comment="滑冰"},
+	{--[[order=1067,]] cand="🎣", comment="钓鱼竿"},
+	{--[[order=1068,]] cand="🤿", comment="潜水面罩"},
+	{--[[order=1069,]] cand="🎽", comment="运动背心"},
+	{--[[order=1070,]] cand="🎿", comment="滑雪"},
+	{--[[order=1071,]] cand="🛷", comment="雪橇"},
+	{--[[order=1072,]] cand="🥌", comment="冰壶"},
+	{--[[order=1073,]] cand="🎯", comment="正中靶心的飞镖"},
+	{--[[order=1074,]] cand="🪀", comment="悠悠球"},
+	{--[[order=1075,]] cand="🪁", comment="风筝"},
+	{--[[order=1076,]] cand="🎱", comment="台球"},
+	{--[[order=1077,]] cand="🔮", comment="水晶球"},
+	{--[[order=1078,]] cand="🪄", comment="魔棒"},
+	{--[[order=1079,]] cand="🧿", comment="纳扎尔护身符"},
+	{--[[order=1080,]] cand="🪬", comment="法蒂玛之手"},
+	{--[[order=1081,]] cand="🎮", comment="游戏手柄"},
+	{--[[order=1082,]] cand="🕹", comment="游戏操控杆"},
+	{--[[order=1083,]] cand="🎰", comment="老虎机"},
+	{--[[order=1084,]] cand="🎲", comment="骰子"},
+	{--[[order=1085,]] cand="🧩", comment="拼图"},
+	{--[[order=1086,]] cand="🧸", comment="泰迪熊"},
+	{--[[order=1087,]] cand="🪅", comment="彩罐"},
+	{--[[order=1088,]] cand="🪩", comment="镜球"},
+	{--[[order=1089,]] cand="🪆", comment="套娃"},
+	{--[[order=1090,]] cand="♠", comment="黑桃"},
+	{--[[order=1091,]] cand="♥", comment="红桃"},
+	{--[[order=1092,]] cand="♦", comment="方片"},
+	{--[[order=1093,]] cand="♣", comment="梅花"},
+	{--[[order=1094,]] cand="♟", comment="兵"},
+	{--[[order=1095,]] cand="🃏", comment="大小王"},
+	{--[[order=1096,]] cand="🀄", comment="红中"},
+	{--[[order=1097,]] cand="🎴", comment="花札"},
+	{--[[order=1098,]] cand="🎭", comment="表演艺术"},
+	{--[[order=1099,]] cand="🖼", comment="带框的画"},
+	{--[[order=1100,]] cand="🎨", comment="调色盘"},
+	{--[[order=1101,]] cand="🧵", comment="线"},
+	{--[[order=1102,]] cand="🪡", comment="缝合针"},
+	{--[[order=1103,]] cand="🧶", comment="毛线"},
+	{--[[order=1104,]] cand="🪢", comment="结"},
+	{--[[order=1105,]] cand="👓", comment="眼镜"},
+	{--[[order=1106,]] cand="🕶", comment="墨镜"},
+	{--[[order=1107,]] cand="🥽", comment="护目镜"},
+	{--[[order=1108,]] cand="🥼", comment="白大褂"},
+	{--[[order=1109,]] cand="🦺", comment="救生衣"},
+	{--[[order=1110,]] cand="👔", comment="领带"},
+	{--[[order=1111,]] cand="👕", comment="T恤"},
+	{--[[order=1112,]] cand="👖", comment="牛仔裤"},
+	{--[[order=1113,]] cand="🧣", comment="围巾"},
+	{--[[order=1114,]] cand="🧤", comment="手套"},
+	{--[[order=1115,]] cand="🧥", comment="外套"},
+	{--[[order=1116,]] cand="🧦", comment="袜子"},
+	{--[[order=1117,]] cand="👗", comment="连衣裙"},
+	{--[[order=1118,]] cand="👘", comment="和服"},
+	{--[[order=1119,]] cand="🥻", comment="纱丽"},
+	{--[[order=1120,]] cand="🩱", comment="连体泳衣"},
+	{--[[order=1121,]] cand="🩲", comment="三角裤"},
+	{--[[order=1122,]] cand="🩳", comment="短裤"},
+	{--[[order=1123,]] cand="👙", comment="比基尼"},
+	{--[[order=1124,]] cand="👚", comment="女装"},
+	{--[[order=1125,]] cand="👛", comment="钱包"},
+	{--[[order=1126,]] cand="👜", comment="手提包"},
+	{--[[order=1127,]] cand="👝", comment="手袋"},
+	{--[[order=1128,]] cand="🛍", comment="购物袋"},
+	{--[[order=1129,]] cand="🎒", comment="书包"},
+	{--[[order=1130,]] cand="🩴", comment="夹趾凉鞋"},
+	{--[[order=1131,]] cand="👞", comment="男鞋"},
+	{--[[order=1132,]] cand="👟", comment="跑鞋"},
+	{--[[order=1133,]] cand="🥾", comment="登山鞋"},
+	{--[[order=1134,]] cand="🥿", comment="平底鞋"},
+	{--[[order=1135,]] cand="👠", comment="高跟鞋"},
+	{--[[order=1136,]] cand="👡", comment="女式凉鞋"},
+	{--[[order=1137,]] cand="🩰", comment="芭蕾舞鞋"},
+	{--[[order=1138,]] cand="👢", comment="女靴"},
+	{--[[order=1139,]] cand="👑", comment="皇冠"},
+	{--[[order=1140,]] cand="👒", comment="女帽"},
+	{--[[order=1141,]] cand="🎩", comment="礼帽"},
+	{--[[order=1142,]] cand="🎓", comment="毕业帽"},
+	{--[[order=1143,]] cand="🧢", comment="鸭舌帽"},
+	{--[[order=1144,]] cand="🪖", comment="军用头盔"},
+	{--[[order=1145,]] cand="⛑", comment="白十字头盔"},
+	{--[[order=1146,]] cand="📿", comment="念珠"},
+	{--[[order=1147,]] cand="💄", comment="唇膏"},
+	{--[[order=1148,]] cand="💍", comment="戒指"},
+	{--[[order=1149,]] cand="💎", comment="宝石"},
+	{--[[order=1150,]] cand="🔇", comment="已静音的扬声器"},
+	{--[[order=1151,]] cand="🔈", comment="低音量的扬声器"},
+	{--[[order=1152,]] cand="🔉", comment="中等音量的扬声器"},
+	{--[[order=1153,]] cand="🔊", comment="高音量的扬声器"},
+	{--[[order=1154,]] cand="📢", comment="喇叭"},
+	{--[[order=1155,]] cand="📣", comment="扩音器"},
+	{--[[order=1156,]] cand="📯", comment="邮号"},
+	{--[[order=1157,]] cand="🔔", comment="铃铛"},
+	{--[[order=1158,]] cand="🔕", comment="禁止响铃"},
+	{--[[order=1159,]] cand="🎼", comment="乐谱"},
+	{--[[order=1160,]] cand="🎵", comment="音符"},
+	{--[[order=1161,]] cand="🎶", comment="多个音符"},
+	{--[[order=1162,]] cand="🎙", comment="录音室麦克风"},
+	{--[[order=1163,]] cand="🎚", comment="电平滑块"},
+	{--[[order=1164,]] cand="🎛", comment="控制旋钮"},
+	{--[[order=1165,]] cand="🎤", comment="麦克风"},
+	{--[[order=1166,]] cand="🎧", comment="耳机"},
+	{--[[order=1167,]] cand="📻", comment="收音机"},
+	{--[[order=1168,]] cand="🎷", comment="萨克斯管"},
+	{--[[order=1169,]] cand="🪗", comment="手风琴"},
+	{--[[order=1170,]] cand="🎸", comment="吉他"},
+	{--[[order=1171,]] cand="🎹", comment="音乐键盘"},
+	{--[[order=1172,]] cand="🎺", comment="小号"},
+	{--[[order=1173,]] cand="🎻", comment="小提琴"},
+	{--[[order=1174,]] cand="🪕", comment="班卓琴"},
+	{--[[order=1175,]] cand="🥁", comment="鼓"},
+	{--[[order=1176,]] cand="🪘", comment="长鼓"},
+	{--[[order=1177,]] cand="📱", comment="手机"},
+	{--[[order=1178,]] cand="📲", comment="带有箭头的手机"},
+	{--[[order=1179,]] cand="☎", comment="电话"},
+	{--[[order=1180,]] cand="📞", comment="电话听筒"},
+	{--[[order=1181,]] cand="📟", comment="寻呼机"},
+	{--[[order=1182,]] cand="📠", comment="传真机"},
+	{--[[order=1183,]] cand="🔋", comment="电池"},
+	{--[[order=1184,]] cand="🪫", comment="电池电量不足"},
+	{--[[order=1185,]] cand="🔌", comment="电源插头"},
+	{--[[order=1186,]] cand="💻", comment="笔记本电脑"},
+	{--[[order=1187,]] cand="🖥", comment="台式电脑"},
+	{--[[order=1188,]] cand="🖨", comment="打印机"},
+	{--[[order=1189,]] cand="⌨", comment="键盘"},
+	{--[[order=1190,]] cand="🖱", comment="电脑鼠标"},
+	{--[[order=1191,]] cand="🖲", comment="轨迹球"},
+	{--[[order=1192,]] cand="💽", comment="电脑光盘"},
+	{--[[order=1193,]] cand="💾", comment="软盘"},
+	{--[[order=1194,]] cand="💿", comment="光盘"},
+	{--[[order=1195,]] cand="📀", comment="DVD"},
+	{--[[order=1196,]] cand="🧮", comment="算盘"},
+	{--[[order=1197,]] cand="🎥", comment="电影摄影机"},
+	{--[[order=1198,]] cand="🎞", comment="影片帧"},
+	{--[[order=1199,]] cand="📽", comment="电影放映机"},
+	{--[[order=1200,]] cand="🎬", comment="场记板"},
+	{--[[order=1201,]] cand="📺", comment="电视机"},
+	{--[[order=1202,]] cand="📷", comment="相机"},
+	{--[[order=1203,]] cand="📸", comment="开闪光灯的相机"},
+	{--[[order=1204,]] cand="📹", comment="摄像机"},
+	{--[[order=1205,]] cand="📼", comment="录像带"},
+	{--[[order=1206,]] cand="🔍", comment="左斜的放大镜"},
+	{--[[order=1207,]] cand="🔎", comment="右斜的放大镜"},
+	{--[[order=1208,]] cand="🕯", comment="蜡烛"},
+	{--[[order=1209,]] cand="💡", comment="灯泡"},
+	{--[[order=1210,]] cand="🔦", comment="手电筒"},
+	{--[[order=1211,]] cand="🏮", comment="红灯笼"},
+	{--[[order=1212,]] cand="🪔", comment="印度油灯"},
+	{--[[order=1213,]] cand="📔", comment="精装笔记本"},
+	{--[[order=1214,]] cand="📕", comment="合上的书本"},
+	{--[[order=1215,]] cand="📖", comment="打开的书本"},
+	{--[[order=1216,]] cand="📗", comment="绿色书本"},
+	{--[[order=1217,]] cand="📘", comment="蓝色书本"},
+	{--[[order=1218,]] cand="📙", comment="橙色书本"},
+	{--[[order=1219,]] cand="📚", comment="书"},
+	{--[[order=1220,]] cand="📓", comment="笔记本"},
+	{--[[order=1221,]] cand="📒", comment="账本"},
+	{--[[order=1222,]] cand="📃", comment="带卷边的页面"},
+	{--[[order=1223,]] cand="📜", comment="卷轴"},
+	{--[[order=1224,]] cand="📄", comment="文件"},
+	{--[[order=1225,]] cand="📰", comment="报纸"},
+	{--[[order=1226,]] cand="🗞", comment="报纸卷"},
+	{--[[order=1227,]] cand="📑", comment="标签页"},
+	{--[[order=1228,]] cand="🔖", comment="书签"},
+	{--[[order=1229,]] cand="🏷", comment="标签"},
+	{--[[order=1230,]] cand="💰", comment="钱袋"},
+	{--[[order=1231,]] cand="🪙", comment="硬币"},
+	{--[[order=1232,]] cand="💴", comment="日元"},
+	{--[[order=1233,]] cand="💵", comment="美元"},
+	{--[[order=1234,]] cand="💶", comment="欧元"},
+	{--[[order=1235,]] cand="💷", comment="英镑"},
+	{--[[order=1236,]] cand="💸", comment="长翅膀的钱"},
+	{--[[order=1237,]] cand="💳", comment="信用卡"},
+	{--[[order=1238,]] cand="🧾", comment="收据"},
+	{--[[order=1239,]] cand="💹", comment="趋势向上且带有日元符号的图表"},
+	{--[[order=1240,]] cand="✉", comment="信封"},
+	{--[[order=1241,]] cand="📧", comment="电子邮件"},
+	{--[[order=1242,]] cand="📨", comment="来信"},
+	{--[[order=1243,]] cand="📩", comment="收邮件"},
+	{--[[order=1244,]] cand="📤", comment="发件箱"},
+	{--[[order=1245,]] cand="📥", comment="收件箱"},
+	{--[[order=1246,]] cand="📦", comment="包裹"},
+	{--[[order=1247,]] cand="📫", comment="有待收信件"},
+	{--[[order=1248,]] cand="📪", comment="无待收信件"},
+	{--[[order=1249,]] cand="📬", comment="有新信件"},
+	{--[[order=1250,]] cand="📭", comment="无新信件"},
+	{--[[order=1251,]] cand="📮", comment="邮筒"},
+	{--[[order=1252,]] cand="🗳", comment="投票箱"},
+	{--[[order=1253,]] cand="✏", comment="铅笔"},
+	{--[[order=1254,]] cand="✒", comment="钢笔尖"},
+	{--[[order=1255,]] cand="🖋", comment="钢笔"},
+	{--[[order=1256,]] cand="🖊", comment="笔"},
+	{--[[order=1257,]] cand="🖌", comment="画笔"},
+	{--[[order=1258,]] cand="🖍", comment="蜡笔"},
+	{--[[order=1259,]] cand="📝", comment="备忘录"},
+	{--[[order=1260,]] cand="💼", comment="公文包"},
+	{--[[order=1261,]] cand="📁", comment="文件夹"},
+	{--[[order=1262,]] cand="📂", comment="打开的文件夹"},
+	{--[[order=1263,]] cand="🗂", comment="索引分隔文件夹"},
+	{--[[order=1264,]] cand="📅", comment="日历"},
+	{--[[order=1265,]] cand="📆", comment="手撕日历"},
+	{--[[order=1266,]] cand="🗒", comment="线圈本"},
+	{--[[order=1267,]] cand="🗓", comment="线圈日历"},
+	{--[[order=1268,]] cand="📇", comment="卡片索引"},
+	{--[[order=1269,]] cand="📈", comment="趋势向上的图表"},
+	{--[[order=1270,]] cand="📉", comment="趋势向下的图表"},
+	{--[[order=1271,]] cand="📊", comment="条形图"},
+	{--[[order=1272,]] cand="📋", comment="剪贴板"},
+	{--[[order=1273,]] cand="📌", comment="图钉"},
+	{--[[order=1274,]] cand="📍", comment="圆图钉"},
+	{--[[order=1275,]] cand="📎", comment="回形针"},
+	{--[[order=1276,]] cand="🖇", comment="连起来的两个回形针"},
+	{--[[order=1277,]] cand="📏", comment="直尺"},
+	{--[[order=1278,]] cand="📐", comment="三角尺"},
+	{--[[order=1279,]] cand="✂", comment="剪刀"},
+	{--[[order=1280,]] cand="🗃", comment="卡片盒"},
+	{--[[order=1281,]] cand="🗄", comment="文件柜"},
+	{--[[order=1282,]] cand="🗑", comment="垃圾桶"},
+	{--[[order=1283,]] cand="🔒", comment="合上的锁"},
+	{--[[order=1284,]] cand="🔓", comment="打开的锁"},
+	{--[[order=1285,]] cand="🔏", comment="墨水笔和锁"},
+	{--[[order=1286,]] cand="🔐", comment="钥匙和锁"},
+	{--[[order=1287,]] cand="🔑", comment="钥匙"},
+	{--[[order=1288,]] cand="🗝", comment="老式钥匙"},
+	{--[[order=1289,]] cand="🔨", comment="锤子"},
+	{--[[order=1290,]] cand="🪓", comment="斧头"},
+	{--[[order=1291,]] cand="⛏", comment="铁镐"},
+	{--[[order=1292,]] cand="⚒", comment="锤子与镐"},
+	{--[[order=1293,]] cand="🛠", comment="锤子与扳手"},
+	{--[[order=1294,]] cand="🗡", comment="匕首"},
+	{--[[order=1295,]] cand="⚔", comment="交叉放置的剑"},
+	{--[[order=1296,]] cand="🔫", comment="水枪"},
+	{--[[order=1297,]] cand="🪃", comment="回旋镖"},
+	{--[[order=1298,]] cand="🏹", comment="弓和箭"},
+	{--[[order=1299,]] cand="🛡", comment="盾牌"},
+	{--[[order=1300,]] cand="🪚", comment="木工锯"},
+	{--[[order=1301,]] cand="🔧", comment="扳手"},
+	{--[[order=1302,]] cand="🪛", comment="螺丝刀"},
+	{--[[order=1303,]] cand="🔩", comment="螺母与螺栓"},
+	{--[[order=1304,]] cand="⚙", comment="齿轮"},
+	{--[[order=1305,]] cand="🗜", comment="夹钳"},
+	{--[[order=1306,]] cand="⚖", comment="天平"},
+	{--[[order=1307,]] cand="🦯", comment="盲杖"},
+	{--[[order=1308,]] cand="🔗", comment="链接"},
+	{--[[order=1309,]] cand="⛓", comment="链条"},
+	{--[[order=1310,]] cand="🪝", comment="挂钩"},
+	{--[[order=1311,]] cand="🧰", comment="工具箱"},
+	{--[[order=1312,]] cand="🧲", comment="磁铁"},
+	{--[[order=1313,]] cand="🪜", comment="梯子"},
+	{--[[order=1314,]] cand="⚗", comment="蒸馏器"},
+	{--[[order=1315,]] cand="🧪", comment="试管"},
+	{--[[order=1316,]] cand="🧫", comment="培养皿"},
+	{--[[order=1317,]] cand="🧬", comment="DNA"},
+	{--[[order=1318,]] cand="🔬", comment="显微镜"},
+	{--[[order=1319,]] cand="🔭", comment="望远镜"},
+	{--[[order=1320,]] cand="📡", comment="卫星天线"},
+	{--[[order=1321,]] cand="💉", comment="注射器"},
+	{--[[order=1322,]] cand="🩸", comment="血滴"},
+	{--[[order=1323,]] cand="💊", comment="药丸"},
+	{--[[order=1324,]] cand="🩹", comment="创可贴"},
+	{--[[order=1325,]] cand="🩼", comment="拐杖"},
+	{--[[order=1326,]] cand="🩺", comment="听诊器"},
+	{--[[order=1327,]] cand="🩻", comment="X射线"},
+	{--[[order=1328,]] cand="🚪", comment="门"},
+	{--[[order=1329,]] cand="🛗", comment="电梯"},
+	{--[[order=1330,]] cand="🪞", comment="镜子"},
+	{--[[order=1331,]] cand="🪟", comment="窗户"},
+	{--[[order=1332,]] cand="🛏", comment="床"},
+	{--[[order=1333,]] cand="🛋", comment="沙发和灯"},
+	{--[[order=1334,]] cand="🪑", comment="椅子"},
+	{--[[order=1335,]] cand="🚽", comment="马桶"},
+	{--[[order=1336,]] cand="🪠", comment="活塞"},
+	{--[[order=1337,]] cand="🚿", comment="淋浴"},
+	{--[[order=1338,]] cand="🛁", comment="浴缸"},
+	{--[[order=1339,]] cand="🪤", comment="捕鼠器"},
+	{--[[order=1340,]] cand="🪒", comment="剃须刀"},
+	{--[[order=1341,]] cand="🧴", comment="乳液瓶"},
+	{--[[order=1342,]] cand="🧷", comment="安全别针"},
+	{--[[order=1343,]] cand="🧹", comment="扫帚"},
+	{--[[order=1344,]] cand="🧺", comment="筐"},
+	{--[[order=1345,]] cand="🧻", comment="卷纸"},
+	{--[[order=1346,]] cand="🪣", comment="桶"},
+	{--[[order=1347,]] cand="🧼", comment="皂"},
+	{--[[order=1348,]] cand="🫧", comment="气泡"},
+	{--[[order=1349,]] cand="🪥", comment="牙刷"},
+	{--[[order=1350,]] cand="🧽", comment="海绵"},
+	{--[[order=1351,]] cand="🧯", comment="灭火器"},
+	{--[[order=1352,]] cand="🛒", comment="购物车"},
+	{--[[order=1353,]] cand="🚬", comment="香烟"},
+	{--[[order=1354,]] cand="⚰", comment="棺材"},
+	{--[[order=1355,]] cand="🪦", comment="墓碑"},
+	{--[[order=1356,]] cand="⚱", comment="骨灰缸"},
+	{--[[order=1357,]] cand="🗿", comment="摩埃"},
+	{--[[order=1358,]] cand="🪧", comment="标语牌"},
+	{--[[order=1359,]] cand="🪪", comment="身份证"},
+	{--[[order=1360,]] cand="🏧", comment="取款机"},
+	{--[[order=1361,]] cand="🚮", comment="倒垃圾"},
+	{--[[order=1362,]] cand="🚰", comment="饮用水"},
+	{--[[order=1363,]] cand="♿", comment="轮椅标识"},
+	{--[[order=1364,]] cand="🚹", comment="男厕"},
+	{--[[order=1365,]] cand="🚺", comment="女厕"},
+	{--[[order=1366,]] cand="🚻", comment="卫生间"},
+	{--[[order=1367,]] cand="🚼", comment="宝宝"},
+	{--[[order=1368,]] cand="🚾", comment="厕所"},
+	{--[[order=1369,]] cand="🛂", comment="护照检查"},
+	{--[[order=1370,]] cand="🛃", comment="海关"},
+	{--[[order=1371,]] cand="🛄", comment="提取行李"},
+	{--[[order=1372,]] cand="🛅", comment="寄存行李"},
+	{--[[order=1373,]] cand="⚠", comment="警告"},
+	{--[[order=1374,]] cand="🚸", comment="儿童过街"},
+	{--[[order=1375,]] cand="⛔", comment="禁止通行"},
+	{--[[order=1376,]] cand="🚫", comment="禁止"},
+	{--[[order=1377,]] cand="🚳", comment="禁止自行车"},
+	{--[[order=1378,]] cand="🚭", comment="禁止吸烟"},
+	{--[[order=1379,]] cand="🚯", comment="禁止乱扔垃圾"},
+	{--[[order=1380,]] cand="🚱", comment="非饮用水"},
+	{--[[order=1381,]] cand="🚷", comment="禁止行人通行"},
+	{--[[order=1382,]] cand="📵", comment="禁止使用手机"},
+	{--[[order=1383,]] cand="🔞", comment="18禁"},
+	{--[[order=1384,]] cand="☢", comment="辐射"},
+	{--[[order=1385,]] cand="☣", comment="生物危害"},
+	{--[[order=1386,]] cand="⬆", comment="向上箭头"},
+	{--[[order=1387,]] cand="↗", comment="右上箭头"},
+	{--[[order=1388,]] cand="➡", comment="向右箭头"},
+	{--[[order=1389,]] cand="↘", comment="右下箭头"},
+	{--[[order=1390,]] cand="⬇", comment="向下箭头"},
+	{--[[order=1391,]] cand="↙", comment="左下箭头"},
+	{--[[order=1392,]] cand="⬅", comment="向左箭头"},
+	{--[[order=1393,]] cand="↖", comment="左上箭头"},
+	{--[[order=1394,]] cand="↕", comment="上下箭头"},
+	{--[[order=1395,]] cand="↔", comment="左右箭头"},
+	{--[[order=1396,]] cand="↩", comment="右转弯箭头"},
+	{--[[order=1397,]] cand="↪", comment="左转弯箭头"},
+	{--[[order=1398,]] cand="⤴", comment="右上弯箭头"},
+	{--[[order=1399,]] cand="⤵", comment="右下弯箭头"},
+	{--[[order=1400,]] cand="🔃", comment="顺时针垂直箭头"},
+	{--[[order=1401,]] cand="🔄", comment="逆时针箭头按钮"},
+	{--[[order=1402,]] cand="🔙", comment="返回箭头"},
+	{--[[order=1403,]] cand="🔚", comment="结束箭头"},
+	{--[[order=1404,]] cand="🔛", comment="ON! 箭头"},
+	{--[[order=1405,]] cand="🔜", comment="SOON 箭头"},
+	{--[[order=1406,]] cand="🔝", comment="置顶"},
+	{--[[order=1407,]] cand="🛐", comment="宗教场所"},
+	{--[[order=1408,]] cand="⚛", comment="原子符号"},
+	{--[[order=1409,]] cand="🕉", comment="奥姆"},
+	{--[[order=1410,]] cand="✡", comment="六芒星"},
+	{--[[order=1411,]] cand="☸", comment="法轮"},
+	{--[[order=1412,]] cand="☯", comment="阴阳"},
+	{--[[order=1413,]] cand="✝", comment="十字架"},
+	{--[[order=1414,]] cand="☦", comment="东正教十字架"},
+	{--[[order=1415,]] cand="☪", comment="星月"},
+	{--[[order=1416,]] cand="☮", comment="和平符号"},
+	{--[[order=1417,]] cand="🕎", comment="烛台"},
+	{--[[order=1418,]] cand="🔯", comment="带中间点的六芒星"},
+	{--[[order=1419,]] cand="♈", comment="白羊座"},
+	{--[[order=1420,]] cand="♉", comment="金牛座"},
+	{--[[order=1421,]] cand="♊", comment="双子座"},
+	{--[[order=1422,]] cand="♋", comment="巨蟹座"},
+	{--[[order=1423,]] cand="♌", comment="狮子座"},
+	{--[[order=1424,]] cand="♍", comment="处女座"},
+	{--[[order=1425,]] cand="♎", comment="天秤座"},
+	{--[[order=1426,]] cand="♏", comment="天蝎座"},
+	{--[[order=1427,]] cand="♐", comment="射手座"},
+	{--[[order=1428,]] cand="♑", comment="摩羯座"},
+	{--[[order=1429,]] cand="♒", comment="水瓶座"},
+	{--[[order=1430,]] cand="♓", comment="双鱼座"},
+	{--[[order=1431,]] cand="⛎", comment="蛇夫座"},
+	{--[[order=1432,]] cand="🔀", comment="随机播放音轨按钮"},
+	{--[[order=1433,]] cand="🔁", comment="重复按钮"},
+	{--[[order=1434,]] cand="🔂", comment="重复一次按钮"},
+	{--[[order=1435,]] cand="▶", comment="播放按钮"},
+	{--[[order=1436,]] cand="⏩", comment="快进按钮"},
+	{--[[order=1437,]] cand="⏭", comment="下一个音轨按钮"},
+	{--[[order=1438,]] cand="⏯", comment="播放或暂停按钮"},
+	{--[[order=1439,]] cand="◀", comment="倒退按钮"},
+	{--[[order=1440,]] cand="⏪", comment="快退按钮"},
+	{--[[order=1441,]] cand="⏮", comment="上一个音轨按钮"},
+	{--[[order=1442,]] cand="🔼", comment="向上三角形按钮"},
+	{--[[order=1443,]] cand="⏫", comment="快速上升按钮"},
+	{--[[order=1444,]] cand="🔽", comment="向下三角形按钮"},
+	{--[[order=1445,]] cand="⏬", comment="快速下降按钮"},
+	{--[[order=1446,]] cand="⏸", comment="暂停按钮"},
+	{--[[order=1447,]] cand="⏹", comment="停止按钮"},
+	{--[[order=1448,]] cand="⏺", comment="录制按钮"},
+	{--[[order=1449,]] cand="⏏", comment="推出按钮"},
+	{--[[order=1450,]] cand="🎦", comment="电影院"},
+	{--[[order=1451,]] cand="🔅", comment="低亮度按钮"},
+	{--[[order=1452,]] cand="🔆", comment="高亮度按钮"},
+	{--[[order=1453,]] cand="📶", comment="信号强度条"},
+	{--[[order=1454,]] cand="📳", comment="振动模式"},
+	{--[[order=1455,]] cand="📴", comment="手机关机"},
+	{--[[order=1456,]] cand="♀", comment="女性符号"},
+	{--[[order=1457,]] cand="♂", comment="男性符号"},
+	{--[[order=1458,]] cand="⚧", comment="跨性别符号"},
+	{--[[order=1459,]] cand="✖", comment="乘"},
+	{--[[order=1460,]] cand="➕", comment="加"},
+	{--[[order=1461,]] cand="➖", comment="减"},
+	{--[[order=1462,]] cand="➗", comment="除"},
+	{--[[order=1463,]] cand="🟰", comment="粗等号"},
+	{--[[order=1464,]] cand="♾", comment="无穷大"},
+	{--[[order=1465,]] cand="‼", comment="双感叹号"},
+	{--[[order=1466,]] cand="⁉", comment="感叹疑问号"},
+	{--[[order=1467,]] cand="❓", comment="红色问号"},
+	{--[[order=1468,]] cand="❔", comment="白色问号"},
+	{--[[order=1469,]] cand="❕", comment="白色感叹号"},
+	{--[[order=1470,]] cand="❗", comment="红色感叹号"},
+	{--[[order=1471,]] cand="〰", comment="波浪型破折号"},
+	{--[[order=1472,]] cand="💱", comment="货币兑换"},
+	{--[[order=1473,]] cand="💲", comment="粗美元符号"},
+	{--[[order=1474,]] cand="⚕", comment="医疗标志"},
+	{--[[order=1475,]] cand="♻", comment="回收标志"},
+	{--[[order=1476,]] cand="⚜", comment="百合花饰"},
+	{--[[order=1477,]] cand="🔱", comment="三叉戟徽章"},
+	{--[[order=1478,]] cand="📛", comment="姓名牌"},
+	{--[[order=1479,]] cand="🔰", comment="日本新手驾驶标志"},
+	{--[[order=1480,]] cand="⭕", comment="红色空心圆圈"},
+	{--[[order=1481,]] cand="✅", comment="勾号按钮"},
+	{--[[order=1482,]] cand="☑", comment="勾选框"},
+	{--[[order=1483,]] cand="✔", comment="勾号"},
+	{--[[order=1484,]] cand="❌", comment="叉号"},
+	{--[[order=1485,]] cand="❎", comment="叉号按钮"},
+	{--[[order=1486,]] cand="➰", comment="卷曲环"},
+	{--[[order=1487,]] cand="➿", comment="双卷曲环"},
+	{--[[order=1488,]] cand="〽", comment="庵点"},
+	{--[[order=1489,]] cand="✳", comment="八轮辐星号"},
+	{--[[order=1490,]] cand="✴", comment="八角星"},
+	{--[[order=1491,]] cand="❇", comment="火花"},
+	{--[[order=1492,]] cand="©", comment="版权"},
+	{--[[order=1493,]] cand="®", comment="注册"},
+	{--[[order=1494,]] cand="™", comment="商标"},
+	{--[[order=1495,]] cand="#️⃣", comment="按键: #"},
+	{--[[order=1496,]] cand="*️⃣", comment="键帽：*"},
+	{--[[order=1497,]] cand="0️⃣", comment="键帽：0"},
+	{--[[order=1498,]] cand="1️⃣", comment="键帽：1"},
+	{--[[order=1499,]] cand="2️⃣", comment="键帽：2"},
+	{--[[order=1500,]] cand="3️⃣", comment="键帽：3"},
+	{--[[order=1501,]] cand="4️⃣", comment="键帽：4"},
+	{--[[order=1502,]] cand="5️⃣", comment="键帽：5"},
+	{--[[order=1503,]] cand="6️⃣", comment="键帽：6"},
+	{--[[order=1504,]] cand="7️⃣", comment="键帽：7"},
+	{--[[order=1505,]] cand="8️⃣", comment="键帽：8"},
+	{--[[order=1506,]] cand="9️⃣", comment="键帽：9"},
+	{--[[order=1507,]] cand="🔟", comment="按键: 10"},
+	{--[[order=1508,]] cand="🔠", comment="输入大写拉丁字母"},
+	{--[[order=1509,]] cand="🔡", comment="输入小写拉丁字母"},
+	{--[[order=1510,]] cand="🔢", comment="输入数字"},
+	{--[[order=1511,]] cand="🔣", comment="输入符号"},
+	{--[[order=1512,]] cand="🔤", comment="输入拉丁字母"},
+	{--[[order=1513,]] cand="🅰", comment="A型血"},
+	{--[[order=1514,]] cand="🆎", comment="AB型血"},
+	{--[[order=1515,]] cand="🅱", comment="B型血"},
+	{--[[order=1516,]] cand="🆑", comment="CL按钮"},
+	{--[[order=1517,]] cand="🆒", comment="cool按钮"},
+	{--[[order=1518,]] cand="🆓", comment="免费按钮"},
+	{--[[order=1519,]] cand="ℹ", comment="信息"},
+	{--[[order=1520,]] cand="🆔", comment="ID按钮"},
+	{--[[order=1521,]] cand="Ⓜ", comment="圆圈包围的M"},
+	{--[[order=1522,]] cand="🆕", comment="new按钮"},
+	{--[[order=1523,]] cand="🆖", comment="NG按钮"},
+	{--[[order=1524,]] cand="🅾", comment="O 型血"},
+	{--[[order=1525,]] cand="🆗", comment="OK按钮"},
+	{--[[order=1526,]] cand="🅿", comment="停车按钮"},
+	{--[[order=1527,]] cand="🆘", comment="SOS按钮"},
+	{--[[order=1528,]] cand="🆙", comment="up按钮"},
+	{--[[order=1529,]] cand="🆚", comment="VS按钮"},
+	{--[[order=1530,]] cand="🈁", comment="日文的“这里”按钮"},
+	{--[[order=1531,]] cand="🈂", comment="日文的“服务费”按钮"},
+	{--[[order=1532,]] cand="🈷", comment="日文的“月总量”按钮"},
+	{--[[order=1533,]] cand="🈶", comment="日文的“收费”按钮"},
+	{--[[order=1534,]] cand="🈯", comment="日文的“预留”按钮"},
+	{--[[order=1535,]] cand="🉐", comment="日文的“议价”按钮"},
+	{--[[order=1536,]] cand="🈹", comment="日文的“打折”按钮"},
+	{--[[order=1537,]] cand="🈚", comment="日文的“免费”按钮"},
+	{--[[order=1538,]] cand="🈲", comment="日文的“禁止”按钮"},
+	{--[[order=1539,]] cand="🉑", comment="日文的“可接受”按钮"},
+	{--[[order=1540,]] cand="🈸", comment="日文的“申请”按钮"},
+	{--[[order=1541,]] cand="🈴", comment="日文的“合格”按钮"},
+	{--[[order=1542,]] cand="🈳", comment="日文的“有空位”按钮"},
+	{--[[order=1543,]] cand="㊗", comment="日文的“祝贺”按钮"},
+	{--[[order=1544,]] cand="㊙", comment="日文的“秘密”按钮"},
+	{--[[order=1545,]] cand="🈺", comment="日文的“开始营业”按钮"},
+	{--[[order=1546,]] cand="🈵", comment="日文的“没有空位”按钮"},
+	{--[[order=1547,]] cand="🔴", comment="红色圆"},
+	{--[[order=1548,]] cand="🟠", comment="橙色圆"},
+	{--[[order=1549,]] cand="🟡", comment="黄色圆"},
+	{--[[order=1550,]] cand="🟢", comment="绿色圆"},
+	{--[[order=1551,]] cand="🔵", comment="蓝色圆"},
+	{--[[order=1552,]] cand="🟣", comment="紫色圆"},
+	{--[[order=1553,]] cand="🟤", comment="棕色圆"},
+	{--[[order=1554,]] cand="⚫", comment="黑色圆"},
+	{--[[order=1555,]] cand="⚪", comment="白色圆"},
+	{--[[order=1556,]] cand="🟥", comment="红色方块"},
+	{--[[order=1557,]] cand="🟧", comment="橙色方块"},
+	{--[[order=1558,]] cand="🟨", comment="黄色方块"},
+	{--[[order=1559,]] cand="🟩", comment="绿色方块"},
+	{--[[order=1560,]] cand="🟦", comment="蓝色方块"},
+	{--[[order=1561,]] cand="🟪", comment="紫色方块"},
+	{--[[order=1562,]] cand="🟫", comment="棕色方块"},
+	{--[[order=1563,]] cand="⬛", comment="黑线大方框"},
+	{--[[order=1564,]] cand="⬜", comment="白线大方框"},
+	{--[[order=1565,]] cand="◼", comment="黑色中方块"},
+	{--[[order=1566,]] cand="◻", comment="白色中方块"},
+	{--[[order=1567,]] cand="◾", comment="黑色中小方块"},
+	{--[[order=1568,]] cand="◽", comment="白色中小方块"},
+	{--[[order=1569,]] cand="▪", comment="黑色小方块"},
+	{--[[order=1570,]] cand="▫", comment="白色小方块"},
+	{--[[order=1571,]] cand="🔶", comment="橙色大菱形"},
+	{--[[order=1572,]] cand="🔷", comment="蓝色大菱形"},
+	{--[[order=1573,]] cand="🔸", comment="橙色小菱形"},
+	{--[[order=1574,]] cand="🔹", comment="蓝色小菱形"},
+	{--[[order=1575,]] cand="🔺", comment="红色正三角"},
+	{--[[order=1576,]] cand="🔻", comment="红色倒三角"},
+	{--[[order=1577,]] cand="💠", comment="带圆点的菱形"},
+	{--[[order=1578,]] cand="🔘", comment="单选按钮"},
+	{--[[order=1579,]] cand="🔳", comment="白色方形按钮"},
+	{--[[order=1580,]] cand="🔲", comment="黑色方形按钮"},
+	{--[[order=1581,]] cand="🏁", comment="终点旗"},
+	{--[[order=1582,]] cand="🚩", comment="三角旗"},
+	{--[[order=1583,]] cand="🎌", comment="交叉旗"},
+	{--[[order=1584,]] cand="🏴", comment="举黑旗"},
+	{--[[order=1585,]] cand="🏳", comment="举白旗"},
+	{--[[order=1586,]] cand="🏳️‍🌈", comment="彩虹旗"},
+	{--[[order=1587,]] cand="🏳️‍⚧️", comment="跨性别旗"},
+	{--[[order=1588,]] cand="🏴‍☠️", comment="海盗旗"},
+	{--[[order=1589,]] cand="🇦🇨", comment="旗: 阿森松岛"},
+	{--[[order=1590,]] cand="🇦🇩", comment="旗: 安道尔"},
+	{--[[order=1591,]] cand="🇦🇪", comment="旗: 阿拉伯联合酋长国"},
+	{--[[order=1592,]] cand="🇦🇫", comment="旗: 阿富汗"},
+	{--[[order=1593,]] cand="🇦🇬", comment="旗: 安提瓜和巴布达"},
+	{--[[order=1594,]] cand="🇦🇮", comment="旗: 安圭拉"},
+	{--[[order=1595,]] cand="🇦🇱", comment="旗: 阿尔巴尼亚"},
+	{--[[order=1596,]] cand="🇦🇲", comment="旗: 亚美尼亚"},
+	{--[[order=1597,]] cand="🇦🇴", comment="旗: 安哥拉"},
+	{--[[order=1598,]] cand="🇦🇶", comment="旗: 南极洲"},
+	{--[[order=1599,]] cand="🇦🇷", comment="旗: 阿根廷"},
+	{--[[order=1600,]] cand="🇦🇸", comment="旗: 美属萨摩亚"},
+	{--[[order=1601,]] cand="🇦🇹", comment="旗: 奥地利"},
+	{--[[order=1602,]] cand="🇦🇺", comment="旗: 澳大利亚"},
+	{--[[order=1603,]] cand="🇦🇼", comment="旗: 阿鲁巴"},
+	{--[[order=1604,]] cand="🇦🇽", comment="旗: 奥兰群岛"},
+	{--[[order=1605,]] cand="🇦🇿", comment="旗: 阿塞拜疆"},
+	{--[[order=1606,]] cand="🇧🇦", comment="旗: 波斯尼亚和黑塞哥维那"},
+	{--[[order=1607,]] cand="🇧🇧", comment="旗: 巴巴多斯"},
+	{--[[order=1608,]] cand="🇧🇩", comment="旗: 孟加拉国"},
+	{--[[order=1609,]] cand="🇧🇪", comment="旗: 比利时"},
+	{--[[order=1610,]] cand="🇧🇫", comment="旗: 布基纳法索"},
+	{--[[order=1611,]] cand="🇧🇬", comment="旗: 保加利亚"},
+	{--[[order=1612,]] cand="🇧🇭", comment="旗: 巴林"},
+	{--[[order=1613,]] cand="🇧🇮", comment="旗: 布隆迪"},
+	{--[[order=1614,]] cand="🇧🇯", comment="旗: 贝宁"},
+	{--[[order=1615,]] cand="🇧🇱", comment="旗: 圣巴泰勒米"},
+	{--[[order=1616,]] cand="🇧🇲", comment="旗: 百慕大"},
+	{--[[order=1617,]] cand="🇧🇳", comment="旗: 文莱"},
+	{--[[order=1618,]] cand="🇧🇴", comment="旗: 玻利维亚"},
+	{--[[order=1619,]] cand="🇧🇶", comment="旗: 荷属加勒比区"},
+	{--[[order=1620,]] cand="🇧🇷", comment="旗: 巴西"},
+	{--[[order=1621,]] cand="🇧🇸", comment="旗: 巴哈马"},
+	{--[[order=1622,]] cand="🇧🇹", comment="旗: 不丹"},
+	{--[[order=1623,]] cand="🇧🇻", comment="旗: 布韦岛"},
+	{--[[order=1624,]] cand="🇧🇼", comment="旗: 博茨瓦纳"},
+	{--[[order=1625,]] cand="🇧🇾", comment="旗: 白俄罗斯"},
+	{--[[order=1626,]] cand="🇧🇿", comment="旗: 伯利兹"},
+	{--[[order=1627,]] cand="🇨🇦", comment="旗: 加拿大"},
+	{--[[order=1628,]] cand="🇨🇨", comment="旗: 科科斯（基林）群岛"},
+	{--[[order=1629,]] cand="🇨🇩", comment="旗: 刚果（金）"},
+	{--[[order=1630,]] cand="🇨🇫", comment="旗: 中非共和国"},
+	{--[[order=1631,]] cand="🇨🇬", comment="旗: 刚果（布）"},
+	{--[[order=1632,]] cand="🇨🇭", comment="旗: 瑞士"},
+	{--[[order=1633,]] cand="🇨🇮", comment="旗: 科特迪瓦"},
+	{--[[order=1634,]] cand="🇨🇰", comment="旗: 库克群岛"},
+	{--[[order=1635,]] cand="🇨🇱", comment="旗: 智利"},
+	{--[[order=1636,]] cand="🇨🇲", comment="旗: 喀麦隆"},
+	{--[[order=1637,]] cand="🇨🇳", comment="旗: 中国"},
+	{--[[order=1638,]] cand="🇨🇴", comment="旗: 哥伦比亚"},
+	{--[[order=1639,]] cand="🇨🇵", comment="旗: 克利珀顿岛"},
+	{--[[order=1640,]] cand="🇨🇷", comment="旗: 哥斯达黎加"},
+	{--[[order=1641,]] cand="🇨🇺", comment="旗: 古巴"},
+	{--[[order=1642,]] cand="🇨🇻", comment="旗: 佛得角"},
+	{--[[order=1643,]] cand="🇨🇼", comment="旗: 库拉索"},
+	{--[[order=1644,]] cand="🇨🇽", comment="旗: 圣诞岛"},
+	{--[[order=1645,]] cand="🇨🇾", comment="旗: 塞浦路斯"},
+	{--[[order=1646,]] cand="🇨🇿", comment="旗: 捷克"},
+	{--[[order=1647,]] cand="🇩🇪", comment="旗: 德国"},
+	{--[[order=1648,]] cand="🇩🇬", comment="旗: 迪戈加西亚岛"},
+	{--[[order=1649,]] cand="🇩🇯", comment="旗: 吉布提"},
+	{--[[order=1650,]] cand="🇩🇰", comment="旗: 丹麦"},
+	{--[[order=1651,]] cand="🇩🇲", comment="旗: 多米尼克"},
+	{--[[order=1652,]] cand="🇩🇴", comment="旗: 多米尼加共和国"},
+	{--[[order=1653,]] cand="🇩🇿", comment="旗: 阿尔及利亚"},
+	{--[[order=1654,]] cand="🇪🇦", comment="旗: 休达及梅利利亚"},
+	{--[[order=1655,]] cand="🇪🇨", comment="旗: 厄瓜多尔"},
+	{--[[order=1656,]] cand="🇪🇪", comment="旗: 爱沙尼亚"},
+	{--[[order=1657,]] cand="🇪🇬", comment="旗: 埃及"},
+	{--[[order=1658,]] cand="🇪🇭", comment="旗: 西撒哈拉"},
+	{--[[order=1659,]] cand="🇪🇷", comment="旗: 厄立特里亚"},
+	{--[[order=1660,]] cand="🇪🇸", comment="旗: 西班牙"},
+	{--[[order=1661,]] cand="🇪🇹", comment="旗: 埃塞俄比亚"},
+	{--[[order=1662,]] cand="🇪🇺", comment="旗: 欧盟"},
+	{--[[order=1663,]] cand="🇫🇮", comment="旗: 芬兰"},
+	{--[[order=1664,]] cand="🇫🇯", comment="旗: 斐济"},
+	{--[[order=1665,]] cand="🇫🇰", comment="旗: 福克兰群岛"},
+	{--[[order=1666,]] cand="🇫🇲", comment="旗: 密克罗尼西亚"},
+	{--[[order=1667,]] cand="🇫🇴", comment="旗: 法罗群岛"},
+	{--[[order=1668,]] cand="🇫🇷", comment="旗: 法国"},
+	{--[[order=1669,]] cand="🇬🇦", comment="旗: 加蓬"},
+	{--[[order=1670,]] cand="🇬🇧", comment="旗: 英国"},
+	{--[[order=1671,]] cand="🇬🇩", comment="旗: 格林纳达"},
+	{--[[order=1672,]] cand="🇬🇪", comment="旗: 格鲁吉亚"},
+	{--[[order=1673,]] cand="🇬🇫", comment="旗: 法属圭亚那"},
+	{--[[order=1674,]] cand="🇬🇬", comment="旗: 根西岛"},
+	{--[[order=1675,]] cand="🇬🇭", comment="旗: 加纳"},
+	{--[[order=1676,]] cand="🇬🇮", comment="旗: 直布罗陀"},
+	{--[[order=1677,]] cand="🇬🇱", comment="旗: 格陵兰"},
+	{--[[order=1678,]] cand="🇬🇲", comment="旗: 冈比亚"},
+	{--[[order=1679,]] cand="🇬🇳", comment="旗: 几内亚"},
+	{--[[order=1680,]] cand="🇬🇵", comment="旗: 瓜德罗普"},
+	{--[[order=1681,]] cand="🇬🇶", comment="旗: 赤道几内亚"},
+	{--[[order=1682,]] cand="🇬🇷", comment="旗: 希腊"},
+	{--[[order=1683,]] cand="🇬🇸", comment="旗: 南乔治亚和南桑威奇群岛"},
+	{--[[order=1684,]] cand="🇬🇹", comment="旗: 危地马拉"},
+	{--[[order=1685,]] cand="🇬🇺", comment="旗: 关岛"},
+	{--[[order=1686,]] cand="🇬🇼", comment="旗: 几内亚比绍"},
+	{--[[order=1687,]] cand="🇬🇾", comment="旗: 圭亚那"},
+	{--[[order=1688,]] cand="🇭🇰", comment="旗: 中国香港特别行政区"},
+	{--[[order=1689,]] cand="🇭🇲", comment="旗: 赫德岛和麦克唐纳群岛"},
+	{--[[order=1690,]] cand="🇭🇳", comment="旗: 洪都拉斯"},
+	{--[[order=1691,]] cand="🇭🇷", comment="旗: 克罗地亚"},
+	{--[[order=1692,]] cand="🇭🇹", comment="旗: 海地"},
+	{--[[order=1693,]] cand="🇭🇺", comment="旗: 匈牙利"},
+	{--[[order=1694,]] cand="🇮🇨", comment="旗: 加纳利群岛"},
+	{--[[order=1695,]] cand="🇮🇩", comment="旗: 印度尼西亚"},
+	{--[[order=1696,]] cand="🇮🇪", comment="旗: 爱尔兰"},
+	{--[[order=1697,]] cand="🇮🇱", comment="旗: 以色列"},
+	{--[[order=1698,]] cand="🇮🇲", comment="旗: 马恩岛"},
+	{--[[order=1699,]] cand="🇮🇳", comment="旗: 印度"},
+	{--[[order=1700,]] cand="🇮🇴", comment="旗: 英属印度洋领地"},
+	{--[[order=1701,]] cand="🇮🇶", comment="旗: 伊拉克"},
+	{--[[order=1702,]] cand="🇮🇷", comment="旗: 伊朗"},
+	{--[[order=1703,]] cand="🇮🇸", comment="旗: 冰岛"},
+	{--[[order=1704,]] cand="🇮🇹", comment="旗: 意大利"},
+	{--[[order=1705,]] cand="🇯🇪", comment="旗: 泽西岛"},
+	{--[[order=1706,]] cand="🇯🇲", comment="旗: 牙买加"},
+	{--[[order=1707,]] cand="🇯🇴", comment="旗: 约旦"},
+	{--[[order=1708,]] cand="🇯🇵", comment="旗: 日本"},
+	{--[[order=1709,]] cand="🇰🇪", comment="旗: 肯尼亚"},
+	{--[[order=1710,]] cand="🇰🇬", comment="旗: 吉尔吉斯斯坦"},
+	{--[[order=1711,]] cand="🇰🇭", comment="旗: 柬埔寨"},
+	{--[[order=1712,]] cand="🇰🇮", comment="旗: 基里巴斯"},
+	{--[[order=1713,]] cand="🇰🇲", comment="旗: 科摩罗"},
+	{--[[order=1714,]] cand="🇰🇳", comment="旗: 圣基茨和尼维斯"},
+	{--[[order=1715,]] cand="🇰🇵", comment="旗: 朝鲜"},
+	{--[[order=1716,]] cand="🇰🇷", comment="旗: 韩国"},
+	{--[[order=1717,]] cand="🇰🇼", comment="旗: 科威特"},
+	{--[[order=1718,]] cand="🇰🇾", comment="旗: 开曼群岛"},
+	{--[[order=1719,]] cand="🇰🇿", comment="旗: 哈萨克斯坦"},
+	{--[[order=1720,]] cand="🇱🇦", comment="旗: 老挝"},
+	{--[[order=1721,]] cand="🇱🇧", comment="旗: 黎巴嫩"},
+	{--[[order=1722,]] cand="🇱🇨", comment="旗: 圣卢西亚"},
+	{--[[order=1723,]] cand="🇱🇮", comment="旗: 列支敦士登"},
+	{--[[order=1724,]] cand="🇱🇰", comment="旗: 斯里兰卡"},
+	{--[[order=1725,]] cand="🇱🇷", comment="旗: 利比里亚"},
+	{--[[order=1726,]] cand="🇱🇸", comment="旗: 莱索托"},
+	{--[[order=1727,]] cand="🇱🇹", comment="旗: 立陶宛"},
+	{--[[order=1728,]] cand="🇱🇺", comment="旗: 卢森堡"},
+	{--[[order=1729,]] cand="🇱🇻", comment="旗: 拉脱维亚"},
+	{--[[order=1730,]] cand="🇱🇾", comment="旗: 利比亚"},
+	{--[[order=1731,]] cand="🇲🇦", comment="旗: 摩洛哥"},
+	{--[[order=1732,]] cand="🇲🇨", comment="旗: 摩纳哥"},
+	{--[[order=1733,]] cand="🇲🇩", comment="旗: 摩尔多瓦"},
+	{--[[order=1734,]] cand="🇲🇪", comment="旗: 黑山"},
+	{--[[order=1735,]] cand="🇲🇫", comment="旗: 法属圣马丁"},
+	{--[[order=1736,]] cand="🇲🇬", comment="旗: 马达加斯加"},
+	{--[[order=1737,]] cand="🇲🇭", comment="旗: 马绍尔群岛"},
+	{--[[order=1738,]] cand="🇲🇰", comment="旗: 北马其顿"},
+	{--[[order=1739,]] cand="🇲🇱", comment="旗: 马里"},
+	{--[[order=1740,]] cand="🇲🇲", comment="旗: 缅甸"},
+	{--[[order=1741,]] cand="🇲🇳", comment="旗: 蒙古"},
+	{--[[order=1742,]] cand="🇲🇴", comment="旗: 中国澳门特别行政区"},
+	{--[[order=1743,]] cand="🇲🇵", comment="旗: 北马里亚纳群岛"},
+	{--[[order=1744,]] cand="🇲🇶", comment="旗: 马提尼克"},
+	{--[[order=1745,]] cand="🇲🇷", comment="旗: 毛里塔尼亚"},
+	{--[[order=1746,]] cand="🇲🇸", comment="旗: 蒙特塞拉特"},
+	{--[[order=1747,]] cand="🇲🇹", comment="旗: 马耳他"},
+	{--[[order=1748,]] cand="🇲🇺", comment="旗: 毛里求斯"},
+	{--[[order=1749,]] cand="🇲🇻", comment="旗: 马尔代夫"},
+	{--[[order=1750,]] cand="🇲🇼", comment="旗: 马拉维"},
+	{--[[order=1751,]] cand="🇲🇽", comment="旗: 墨西哥"},
+	{--[[order=1752,]] cand="🇲🇾", comment="旗: 马来西亚"},
+	{--[[order=1753,]] cand="🇲🇿", comment="旗: 莫桑比克"},
+	{--[[order=1754,]] cand="🇳🇦", comment="旗: 纳米比亚"},
+	{--[[order=1755,]] cand="🇳🇨", comment="旗: 新喀里多尼亚"},
+	{--[[order=1756,]] cand="🇳🇪", comment="旗: 尼日尔"},
+	{--[[order=1757,]] cand="🇳🇫", comment="旗: 诺福克岛"},
+	{--[[order=1758,]] cand="🇳🇬", comment="旗: 尼日利亚"},
+	{--[[order=1759,]] cand="🇳🇮", comment="旗: 尼加拉瓜"},
+	{--[[order=1760,]] cand="🇳🇱", comment="旗: 荷兰"},
+	{--[[order=1761,]] cand="🇳🇴", comment="旗: 挪威"},
+	{--[[order=1762,]] cand="🇳🇵", comment="旗: 尼泊尔"},
+	{--[[order=1763,]] cand="🇳🇷", comment="旗: 瑙鲁"},
+	{--[[order=1764,]] cand="🇳🇺", comment="旗: 纽埃"},
+	{--[[order=1765,]] cand="🇳🇿", comment="旗: 新西兰"},
+	{--[[order=1766,]] cand="🇴🇲", comment="旗: 阿曼"},
+	{--[[order=1767,]] cand="🇵🇦", comment="旗: 巴拿马"},
+	{--[[order=1768,]] cand="🇵🇪", comment="旗: 秘鲁"},
+	{--[[order=1769,]] cand="🇵🇫", comment="旗: 法属波利尼西亚"},
+	{--[[order=1770,]] cand="🇵🇬", comment="旗: 巴布亚新几内亚"},
+	{--[[order=1771,]] cand="🇵🇭", comment="旗: 菲律宾"},
+	{--[[order=1772,]] cand="🇵🇰", comment="旗: 巴基斯坦"},
+	{--[[order=1773,]] cand="🇵🇱", comment="旗: 波兰"},
+	{--[[order=1774,]] cand="🇵🇲", comment="旗: 圣皮埃尔和密克隆群岛"},
+	{--[[order=1775,]] cand="🇵🇳", comment="旗: 皮特凯恩群岛"},
+	{--[[order=1776,]] cand="🇵🇷", comment="旗: 波多黎各"},
+	{--[[order=1777,]] cand="🇵🇸", comment="旗: 巴勒斯坦领土"},
+	{--[[order=1778,]] cand="🇵🇹", comment="旗: 葡萄牙"},
+	{--[[order=1779,]] cand="🇵🇼", comment="旗: 帕劳"},
+	{--[[order=1780,]] cand="🇵🇾", comment="旗: 巴拉圭"},
+	{--[[order=1781,]] cand="🇶🇦", comment="旗: 卡塔尔"},
+	{--[[order=1782,]] cand="🇷🇪", comment="旗: 留尼汪"},
+	{--[[order=1783,]] cand="🇷🇴", comment="旗: 罗马尼亚"},
+	{--[[order=1784,]] cand="🇷🇸", comment="旗: 塞尔维亚"},
+	{--[[order=1785,]] cand="🇷🇺", comment="旗: 俄罗斯"},
+	{--[[order=1786,]] cand="🇷🇼", comment="旗: 卢旺达"},
+	{--[[order=1787,]] cand="🇸🇦", comment="旗: 沙特阿拉伯"},
+	{--[[order=1788,]] cand="🇸🇧", comment="旗: 所罗门群岛"},
+	{--[[order=1789,]] cand="🇸🇨", comment="旗: 塞舌尔"},
+	{--[[order=1790,]] cand="🇸🇩", comment="旗: 苏丹"},
+	{--[[order=1791,]] cand="🇸🇪", comment="旗: 瑞典"},
+	{--[[order=1792,]] cand="🇸🇬", comment="旗: 新加坡"},
+	{--[[order=1793,]] cand="🇸🇭", comment="旗: 圣赫勒拿"},
+	{--[[order=1794,]] cand="🇸🇮", comment="旗: 斯洛文尼亚"},
+	{--[[order=1795,]] cand="🇸🇯", comment="旗: 斯瓦尔巴和扬马延"},
+	{--[[order=1796,]] cand="🇸🇰", comment="旗: 斯洛伐克"},
+	{--[[order=1797,]] cand="🇸🇱", comment="旗: 塞拉利昂"},
+	{--[[order=1798,]] cand="🇸🇲", comment="旗: 圣马力诺"},
+	{--[[order=1799,]] cand="🇸🇳", comment="旗: 塞内加尔"},
+	{--[[order=1800,]] cand="🇸🇴", comment="旗: 索马里"},
+	{--[[order=1801,]] cand="🇸🇷", comment="旗: 苏里南"},
+	{--[[order=1802,]] cand="🇸🇸", comment="旗: 南苏丹"},
+	{--[[order=1803,]] cand="🇸🇹", comment="旗: 圣多美和普林西比"},
+	{--[[order=1804,]] cand="🇸🇻", comment="旗: 萨尔瓦多"},
+	{--[[order=1805,]] cand="🇸🇽", comment="旗: 荷属圣马丁"},
+	{--[[order=1806,]] cand="🇸🇾", comment="旗: 叙利亚"},
+	{--[[order=1807,]] cand="🇸🇿", comment="旗: 斯威士兰"},
+	{--[[order=1808,]] cand="🇹🇦", comment="旗: 特里斯坦-达库尼亚群岛"},
+	{--[[order=1809,]] cand="🇹🇨", comment="旗: 特克斯和凯科斯群岛"},
+	{--[[order=1810,]] cand="🇹🇩", comment="旗: 乍得"},
+	{--[[order=1811,]] cand="🇹🇫", comment="旗: 法属南部领地"},
+	{--[[order=1812,]] cand="🇹🇬", comment="旗: 多哥"},
+	{--[[order=1813,]] cand="🇹🇭", comment="旗: 泰国"},
+	{--[[order=1814,]] cand="🇹🇯", comment="旗: 塔吉克斯坦"},
+	{--[[order=1815,]] cand="🇹🇰", comment="旗: 托克劳"},
+	{--[[order=1816,]] cand="🇹🇱", comment="旗: 东帝汶"},
+	{--[[order=1817,]] cand="🇹🇲", comment="旗: 土库曼斯坦"},
+	{--[[order=1818,]] cand="🇹🇳", comment="旗: 突尼斯"},
+	{--[[order=1819,]] cand="🇹🇴", comment="旗: 汤加"},
+	{--[[order=1820,]] cand="🇹🇷", comment="旗: 土耳其"},
+	{--[[order=1821,]] cand="🇹🇹", comment="旗: 特立尼达和多巴哥"},
+	{--[[order=1822,]] cand="🇹🇻", comment="旗: 图瓦卢"},
+	{--[[order=1823,]] cand="🇹🇼", comment="旗: 台湾"},
+	{--[[order=1824,]] cand="🇹🇿", comment="旗: 坦桑尼亚"},
+	{--[[order=1825,]] cand="🇺🇦", comment="旗: 乌克兰"},
+	{--[[order=1826,]] cand="🇺🇬", comment="旗: 乌干达"},
+	{--[[order=1827,]] cand="🇺🇲", comment="旗: 美国本土外小岛屿"},
+	{--[[order=1828,]] cand="🇺🇳", comment="旗: 联合国"},
+	{--[[order=1829,]] cand="🇺🇸", comment="旗: 美国"},
+	{--[[order=1830,]] cand="🇺🇾", comment="旗: 乌拉圭"},
+	{--[[order=1831,]] cand="🇺🇿", comment="旗: 乌兹别克斯坦"},
+	{--[[order=1832,]] cand="🇻🇦", comment="旗: 梵蒂冈"},
+	{--[[order=1833,]] cand="🇻🇨", comment="旗: 圣文森特和格林纳丁斯"},
+	{--[[order=1834,]] cand="🇻🇪", comment="旗: 委内瑞拉"},
+	{--[[order=1835,]] cand="🇻🇬", comment="旗: 英属维尔京群岛"},
+	{--[[order=1836,]] cand="🇻🇮", comment="旗: 美属维尔京群岛"},
+	{--[[order=1837,]] cand="🇻🇳", comment="旗: 越南"},
+	{--[[order=1838,]] cand="🇻🇺", comment="旗: 瓦努阿图"},
+	{--[[order=1839,]] cand="🇼🇫", comment="旗: 瓦利斯和富图纳"},
+	{--[[order=1840,]] cand="🇼🇸", comment="旗: 萨摩亚"},
+	{--[[order=1841,]] cand="🇽🇰", comment="旗: 科索沃"},
+	{--[[order=1842,]] cand="🇾🇪", comment="旗: 也门"},
+	{--[[order=1843,]] cand="🇾🇹", comment="旗: 马约特"},
+	{--[[order=1844,]] cand="🇿🇦", comment="旗: 南非"},
+	{--[[order=1845,]] cand="🇿🇲", comment="旗: 赞比亚"},
+	{--[[order=1846,]] cand="🇿🇼", comment="旗: 津巴布韦"},
+	{--[[order=1847,]] cand="🏴󠁧󠁢󠁥󠁮󠁧󠁿", comment="旗: 英格兰"},
+	{--[[order=1848,]] cand="🏴󠁧󠁢󠁳󠁣󠁴󠁿", comment="旗: 苏格兰"},
+	{--[[order=1849,]] cand="🏴󠁧󠁢󠁷󠁬󠁳󠁿", comment="旗: 威尔士"},
+	{--[[order=1850,]] cand="🏻", comment="较浅肤色"},
+	{--[[order=1851,]] cand="🏼", comment="中等-浅肤色"},
+	{--[[order=1852,]] cand="🏽", comment="中等肤色"},
+	{--[[order=1853,]] cand="🏾", comment="中等-深肤色"},
+	{--[[order=1854,]] cand="🏿", comment="较深肤色"},
+	{--[[order=1855,]] cand="🦰", comment="红发"},
+	{--[[order=1856,]] cand="🦱", comment="卷发"},
+	{--[[order=1857,]] cand="🦳", comment="白发"},
+	{--[[order=1858,]] cand="🦲", comment="秃顶"}
+}
+-- key as input punct, /em[key] to yield from _start to _end 
+local ranges = {
+	[""] = {_start = 1, _end = 1858, tip = "全部"},
+	jt = { _start = 494, _end = 519, tip = "家庭"},
+	dw = { _start = 525, _end = 642, tip = "动物"},
+	lx = { _start = 801, _end = 1018, tip = "旅行"},
+	che = { _start = 867, _end = 933, tip = "车&交通"},
+	hd = { _start = 1019, _end = 1104, tip = "活动"},
+	fh = { _start = 1360, _end = 1580, tip = "符号"},
+	fs = { _start = 1850, _end = 1858, tip = "肤色"},
+	qi = { _start = 1581, _end = 1849, tip = "旗帜"},
+	shou = { _start = 164, _end = 201, tip = "手"},
+	ren = { _start = 223, _end = 519, tip = "人"},
+	rl = { _start = 164, _end = 524, tip = "人类"},
+	sw = { _start = 704, _end = 800, tip = "食物"},
+	wp = { _start = 1105, _end = 1359, tip = "物品"},
+	xl = { _start = 1, _end = 163, tip = "笑脸"},
+	xz = { _start = 1419, _end = 1431, tip = "星座"},
+	zw = { _start = 643, _end = 703, tip = "植物"}
+}
+
+local function Emoji_Translator(input, seg, env)
+	-- not start with /em return 
+	if not input:match("^/em") then return end
+	local segment = env.engine.context.composition:back()
+	local page_size = env.engine.schema.page_size
+	local prompt = ""
+	local cnt = 0
+	-- calc prompt
+	for k, v in pairs(ranges) do
+		if ("/em"..k):match(input .. "(.*)$") then
+			local cmpl = (("/em"..k):match(input .. "(.*)$"))
+			if cmpl ~= "" then prompt = prompt .. "~" .. cmpl .. emoji_candidate_info[ranges[k]._start].cand .. " " end
+			cnt = cnt + 1
+			if cnt >= page_size then break end
 		end
+	end
+	-- calc prompt end
+	local datas = ranges[ input:match("/em(.*)$") ]
+	-- not matched, return
+	if not datas then
+		segment.prompt = prompt
+		return
+	end
+	-- if matched add current group tip
+	segment.prompt = "[" .. datas.tip .. "] " .. prompt
+	-- yield candidates
+	for idx = datas._start, datas._end do
+		yield(Candidate("emoji", seg.start, seg._end, emoji_candidate_info[idx].cand, emoji_candidate_info[idx].comment))	
 	end
 end
 
-return emoji
+return Emoji_Translator
 
-
--- -------------------------------------------------------
--- add line in schema custom patch if not exits
--- -------------------------------------------------------
--- engine/translators/+: lua_translator@Emoji_Translator
--- recognizer/patterns/punct+: '^/[a-zA-Z]+$'
-
-
--- -------------------------------------------------------
--- add line in rime.lua
--- -------------------------------------------------------
--- local emoji = require("emoji")()
--- Emoji_Translator = emoji.Emoji_Translator
+-- how to use this
+-- in rime.lua
+--Emoji_Translator = require("emoji2")
 --
+-- in schema
+--  engine/translators/+:
+--  - lua_translator@Emoji_Translator

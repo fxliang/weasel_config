@@ -17,8 +17,8 @@ patch:
   style/layout/shadow_offset_y: 4
   style/layout/hilite_padding:  10
   style/layout/hilite_spacing: 10
-  style/layout/margin_x: 20
-  style/layout/margin_y: 20
+  style/layout/margin_x: 10
+  style/layout/margin_y: 10
   style/layout/round_corner:   5
   style/layout/corner_radius: 15
 
