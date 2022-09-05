@@ -1940,7 +1940,15 @@ local function Emoji_Translator(input, seg, env)
 	end
 end
 
-return Emoji_Translator
+local function tips()
+	local tips = ""
+	for k,v in pairs(ranges) do
+		tips = tips .. (prefix .. k) .. "\t\t" .. v.tip .. "\r"
+	end
+	tips = string.sub(tips, 1, #tips - 1)
+	return tips
+end
+return {translator = Emoji_Translator, tips = tips}
 
 -- how to use this
 -- in rime.lua
