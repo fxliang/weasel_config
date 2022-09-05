@@ -1,6 +1,5 @@
 patch:
-  style/color_font: true
-  style/font_face: "Segoe UI, Segoe UI Emoji:1f000:1f09f, Noto Color Emoji SVG:80, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
+  style/font_face: "Segoe UI, Noto Color Emoji SVG, LXGW Wenkai, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
   style/label_font_face: "Segoe UI, Noto Color Emoji SVG:80 , Microsoft Yahei"
   style/font_point: 20
   style/label_font_point: 20
