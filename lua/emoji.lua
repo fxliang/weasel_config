@@ -1922,7 +1922,7 @@ local function prompt_str(input, limit, datas)
 	return prompt
 end
 -- translator
-local function Emoji_Translator(input, seg, env)
+function Emoji_Translator(input, seg, env)
 	-- not start with prefix return 
 	if not input:match("^" .. prefix) then return end
 	local segment = env.engine.context.composition:back()
@@ -1940,7 +1940,7 @@ local function Emoji_Translator(input, seg, env)
 	end
 end
 
-local function tips()
+function Emoji_Tips()
 	local tips = ""
 	for k,v in pairs(ranges) do
 		tips = tips .. (prefix .. k) .. "\t\t" .. v.tip .. "\r"
@@ -1948,12 +1948,3 @@ local function tips()
 	tips = string.sub(tips, 1, #tips - 1)
 	return tips
 end
-return {translator = Emoji_Translator, tips = tips}
-
--- how to use this
--- in rime.lua
--- Emoji_Translator = require("emoji")
---
--- in schema custom.yaml
---   engine/translators/+:
---   - lua_translator@Emoji_Translator

@@ -1,29 +1,37 @@
-local rmb = require("number")
-local emoji = require("emoji")
-function tips(input,seg)
+require("mydate")
+require("unicode")
+require("number")
+require("emoji")
+require("basefunctions")
+
+-- global lua help tips
+function Lua_Tips(input,seg, env)
+	local segment = env.engine.context.composition:back()
+	if input:match("^/$") then 
+		segment.prompt = "~? [获得输入帮助]"
+		return
+	end
 	if input:match("^/%?$") then
-		local emoji_tips = "" .. emoji.tips()
-		local daxie_tips = "" .. rmb.tips()
-		yield(Candidate("tips", seg._start, seg._end, "", emoji_tips))
-		yield(Candidate("tips", seg._start, seg._end, "", daxie_tips))
+		segment.prompt = "Lua快捷输入帮助"
+		local emoji_tips = "" .. Emoji_Tips()
+		local daxie_tips = "" .. Daxie_Tips()
+		local unicode_tips = "" .. Unicode_Tips()
+		local date_tips = "" .. Date_Tips()
+
+		local alltips = ""
+		alltips = alltips .. emoji_tips 
+		alltips = alltips .. "\r" .. daxie_tips 
+		alltips = alltips .. "\r" .. date_tips
+		alltips = alltips .. "\r" .. unicode_tips
+		yield(Candidate("tips", seg._start, seg._end, "", alltips))
 	end
 end
-local unicode = require("unicode")()
-local mydate = require("mydate")()
-local english = require("english")()
-local basefunc = require("basefunctions")()
---must after function definitions
-Emoji_Translator = emoji.translator
 
+--must after function definitions
+local english = require("english")()
 english_processor = english.processor
 english_segmentor = english.segmentor
 english_translator = english.translator
 english_filter = english.filter
 english_filter0 = english.filter0
-Multiline_filter = basefunc.Multiline_filter
-
--- translators
-date_translator = mydate.date_translator
-UnicodeTranslator  = unicode.UnicodeTranslator
-daxie_translator = rmb.translator
 
