@@ -236,6 +236,7 @@ end
 -- 农历转公历,返回公历日期 year, month, day
 function LunarToCommon(year, month, day, _isLeap)
 	local y,m,d,isLeap = year, month, day, _isLeap
+	if (leapMonths(y) ~= m or leapMonths(y) == 0) and _isLeap then return nil end
 	local tmpLuna = LunarInt(y, m, d)
 	while tmpLuna.year ~= year or tmpLuna.month ~= month or math.floor(tmpLuna.day) ~= day or tmpLuna.isLeap ~= _isLeap do
 		d = d + 1

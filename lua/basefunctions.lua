@@ -29,22 +29,11 @@ function Multiline_filter(input)
 end
 
 function Tip_Filter(input, env, cands)
-	env.uniquifier = Component.Filter(env.engine, "", "uniquifier")
-	local translation = Translation( function()
-		for cand in input:iter() do
-			if cand.type:match("^tips") then
-				cand.text= tostring(math.random())
-			end
-			yield(cand)
+	for cand in input:iter() do
+		if cand.type:match("^tip") then
+			cand.comment = cand.text
+			cand.text = ""
 		end
-	end)
-	--  uniquifier
-    local uniquifiered = env.uniquifier:apply(translation,cands)
-    -- lua-filter  還原 cand.text = ""
-    for cand in uniquifiered:iter() do
-        if cand.type:match("^tip") then 
-               cand.text = ""
-        end
-        yield(cand)
-     end
+		yield(cand)
+	end
 end

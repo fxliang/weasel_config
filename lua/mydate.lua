@@ -1,6 +1,6 @@
 require("wnl")
 -- 计算目标时间的相关信息,输出字符串列表
-local function CalcDate(t) 
+local function CalcDate(t)
 	local tb = {'星期日','星期一','星期二','星期三','星期四','星期五','星期六'}
 	local wkn = os.date("*t", t).wday
 	local dateformated = {
@@ -24,7 +24,7 @@ local function GetNearWeekDayN(n, subfix)
 	return  CalcDate(os.time({year = cy, month = cm, day = cd + offset}))
 end
 
-function Date_Translator(input, seg)
+function Date_Translator(input, seg, env)
 	local tb = {'星期日','星期一','星期二','星期三','星期四','星期五','星期六'}
 	local t = os.time()
 	local res = CalcDate(t)
@@ -82,22 +82,29 @@ function Date_Translator(input, seg)
 		yield(Candidate("weekday", seg.start, seg._end, res.weekday, "" ))
 		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.sz, ""))
 		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.gz, ""))
-	--[[
-	else if input:match("^/%d%d%d%d%d%d[0123]%dn$") then
+	-- [[
+	elseif input:match("^/%d%d%d%d%d%d[0123]%dnr?$") then
 		local of = 1
 		local yr =tonumber(string.sub(input, of+1, of+4))
 		local mon=tonumber(string.sub(input, of+5, of+6))
 		local day=tonumber(string.sub(input, of+7, of+8))
-		local calcDate = LunarToCommon(yr, mon, day)
-		t = os.time({calcDate.year, calcDate.month, calcDate.day})
-		subfix = ""
+		local isleap = false
+		if input:match("nr$") then isleap = true end
+		local calcDate = LunarToCommon(yr, mon, day, isleap)
+		if not calcDate then 
+			local segment = env.engine.context.composition:back()
+			segment.prompt = "闰月错误"
+			return
+		end
+		local t = os.time({year = calcDate.year, month  = calcDate.month, day = calcDate.day})
+		local subfix = "农历反查"
 		local res = CalcDate(t)
 		yield(Candidate("weekday", seg.start, seg._end, res.date, subfix ))
 		yield(Candidate("weekday", seg.start, seg._end, res.dateweekday, "" ))
 		yield(Candidate("weekday", seg.start, seg._end, res.weekday, "" ))
 		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.sz, ""))
 		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.gz, ""))
-		]]
+		--]]
 	elseif string.match(input, '/%d+[hq]') then
 		local cy = tonumber(os.date("%Y", unixTime))
 		local cm = tonumber(os.date("%m", unixTime))
@@ -133,6 +140,8 @@ function Date_Tips()
 	res = res .. "/\\d+h\tx天后\r"
 	res = res .. "/\\d+q\tx天前\r"
 	res = res .. "/20220906\t2022年9月6日的日期\r"
+	res = res .. "/20220906n\t二零二二年九月初六的反查\r"
+	res = res .. "/20200406nr\t二零二零年闰四月初六的反查\r"
 	res = res .. "/20220909g\t2022年9月9日到今天的间隔\r"
 	res = res .. "/20220906h\\d+[^0-9]\t2022年9月6日后x天\r"
 	res = res .. "/20220906q\\d+[^0-9]\t2022年9月6日前x天"
