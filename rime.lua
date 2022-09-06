@@ -1,16 +1,20 @@
+local rmb = require("number")
+local emoji = require("emoji")
 function tips(input,seg)
 	if input:match("^/%?$") then
-		local tip = "" .. require("emoji").tips() 
-		yield(Candidate("tips", seg._start, seg._end, "", tip))
+		local emoji_tips = "" .. emoji.tips()
+		local daxie_tips = "" .. rmb.tips()
+		yield(Candidate("tips", seg._start, seg._end, "", emoji_tips))
+		yield(Candidate("tips", seg._start, seg._end, "", daxie_tips))
 	end
 end
 local unicode = require("unicode")()
 local mydate = require("mydate")()
 local english = require("english")()
-local rmb = require("number")()
 local basefunc = require("basefunctions")()
 --must after function definitions
-Emoji_Translator = require("emoji").translator
+Emoji_Translator = emoji.translator
+
 english_processor = english.processor
 english_segmentor = english.segmentor
 english_translator = english.translator
@@ -21,5 +25,5 @@ Multiline_filter = basefunc.Multiline_filter
 -- translators
 date_translator = mydate.date_translator
 UnicodeTranslator  = unicode.UnicodeTranslator
-daxie_translator = rmb.daxie_translator
+daxie_translator = rmb.translator
 

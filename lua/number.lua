@@ -1,4 +1,4 @@
-local function rmb()
+--local function rmb()
 	local confs = {
 		{
 			comment = " 大写",
@@ -93,7 +93,7 @@ local function rmb()
 		return s
 	end
 
-	function split(input, delimiter)
+	local function split(input, delimiter)
 		input = tostring(input)
 		delimiter = tostring(delimiter)
 		if (delimiter == "") then return false end
@@ -128,6 +128,11 @@ local function rmb()
 			end
 		end
 	end
-end
 
-return rmb
+	function daxie_tips()
+		return "/dx\\d\\+(.\\d\\d)?\t\t大写金额"
+	end
+--end
+
+--return rmb
+return {translator = daxie_translator, tips = daxie_tips}
