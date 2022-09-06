@@ -132,5 +132,5 @@ function Daxie_Translator(input, seg, env)
 end
 
 function Daxie_Tips()
-	return "/dx\\d+(.\\d\\d)?\t\t大写金额"
+	return "/dx\\d+(.\\d\\d)?\t大写金额"
 end

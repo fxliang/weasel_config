@@ -4,7 +4,7 @@ patch:
     reset: 0
     states: [ "🈚️", "🈶️" ]
   'engine/filters/@before 0':
-    simplifier@emoji_suggestion
+    - simplifier@emoji_suggestion
   emoji_suggestion:
     opencc_config: emoji.json
     option_name: emoji_suggestion
@@ -12,6 +12,7 @@ patch:
   menu/page_size: 6
   engine/filters/+:
   - lua_filter@Multiline_filter
+  - lua_filter@Tip_Filter
   engine/translators/+:
   - table_translator@custom_phrase
   - lua_translator@Date_Translator

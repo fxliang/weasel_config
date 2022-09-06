@@ -62,7 +62,6 @@ function Date_Translator(input, seg)
 		local gapstr =   tostring(math.floor(d:spandays()))
 		local cmt = "距离今天的日期间隔"
 		yield(Candidate("gap", seg.start, seg._end, gapstr, cmt ))
-
 	elseif string.match(input, "/%d%d%d%d%d%d[0123]%d[hq]%d+[^0-9]$") then
 		local of = 1
 		local yr=string.sub(input, of+1, of+4)
@@ -83,6 +82,22 @@ function Date_Translator(input, seg)
 		yield(Candidate("weekday", seg.start, seg._end, res.weekday, "" ))
 		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.sz, ""))
 		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.gz, ""))
+	--[[
+	else if input:match("^/%d%d%d%d%d%d[0123]%dn$") then
+		local of = 1
+		local yr =tonumber(string.sub(input, of+1, of+4))
+		local mon=tonumber(string.sub(input, of+5, of+6))
+		local day=tonumber(string.sub(input, of+7, of+8))
+		local calcDate = LunarToCommon(yr, mon, day)
+		t = os.time({calcDate.year, calcDate.month, calcDate.day})
+		subfix = ""
+		local res = CalcDate(t)
+		yield(Candidate("weekday", seg.start, seg._end, res.date, subfix ))
+		yield(Candidate("weekday", seg.start, seg._end, res.dateweekday, "" ))
+		yield(Candidate("weekday", seg.start, seg._end, res.weekday, "" ))
+		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.sz, ""))
+		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.gz, ""))
+		]]
 	elseif string.match(input, '/%d+[hq]') then
 		local cy = tonumber(os.date("%Y", unixTime))
 		local cm = tonumber(os.date("%m", unixTime))
@@ -110,17 +125,17 @@ function Date_Translator(input, seg)
 end
 
 function Date_Tips()
-	local res = "/date\t\t日期\r"
-	res = res .. "/time\t\t时间\r"
-	res = res .. "/[1-7]x\t\t下周x\r"
-	res = res .. "/[1-7]s\t\t上周x\r"
-	res = res .. "/[1-7]z\t\t这周x\r"
-	res = res .. "/\\d+h\t\tx天后\r"
-	res = res .. "/\\d+q\t\tx天前\r"
-	res = res .. "/20220906\t\t2022年9月6日的日期\r"
-	res = res .. "/20220909g\t\t2022年9月9日到今天的间隔\r"
-	res = res .. "/20220906h\\d+[^0-9]\t\t2022年9月6日后x天\r"
-	res = res .. "/20220906q\\d+[^0-9]\t\t2022年9月6日前x天"
+	local res = "/date\t日期\r"
+	res = res .. "/time\t时间\r"
+	res = res .. "/[1-7]x\t下周x\r"
+	res = res .. "/[1-7]s\t上周x\r"
+	res = res .. "/[1-7]z\t这周x\r"
+	res = res .. "/\\d+h\tx天后\r"
+	res = res .. "/\\d+q\tx天前\r"
+	res = res .. "/20220906\t2022年9月6日的日期\r"
+	res = res .. "/20220909g\t2022年9月9日到今天的间隔\r"
+	res = res .. "/20220906h\\d+[^0-9]\t2022年9月6日后x天\r"
+	res = res .. "/20220906q\\d+[^0-9]\t2022年9月6日前x天"
 
 	return res
 end

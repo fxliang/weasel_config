@@ -23,12 +23,16 @@ function Lua_Tips(input,seg, env)
 		alltips = alltips .. "\r" .. daxie_tips 
 		alltips = alltips .. "\r" .. date_tips
 		alltips = alltips .. "\r" .. unicode_tips
-		yield(Candidate("tips", seg._start, seg._end, "", alltips))
+		yield(Candidate("tips", seg._start, seg._end, "", emoji_tips))
+		yield(Candidate("tips", seg._start, seg._end, "", daxie_tips))
+		yield(Candidate("tips", seg._start, seg._end, "", unicode_tips))
+		yield(Candidate("tips", seg._start, seg._end, "", date_tips))
 	end
 end
 
 --must after function definitions
 local english = require("english")()
+
 english_processor = english.processor
 english_segmentor = english.segmentor
 english_translator = english.translator

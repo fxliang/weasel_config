@@ -11,7 +11,7 @@ patch:
   style/layout/border: 2
   style/layout/spacing: 20
   style/layout/candidate_spacing: 20
-  style/layout/shadow_radius: 3 
+  style/layout/shadow_radius: 0 
   style/layout/shadow_offset_x: 4
   style/layout/shadow_offset_y: 4
   style/layout/hilite_padding:  10

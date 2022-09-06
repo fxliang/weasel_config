@@ -1943,7 +1943,7 @@ end
 function Emoji_Tips()
 	local tips = ""
 	for k,v in pairs(ranges) do
-		tips = tips .. (prefix .. k) .. "\t\t" .. v.tip .. "\r"
+		tips = tips .. (prefix .. k) .. "\t" .. v.tip .. "\r"
 	end
 	tips = string.sub(tips, 1, #tips - 1)
 	return tips

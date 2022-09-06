@@ -140,10 +140,8 @@ local function Ganzhir(year,month,day)
 	return res
 end
 
--- 输入年月日，返回 农历信息,
--- .sz 为 二零二一年十二月初六 这样的信息
--- .gz 为 辛丑年十二月初六   这样的信息
-function Lunar(y, m, d)
+-- 输入年月日，返回 农历信息, 数值year, month, day, isLeap
+local function LunarInt(y, m, d)
     local d1 = date(1900,1,31)
     local d2 = date(y,m,d)
     local offset = date.diff(d2,d1):spandays()
@@ -194,6 +192,14 @@ function Lunar(y, m, d)
     end
     local month = i
     local day = offset + 1
+	return{year = year, month = month, day = day, isLeap = isLeap}
+end
+-- 输入年月日，返回 农历信息,
+-- .sz 为 二零二一年十二月初六 这样的信息
+-- .gz 为 辛丑年十二月初六   这样的信息
+function Lunar(y, m, d)
+	local lunar = LunarInt(y, m, d)
+	local year, month, day, isLeap = lunar.year, lunar.month, lunar.day, lunar.isLeap
 	--数字表示农历
     local sz = {'零','一','二','三','四','五','六','七','八','九', '十'}
     local nian = sz[year//1000 + 1] .. sz[year%1000//100 + 1] .. sz[year%100//10 + 1] .. sz[year%10 + 1]
@@ -226,4 +232,21 @@ function Lunar(y, m, d)
         gz = (Ganzhin(year) .. '年' .. yue .. '月' .. ri )
 	}
 	return res
+end
+-- 农历转公历,返回公历日期 year, month, day
+function LunarToCommon(year, month, day, _isLeap)
+	local y,m,d,isLeap = year, month, day, _isLeap
+	local tmpLuna = LunarInt(y, m, d)
+	while tmpLuna.year ~= year or tmpLuna.month ~= month or math.floor(tmpLuna.day) ~= day or tmpLuna.isLeap ~= _isLeap do
+		d = d + 1
+		tmpLuna = LunarInt(y, m, d)
+		--print("当前公历", y, m, d)
+		--print("目标农历", year, month, day, _isLeap)
+		--print("当前农历", tmpLuna.year, tmpLuna.month, tmpLuna.day, tmpLuna.isLeap)
+		--print(math.floor(tmpLuna.day), day)
+		--print("---------------------------------------------------------")
+	end
+	local t = os.time({year = y, month = m, day = d})
+	local d = os.date("*t", t)
+	return {year = d.year, month = d.month, day = d.day}
 end

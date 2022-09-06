@@ -1,6 +1,11 @@
 -- Unicode quick input
-function Unicode_Translator(input, seg)
-	if string.match(input, "^U%x+") or string.match(input, '^/uc%x+') then
+function Unicode_Translator(input, seg, env)
+	if not (input:match("^U") or input:match("^/uc")) then return end
+	local segment = env.engine.context.composition:back()
+	if input:match("^U$") or input:match("^/uc$") then
+		segment.prompt = "输入[0-9a-fA-F],以[^0-9a-fA-F]分割两个字符，Unicode"
+	end
+	if input:match("^U%x+") or input:match('^/uc%x+') then
 		local cand = ''
 		local cmt = ''
 		local rinput = ''
@@ -23,5 +28,5 @@ function Unicode_Translator(input, seg)
 end
 
 function Unicode_Tips()
-	return "U\\x+\\X+\\x+ ...\t\tUnicode\r/uc\\x+\\X+\\x+ ...\t\tUnicode"
+	return "U\\x+\\X+\\x+ ...\tUnicode\r/uc\\x+\\X+\\x+ ...\tUnicode"
 end
