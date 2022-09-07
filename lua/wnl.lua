@@ -247,7 +247,9 @@ function LunarToCommon(year, month, day, _isLeap)
 		--print(math.floor(tmpLuna.day), day)
 		--print("---------------------------------------------------------")
 	end
-	local t = os.time({year = y, month = m, day = d})
-	local d = os.date("*t", t)
-	return {year = d.year, month = d.month, day = d.day}
+
+	--local t = os.time({year = y, month = m, day = d})
+	--local d = os.date("*t", t)
+	local d = date(y, m, d)
+	return {year = d:getyear(), month = d:getmonth(), day = d:getday()}
 end
