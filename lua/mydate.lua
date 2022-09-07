@@ -34,6 +34,15 @@ local function GetNearWeekDayN(n, subfix)
 end
 
 function Date_Translator(input, seg, env)
+	if not (input:match("^/date$") 
+		or input:match("^/time$")
+		or input:match("/%d%d%d%d%d%d[0123]%d[gn]?r?$") 
+		or input:match("/%d%d%d%d%d%d[0123]%d[hq]%d+[^0-9]$") 
+		or input:match('/%d+[hq]')
+		or input:match('/[1-7][xsz]'))
+		then
+			return
+	end
 	local t = os.time()
 	local cy = tonumber(os.date("%Y", os.time()))
 	local cm = tonumber(os.date("%m", os.time()))
