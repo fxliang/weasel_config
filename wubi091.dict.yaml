@@ -19,7 +19,6 @@ encoder:
     - length_in_range: [4, 10]
       formula: "AaBaCaZa"
 ...
-abcd\refgh\rkkkk	aaaa
 或	a
 七	a
 花	a
@@ -25299,8 +25298,8 @@ DNF	dnf
 DNS	dns
 成材	dnsf
 硬性要求	dnsf
-尤其	dnsg
 成本	dnsg
+尤其	dnsg
 感情生活	dnsi
 DNS服务器	dnsk
 大异其趣	dnsk
@@ -53301,6 +53300,7 @@ give me five	gmf
 再睡	gmht
 两眼	gmhv
 现眼	gmhv
+不见得人	gmhw
 再往	gmhy
 形同虚设	gmhy
 兩	gmhy
@@ -97966,7 +97966,7 @@ Logic Pro X	lpx
 圆括号	lrk
 加热器	lrkd
 转换器	lrkd
-跟打器	lrkd
+连接器	lrkd
 圆括号	lrkg
 转接口	lrkk
 暂别	lrkl
@@ -150386,10 +150386,10 @@ setup	setu
 本事	sggk
 想不到吧	sggk
 其事	sggk
+本来	sggo
 西亚	sggo
 西晋	sggo
 生下来	sggo
-本来	sggo
 机事不密	sggp
 相互理解	sggq
 想不到你是这样的	sggr

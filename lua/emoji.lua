@@ -1934,9 +1934,9 @@ function Emoji_Translator(input, seg, env)
 	if not datas then return end
 	-- yield candidates
 	for idx = datas._start, datas._end do
-		if emoji_candidate_info[idx].ver == nil then
+		--if emoji_candidate_info[idx].ver == nil then
 			yield(Candidate("emoji", seg._start, seg._end, emoji_candidate_info[idx].cand, emoji_candidate_info[idx].comment))
-		end
+		--end
 	end
 end
 
