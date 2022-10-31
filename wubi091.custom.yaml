@@ -28,4 +28,6 @@ patch:
   speller/auto_select: true
   speller/auto_select_unique_candidate: true
   speller/delimiter: "`"  #因为用了;'来做23词选择，所以原来的分词键要改成/
+  translator/comment_format/+:
+    - "xform/^~//"
 
