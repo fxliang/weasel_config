@@ -1,13 +1,16 @@
 patch:
-  __include: win10
+  __include: win11
+  style/color_font: true
+  #style/capture_type: highlighted
+  #style/capture_type: candidates
 
 lost_temple:
   style/font_face: "NotFont, Segoe UI Emoji:80, 汉仪仿宋(GB18030版), LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
   style/label_font_face: "NotFont, Segoe UI Emoji:80, 汉仪仿宋(GB18030版), LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
   style/comment_font_face: "NotFont, Segoe UI Emoji:80, 汉仪仿宋(GB18030版), LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
-  style/font_point: 20
-  style/label_font_point: 12
-  style/comment_font_point: 12
+  style/font_point: 24
+  style/label_font_point: 10
+  style/comment_font_point: 10
   style/color_scheme: lost_temple
   #style/preedit_type: preview
   style/horizontal: true
@@ -18,22 +21,22 @@ lost_temple:
   style/layout/spacing: 15
   style/layout/candidate_spacing: 10
   style/layout/shadow_radius:   8 
-  style/layout/shadow_offset_x: 8
-  style/layout/shadow_offset_y: 8
+  style/layout/shadow_offset_x: 10
+  style/layout/shadow_offset_y: 10
   style/layout/hilite_spacing: 10
   style/layout/hilite_padding:  4
-  style/layout/margin_x:        20
-  style/layout/margin_y:        20
+  style/layout/margin_x:        25
+  style/layout/margin_y:        25
   style/layout/hilited_corner_radius:   5
   style/layout/corner_radius: 10
 
   # color_schemes customization
   preset_color_schemes/lost_temple/hilited_candidate_back_color: 0x82e6ca
-  preset_color_schemes/lost_temple/hilited_candidate_shadow_color: 0x90000000
+  preset_color_schemes/lost_temple/hilited_candidate_shadow_color: 0xa0000000
   preset_color_schemes/lost_temple/candidate_shadow_color: 0x00000000
   preset_color_schemes/lost_temple/candidate_back_color: 0x00444444
   preset_color_schemes/lost_temple/hilited_shadow_color: 0x00000000
-  preset_color_schemes/lost_temple/shadow_color: 0x90000000
+  preset_color_schemes/lost_temple/shadow_color: 0x00000000
   preset_color_schemes/lost_temple/border_color: 0x00444444
 
 win10:    
@@ -47,9 +50,10 @@ win10:
   style/inline_preedit: true
   style/fullscreen: false
   style/color_scheme: win10blue
+  style/color_scheme_dark: win10gray
   style/layout/align_type: center
   style/layout/min_height: 0
-  style/layout/border: 1
+  style/layout/border: 2
   style/layout/spacing: 20
   style/layout/candidate_spacing: 20
   style/layout/shadow_radius:    0 
@@ -59,10 +63,10 @@ win10:
   style/layout/hilite_spacing: 10
   style/layout/margin_x:  10
   style/layout/margin_y:  10
-  style/layout/round_corner:   0
-  style/layout/corner_radius:   0
-  preset_color_schemes/win10:
-    name: "Win10"
+  style/layout/round_corner:    6
+  style/layout/corner_radius:   6
+  preset_color_schemes/win10gray:
+    name: "Win10Gray"
     candidate_text_color: 0x000000
     comment_text_color: 0x666666
     text_color: 0x000000
@@ -96,5 +100,80 @@ win10:
     candidate_back_color: 0x00ffffff
     candidate_shadow_color: 0x00ffffff
     comment_text_color: 0x222222
+  preset_color_schemes/win10black:
+    name: "Win10Black"
+    candidate_text_color: 0xffffff
+    comment_text_color: 0x666666
+    text_color: 0xffffff
+    back_color: 0x000000
+    border_color:  0x347440
+    hilited_text_color: 0xffffff
+    hilited_back_color: 0x347440
+    hilited_candidate_text_color:  0xffffff
+    hilited_candidate_back_color: 0x347440
+    hilited_comment_text_color:   0xa9a9a9
+    hilited_label_color: 0xa9a9a9
+    label_color: 0xa9a9a9
+    shadow_color: 0x00000000
 
 
+win11:    
+  style/font_face: "NotFont, Segoe UI Emoji:80, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
+  style/label_font_face: "NotFont, Segoe UI Emoji:80, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
+  style/comment_font_face: "NotFont, Segoe UI Emoji:80, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
+  style/font_point: 20
+  style/label_font_point: 20
+  style/comment_font_point: 20
+  style/horizontal: true
+  style/inline_preedit: true
+  style/fullscreen: false
+  style/color_scheme: win11light
+  style/color_scheme_dark: win11dark
+  style/layout/align_type: center
+  style/layout/min_height: 0
+  style/layout/border: 2
+  style/layout/spacing: 20
+  style/layout/candidate_spacing: 20
+  style/layout/shadow_radius:   8 
+  style/layout/shadow_offset_x: 0
+  style/layout/shadow_offset_y: 0
+  style/layout/hilite_padding:  5
+  style/layout/hilite_spacing: 10
+  style/layout/margin_x:  15
+  style/layout/margin_y:  15
+  style/layout/round_corner:    6
+  style/layout/corner_radius:   10
+  preset_color_schemes/win11light:
+    name: "Win11Light"
+    candidate_text_color: 0x000000
+    comment_text_color: 0x666666
+    text_color: 0x1a1a1a
+    back_color: 0xf9f9f9
+    border_color:  0xf0f0f0
+    hilited_text_color: 0x1a1a1a
+    hilited_back_color: 0xffffff
+    hilited_candidate_text_color:  0x1a1a1a
+    hilited_candidate_back_color: 0xf0f0f0
+    hilited_comment_text_color:   0x1a1a1a
+    hilited_label_color: 0x1a1a1a
+    label_color: 0x1a1a1a
+    shadow_color: 0x20000000
+
+  preset_color_schemes/win11dark:
+    name: "Win11Dark"
+    border_color:  0xc202020
+    back_color: 0x303030
+    hilited_back_color: 0x202020
+    hilited_candidate_back_color: 0x202020
+    candidate_back_color: 0x00303030
+
+    hilited_text_color: 0xf9f9f9
+    hilited_label_color: 0xf9f9f9
+    hilited_candidate_text_color:  0xf9f9f9
+    hilited_comment_text_color:   0xf9f9f9
+
+    text_color: 0xc9c9c9
+    label_color: 0xc9c9c9
+    candidate_text_color: 0xc9c9c9
+    comment_text_color: 0xc9c9c9
+    shadow_color: 0x16000000
