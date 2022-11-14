@@ -1,6 +1,7 @@
 patch:
   __include: win11
   style/color_font: true
+  style/blur_window: true
   #style/capture_type: highlighted
   #style/capture_type: candidates
 
@@ -129,6 +130,7 @@ win11:
   style/fullscreen: false
   style/color_scheme: win11light
   style/color_scheme_dark: win11dark
+  style/mark_text: "☘"
   style/layout/align_type: center
   style/layout/min_height: 0
   style/layout/border: 2
@@ -148,16 +150,17 @@ win11:
     candidate_text_color: 0x000000
     comment_text_color: 0x666666
     text_color: 0x1a1a1a
-    back_color: 0xf9f9f9
-    border_color:  0xf0f0f0
+    back_color: 0x10f9f9f9
+    border_color:  0x10f0f0f0
     hilited_text_color: 0x1a1a1a
     hilited_back_color: 0xffffff
     hilited_candidate_text_color:  0x1a1a1a
     hilited_candidate_back_color: 0xf0f0f0
+    hilited_mark_color: 0x1a1a1a
     hilited_comment_text_color:   0x1a1a1a
     hilited_label_color: 0x1a1a1a
     label_color: 0x1a1a1a
-    shadow_color: 0x20000000
+    shadow_color: 0x00000000
 
   preset_color_schemes/win11dark:
     name: "Win11Dark"
