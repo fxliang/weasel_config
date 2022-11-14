@@ -26,7 +26,7 @@ style/preset_color_schemes/+:
     hilited_candidate_text_color: 0xffffff      #高亮（选中）候选文字颜色
     hilited_label_color: 0xffffff               #高亮（选中）候选序号文字颜色
     hilited_comment_text_color: 0xeeeeee        #高亮（选中）候选注释文字颜色
-	hilite_mark_color: 0x00000000				#*高亮标记颜色，默认透明。在alpha 非0的情况下：当style/mark_text为空则显示仿Windows11 高亮选中效果，如果style/mark_text为非空字符则为字符颜色
+    hilite_mark_color: 0x00000000				#*高亮标记颜色，默认透明。在alpha 非0的情况下：当style/mark_text为空则显示仿Windows11 高亮选中效果，如果style/mark_text为非空字符则为字符颜色
 
 #####################################################################################################
   # 字体设置
