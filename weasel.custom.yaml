@@ -1,142 +1,151 @@
 patch:
   __include: win11
+  __include: my_color_schemes
   style/layout/max_width:  800
   style/layout/max_height: 600
   #style/capture_type: highlighted
   #style/capture_type: candidates
-  preset_color_schemes/+:
-    win11light:
-      name: "Win11light"
-      candidate_text_color: 0x000000
-      comment_text_color: 0x666666
-      comment_back_color: 0x00f9f9f9
-      text_color: 0x1a1a1a
-      back_color: 0x5ff9f9f9
-      border_color:  0x2f9f9f9f
-      hilited_text_color: 0x1a1a1a
-      hilited_back_color: 0x1ff9f9f9
-      hilited_candidate_text_color:  0x1a1a1a
-      hilited_candidate_back_color: 0x2ff9a9f9
-      candidate_back_color: 0x2ff9f9f9
-      hilited_mark_color: 0xfa5f00
-      hilited_comment_text_color:   0x1a1a1a
-      hilited_label_color: 0x1a1a1a
-      label_color: 0x1a1a1a
-      shadow_color: 0x00000000
-    win11dark:
-      name: "Win11Dark"
-      border_color:  0xc202020
-      back_color: 0x303030
-      hilited_back_color: 0x20202020
-      #hilited_candidate_back_color: 0x202020
-      hilited_candidate_back_color: 0x7fd07c3a
-      hilited_candidate_border_color: 0xd07c3a
-      candidate_back_color: 0x10d07c3a
-
-      hilited_text_color: 0xf9f9f9
-      hilited_label_color: 0xf9f9f9
-      hilited_candidate_text_color:  0xf9f9f9
-      hilited_comment_text_color:   0xf9f9f9
-      hilited_mark_color: 0xff0000
-
-      text_color: 0xc9c9c9
-      label_color: 0xc9c9c9
-      candidate_text_color: 0xc9c9c9
-      comment_text_color: 0xc9c9c9
-      shadow_color: 0x60000000
-    olor_schemes/oldbook:
-      name: "oldbook"
-      border_color:  0xc202020
-      back_color: 0xdcf5f5
-      hilited_back_color: 0x00202020
-      #hilited_shadow_color: 0x50202020
-      hilited_candidate_back_color: 0x01d07c3a
-      hilited_candidate_border_color: 0xd07c3a
-
-      hilited_text_color: 0x202020
-      hilited_label_color: 0x202020
-      hilited_candidate_text_color:  0x202020
-      hilited_comment_text_color:   0x202020
-      hilited_mark_color: 0xff0000
-
-      text_color: 0x404040
-      label_color: 0x404040
-      candidate_text_color: 0x404040
-      candidate_back_color: 0x01d07c3a
-      comment_text_color: 0x404040
-      candidate_border_color: 0x20d07c3a
-      shadow_color: 0x60000000
-    fakemac:
-      name: "fakemac"
-      candidate_text_color: 0x000000
-      candidate_back_color: 0x0055555
-      comment_text_color: 0x000000
-      label_color: 0x000000
-      text_color: 0xf0f0f0
-      back_color: 0x5f555555
-      border_color:  0x00555555
-      hilited_text_color: 0xf0f0f0
-      hilited_back_color: 0xcf555555
-      hilited_candidate_text_color:  0xffffff
-      hilited_candidate_back_color: 0x5f555555
-      hilited_mark_color: 0xfa5f00
-      hilited_comment_text_color:   0xf0f0f0
-      hilited_label_color: 0xd0d0d0
-      shadow_color: 0x00000000
-    win10gray:
-      name: "Win10Gray"
-      candidate_text_color: 0x000000
-      comment_text_color: 0x666666
-      text_color: 0x000000
-      back_color: 0x4ff4f4f4
-      border_color:  0xcccccc
-      hilited_text_color: 0x000000
-      hilited_back_color: 0xffffff
-      hilited_candidate_text_color:  0x000000
-      hilited_candidate_back_color: 0xcccccc
-      hilited_comment_text_color:   0x555555
-      hilited_label_color: 0x444444
-      hilited_mark_color: 0xd77800
-      label_color: 0x888888
-      shadow_color: 0x20000000
-    win10blue:
-      name: "Win10Blue"
-      text_color: 0x000000
-      back_color: 0x1fffffff
-      shadow_color: 0x00000000
-      border_color:  0xd77800
-      hilited_text_color: 0x000000
-      hilited_back_color: 0x00ffffff
-      hilited_shadow_color: 0x00d77800
-      hilited_label_color: 0xffffff
-      hilited_candidate_text_color: 0xffffff
-      hilited_candidate_back_color: 0xd77800
-      hilited_candidate_shadow_color:  0x00d77800
-      hilited_comment_text_color:   0xffffff
-      #hilited_candidate_shadow_color: 0x40000000
-
-      label_color: 0x838383
-      candidate_text_color: 0x000000
-      candidate_back_color: 0x00ffffff
-      candidate_shadow_color: 0x00ffffff
-      comment_text_color: 0x222222
-      #hilited_mark_color: 0xffffff
-    win10black:
-      name: "Win10Black"
-      candidate_text_color: 0xffffff
-      comment_text_color: 0x666666
-      text_color: 0xffffff
-      back_color: 0x000000
-      border_color:  0x347440
-      hilited_text_color: 0xffffff
-      hilited_back_color: 0x347440
-      hilited_candidate_text_color:  0xffffff
-      hilited_candidate_back_color: 0x347440
-      hilited_comment_text_color:   0xa9a9a9
-      hilited_label_color: 0xa9a9a9
-      label_color: 0xa9a9a9
-      shadow_color: 0x00000000
+  #preset_color_schemes/:
  
+my_color_schemes:
+  preset_color_schemes/win11light:
+    name: "Win11light"
+    candidate_text_color: 0x000000
+    comment_text_color: 0x666666
+    comment_back_color: 0x00f9f9f9
+    text_color: 0x1a1a1a
+    back_color: 0x5ff9f9f9
+    border_color:  0x2f9f9f9f
+    hilited_text_color: 0x1a1a1a
+    hilited_back_color: 0x1ff9f9f9
+    hilited_candidate_text_color:  0x1a1a1a
+    hilited_candidate_back_color: 0x2ff9a9f9
+    candidate_back_color: 0x2ff9f9f9
+    hilited_mark_color: 0xfa5f00
+    hilited_comment_text_color:   0x1a1a1a
+    hilited_label_color: 0x1a1a1a
+    label_color: 0x1a1a1a
+    shadow_color: 0x00000000
+
+  preset_color_schemes/win11dark:
+    name: "Win11Dark"
+    border_color:  0xc202020
+    back_color: 0x303030
+    hilited_back_color: 0x20202020
+    #hilited_candidate_back_color: 0x202020
+    hilited_candidate_back_color: 0x7fd07c3a
+    hilited_candidate_border_color: 0xd07c3a
+    candidate_back_color: 0x10d07c3a
+
+    hilited_text_color: 0xf9f9f9
+    hilited_label_color: 0xf9f9f9
+    hilited_candidate_text_color:  0xf9f9f9
+    hilited_comment_text_color:   0xf9f9f9
+    hilited_mark_color: 0xff0000
+
+    text_color: 0xc9c9c9
+    label_color: 0xc9c9c9
+    candidate_text_color: 0xc9c9c9
+    comment_text_color: 0xc9c9c9
+    shadow_color: 0x60000000
+
+  preset_color_schemes/oldbook:
+    name: "oldbook"
+    border_color:  0xc202020
+    back_color: 0xdcf5f5
+    hilited_back_color: 0x00202020
+    #hilited_shadow_color: 0x50202020
+    hilited_candidate_back_color: 0x01d07c3a
+    hilited_candidate_border_color: 0xd07c3a
+
+    hilited_text_color: 0x202020
+    hilited_label_color: 0x202020
+    hilited_candidate_text_color:  0x202020
+    hilited_comment_text_color:   0x202020
+    hilited_mark_color: 0xff0000
+
+    text_color: 0x404040
+    label_color: 0x404040
+    candidate_text_color: 0x404040
+    candidate_back_color: 0x01d07c3a
+    comment_text_color: 0x404040
+    candidate_border_color: 0x20d07c3a
+    shadow_color: 0x60000000
+          
+  preset_color_schemes/fakemac:
+    name: "fakemac"
+    candidate_text_color: 0x000000
+    candidate_back_color: 0x0055555
+    comment_text_color: 0x000000
+    label_color: 0x000000
+    text_color: 0xf0f0f0
+    back_color: 0x5f555555
+    border_color:  0x00555555
+    hilited_text_color: 0xf0f0f0
+    hilited_back_color: 0xcf555555
+    hilited_candidate_text_color:  0xffffff
+    hilited_candidate_back_color: 0x5f555555
+    hilited_mark_color: 0xfa5f00
+    hilited_comment_text_color:   0xf0f0f0
+    hilited_label_color: 0xd0d0d0
+    shadow_color: 0x00000000
+
+  preset_color_schemes/win10gray:
+    name: "Win10Gray"
+    candidate_text_color: 0x000000
+    comment_text_color: 0x666666
+    text_color: 0x000000
+    back_color: 0x4ff4f4f4
+    border_color:  0xcccccc
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xffffff
+    hilited_candidate_text_color:  0x000000
+    hilited_candidate_back_color: 0xcccccc
+    hilited_comment_text_color:   0x555555
+    hilited_label_color: 0x444444
+    hilited_mark_color: 0xd77800
+    label_color: 0x888888
+    shadow_color: 0x20000000
+
+  preset_color_schemes/win10blue:
+    name: "Win10Blue"
+    text_color: 0x000000
+    back_color: 0x1fffffff
+    shadow_color: 0x00000000
+    border_color:  0xd77800
+    hilited_text_color: 0x000000
+    hilited_back_color: 0x00ffffff
+    hilited_shadow_color: 0x00d77800
+    hilited_label_color: 0xffffff
+    hilited_candidate_text_color: 0xffffff
+    hilited_candidate_back_color: 0xd77800
+    hilited_candidate_shadow_color:  0x00d77800
+    hilited_comment_text_color:   0xffffff
+    #hilited_candidate_shadow_color: 0x40000000
+
+    label_color: 0x838383
+    candidate_text_color: 0x000000
+    candidate_back_color: 0x00ffffff
+    candidate_shadow_color: 0x00ffffff
+    comment_text_color: 0x222222
+    #hilited_mark_color: 0xffffff
+        
+  preset_color_schemes/win10black:
+    name: "Win10Black"
+    candidate_text_color: 0xffffff
+    comment_text_color: 0x666666
+    text_color: 0xffffff
+    back_color: 0x000000
+    border_color:  0x347440
+    hilited_text_color: 0xffffff
+    hilited_back_color: 0x347440
+    hilited_candidate_text_color:  0xffffff
+    hilited_candidate_back_color: 0x347440
+    hilited_comment_text_color:   0xa9a9a9
+    hilited_label_color: 0xa9a9a9
+    label_color: 0xa9a9a9
+    shadow_color: 0x00000000
+      
 # set first font name an invalid font name, to make every valid font able to set unicode range, fontname:start_code_point: end_code_point or fontname:start_code_point
 color_font:
   style/font_face: "NotFont, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
