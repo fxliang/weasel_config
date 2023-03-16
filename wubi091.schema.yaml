@@ -1,16 +1,3 @@
-__include: "base:/patch"
-chord_composer:
-  algebra:
-    - "xform/^df$/2/"
-    - "xform/^([a-z])$/$1/"
-  alphabet: qwertasdfgzxcvbyuiophjklnm
-custom_phrase:
-  db_class: stabledb
-  dictionary: ""
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
-  user_dict: custom_phrase091
 customization: 3660603081
 engine:
   filters:

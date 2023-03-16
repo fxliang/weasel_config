@@ -1,11 +1,15 @@
 patch:
   __include: win11
+  __include: font_face_settings
   __include: my_color_schemes
+  __include: font_size_settings
+  __include: _vertical_text
+  style/mark_text: "|"
   style/layout/max_width:  800
   style/layout/max_height: 600
+
   #style/capture_type: highlighted
   #style/capture_type: candidates
-  #preset_color_schemes/:
  
 my_color_schemes:
   preset_color_schemes/win11light:
@@ -15,11 +19,11 @@ my_color_schemes:
     comment_back_color: 0x00f9f9f9
     text_color: 0x1a1a1a
     back_color: 0x5ff9f9f9
-    border_color:  0x2f9f9f9f
+    border_color:  0x1f9f9f9f
     hilited_text_color: 0x1a1a1a
     hilited_back_color: 0x1ff9f9f9
     hilited_candidate_text_color:  0x1a1a1a
-    hilited_candidate_back_color: 0x2ff9a9f9
+    hilited_candidate_back_color: 0x2ff97979
     candidate_back_color: 0x2ff9f9f9
     hilited_mark_color: 0xfa5f00
     hilited_comment_text_color:   0x1a1a1a
@@ -41,7 +45,7 @@ my_color_schemes:
     hilited_label_color: 0xf9f9f9
     hilited_candidate_text_color:  0xf9f9f9
     hilited_comment_text_color:   0xf9f9f9
-    hilited_mark_color: 0xff0000
+    hilited_mark_color: 0xf07c3a
 
     text_color: 0xc9c9c9
     label_color: 0xc9c9c9
@@ -92,19 +96,19 @@ my_color_schemes:
 
   preset_color_schemes/win10gray:
     name: "Win10Gray"
-    candidate_text_color: 0x000000
-    comment_text_color: 0x666666
     text_color: 0x000000
     back_color: 0x4ff4f4f4
-    border_color:  0xcccccc
+    border_color:  0x4fcccccc
     hilited_text_color: 0x000000
-    hilited_back_color: 0xffffff
+    hilited_back_color: 0x4ff4f4f4
     hilited_candidate_text_color:  0x000000
-    hilited_candidate_back_color: 0xcccccc
+    hilited_candidate_back_color: 0x4fcccccc
     hilited_comment_text_color:   0x555555
-    hilited_label_color: 0x444444
+    hilited_label_color: 0x555555
     hilited_mark_color: 0xd77800
     label_color: 0x888888
+    candidate_text_color: 0x222222
+    comment_text_color: 0x888888
     shadow_color: 0x20000000
 
   preset_color_schemes/win10blue:
@@ -146,8 +150,13 @@ my_color_schemes:
     label_color: 0xa9a9a9
     shadow_color: 0x00000000
       
+font_size_settings:
+  style/font_point:         20
+  style/label_font_point:   16
+  style/comment_font_point: 16
+
 # set first font name an invalid font name, to make every valid font able to set unicode range, fontname:start_code_point: end_code_point or fontname:start_code_point
-color_font:
+font_face_settings:
   style/font_face: "NotFont, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
   style/label_font_face: "NotFont, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
   style/comment_font_face: "NotFont, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
@@ -164,13 +173,8 @@ _vertical_text_wrap:
   style/layout/max_height: 600
 
 lost_temple:
-  __include: color_font
-  style/font_point: 24
-  style/label_font_point:   16
-  style/comment_font_point: 16
   style/color_scheme: lost_temple
   style/color_scheme_dark: lost_temple
-  style/mark_text: "👉"
   style/blur_window: false
   style/horizontal: true
   style/inline_preedit: true
@@ -188,75 +192,62 @@ lost_temple:
   style/layout/round_corner:    5
   style/layout/corner_radius:   10
   # color_schemes customization
-  preset_color_schemes/lost_temple/hilited_candidate_back_color: 0x7f82e6ca
-  preset_color_schemes/lost_temple/hilited_candidate_border_color: 0x82e6ca
+  preset_color_schemes/lost_temple/hilited_candidate_back_color: 0x82e6ca
+  #preset_color_schemes/lost_temple/hilited_candidate_border_color: 0x82e6ca
   preset_color_schemes/lost_temple/candidate_back_color: 0x00444444
   #preset_color_schemes/lost_temple/candidate_border_color: 0x00444444
   preset_color_schemes/lost_temple/hilited_candidate_shadow_color: 0xc0000000
   preset_color_schemes/lost_temple/candidate_shadow_color: 0x00000000
   preset_color_schemes/lost_temple/hilited_shadow_color: 0x00000000
-  preset_color_schemes/lost_temple/shadow_color: 0x000000000
+  preset_color_schemes/lost_temple/shadow_color: 0xc0000000
   preset_color_schemes/lost_temple/border_color: 0x00444444
   preset_color_schemes/lost_temple/back_color: 0x444444
   preset_color_schemes/lost_temple/hilited_label_color: 0x000000
   preset_color_schemes/lost_temple/hilited_mark_color: 0x444444
 
 win10:    
-  __include: color_font
-  menu/alternative_select_labels: [ 〡, 〢, 〣, 〤, 〥, 〦, 〧, 〨, 〩 ]
   style/blur_window: true
-  style/font_point: 24
-  style/label_font_point: 24
-  style/comment_font_point: 24
   style/horizontal: true
   style/inline_preedit: true
-  style/fullscreen: false
+  # color_scheme settings
   style/color_scheme: win10gray
   style/color_scheme_dark: win10blue
+  #layout settings
   style/layout/align_type: center
   style/layout/min_height: 0
   style/layout/border: 1
   style/layout/spacing: 20
-  style/layout/candidate_spacing: 20
+  style/layout/candidate_spacing: 10
   style/layout/shadow_radius:   0
   style/layout/shadow_offset_x: 5
   style/layout/shadow_offset_y: 5
   style/layout/hilite_padding:  10
-  style/layout/hilite_spacing: 10
-  style/mark_text: "|"
+  style/layout/hilite_spacing:  15
   style/layout/margin_x:  10
   style/layout/margin_y:  10
   style/layout/round_corner:    0
-  style/layout/corner_radius:   0
+  style/layout/corner_radius:   5
 
 win11:    
   style/blur_window: true
-  __include: color_font
-  #__include: _vertical_text_wrap
-  style/font_point: 20
-  style/label_font_point: 20
-  style/comment_font_point: 20
-  #style/mark_text: "👇"
-  #style/mark_text: "🖌"
-  style/mark_text: "|"
   style/horizontal: true
-  style/inline_preedit: true
-  #style/preedit_type: preview_all
-  style/fullscreen: false
-  style/color_scheme: win11dark
-  style/color_scheme_dark: win11light
+  #style/inline_preedit: true
+  # color_scheme settings
+  style/color_scheme: win11light
+  style/color_scheme_dark: win11dark
+  # layout settings
   style/layout/align_type: center
   style/layout/min_height: 0
   style/layout/border: 2
   style/layout/spacing: 20
   style/layout/candidate_spacing: 20
   style/layout/shadow_radius:   10 
-  style/layout/shadow_offset_x: -15
-  style/layout/shadow_offset_y: 15
+  style/layout/shadow_offset_x: 0
+  style/layout/shadow_offset_y: 0
   style/layout/hilite_padding:  5
   style/layout/hilite_spacing: 20
   style/layout/margin_x:  15
   style/layout/margin_y:  15
   style/layout/round_corner:    10
-  style/layout/corner_radius:   10
+  style/layout/corner_radius:   20
 
