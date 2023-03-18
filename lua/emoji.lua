@@ -1921,6 +1921,22 @@ local function prompt_str(input, limit, datas, subfix)
 	prompt = datas and "[" .. datas.tip .. subfix .. "] " .. prompt or prompt
 	return prompt
 end
+function AddSkinColor(emoji, skincode)
+    local outemoji = ""
+    local codes = {}
+    for p, c in utf8.codes(emoji) do table.insert(codes, c) end
+    if #codes == 1 then outemoji = emoji .. skincode
+    elseif #codes == 3 and codes[2] == 8205 then 
+        outemoji  = utf8.char(codes[1]) .. skincode .. utf8.char(codes[2]) .. utf8.char(codes[3])
+    elseif #codes == 4 and codes[2] == 8205 then
+        outemoji  = utf8.char(codes[1]) .. skincode .. utf8.char(codes[2]) .. utf8.char(codes[3]) .. utf8.char(codes[4])
+    elseif #codes == 5 and codes[3] == 8205 then
+        outemoji  = utf8.char(codes[1]) .. utf8.char(codes[2])  .. skincode .. utf8.char(codes[3]) .. utf8.char(codes[4]) .. utf8.char(codes[5])
+	else
+		outemoji = emoji .. skincode
+    end
+    return outemoji
+end
 -- translator
 function Emoji_Translator(input, seg, env)
 	-- not start with prefix return 
@@ -1964,8 +1980,10 @@ function Emoji_Translator(input, seg, env)
 	if not datas then return end
 	-- yield candidates
 	for idx = datas._start, datas._end do
+		local candtxt = AddSkinColor(emoji_candidate_info[idx].cand, fsprefix)
 		--if emoji_candidate_info[idx].ver == nil then
-			yield(Candidate("emoji", seg._start, seg._end, emoji_candidate_info[idx].cand .. fsprefix, emoji_candidate_info[idx].comment))
+			--yield(Candidate("emoji", seg._start, seg._end, emoji_candidate_info[idx].cand .. fsprefix, emoji_candidate_info[idx].comment))
+			yield(Candidate("emoji", seg._start, seg._end, candtxt, emoji_candidate_info[idx].comment))
 		--end
 	end
 end

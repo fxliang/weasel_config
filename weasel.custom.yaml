@@ -5,11 +5,10 @@ patch:
   __include: font_size_settings
   __include: _vertical_text
   style/mark_text: "|"
+  #style/capture_by_click: true
   style/layout/max_width:  800
   style/layout/max_height: 600
 
-  #style/capture_type: highlighted
-  #style/capture_type: candidates
  
 my_color_schemes:
   preset_color_schemes/win11light:
@@ -199,7 +198,7 @@ lost_temple:
   preset_color_schemes/lost_temple/hilited_candidate_shadow_color: 0xc0000000
   preset_color_schemes/lost_temple/candidate_shadow_color: 0x00000000
   preset_color_schemes/lost_temple/hilited_shadow_color: 0x00000000
-  preset_color_schemes/lost_temple/shadow_color: 0xc0000000
+  preset_color_schemes/lost_temple/shadow_color: 0x00000000
   preset_color_schemes/lost_temple/border_color: 0x00444444
   preset_color_schemes/lost_temple/back_color: 0x444444
   preset_color_schemes/lost_temple/hilited_label_color: 0x000000
@@ -233,8 +232,8 @@ win11:
   style/horizontal: true
   #style/inline_preedit: true
   # color_scheme settings
-  style/color_scheme: win11light
-  style/color_scheme_dark: win11dark
+  style/color_scheme: win11dark
+  style/color_scheme_dark:  win11light
   # layout settings
   style/layout/align_type: center
   style/layout/min_height: 0
