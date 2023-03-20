@@ -18,3 +18,4 @@ patch:
     - {schema: double_pinyin}
     - {schema: wubi091}
     - {schema: english}
+    - {schema: terra_pinyin}
