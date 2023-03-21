@@ -5,7 +5,7 @@ patch:
   __include: font_size_settings
   __include: _vertical_text
   style/mark_text: "|"
-  style/capture_by_click: true
+  #style/capture_by_click: true
   style/layout/max_width:  800
   style/layout/max_height: 600
  
@@ -54,8 +54,7 @@ my_color_schemes:
   preset_color_schemes/oldbook:
     name: "oldbook"
     border_color:  0x76a3c3 #0xc202020
-    #back_color: 0xdcf5f5
-    back_color: ob.jpg #0xdcf5f5
+    back_color: 0xdcf5f5
     hilited_back_color: 0x00202020
     #hilited_shadow_color: 0x50202020
     hilited_candidate_back_color: 0x01d07c3a
