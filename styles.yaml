@@ -1,5 +1,5 @@
 patch:
-  __include: win11
+  __include: unnamed
   __include: font_face_settings
   __include: my_color_schemes
   __include: font_size_settings
@@ -10,6 +10,28 @@ patch:
   style/layout/max_height: 600
  
 my_color_schemes:
+  preset_color_schemes/unnamed0:
+    name: "未命名 | unnamed0"
+    C: &hilited_color 0x0a51f9
+    label_color: 0x0a51f9
+    candidate_text_color: 0x0a51f9
+    comment_text_color: 0x0a51f9
+    candidate_back_color: 0x70ffffff
+    candidate_border_color: 0x200a51f9
+    text_color: 0x1a1a1a
+    back_color: 0x84a0a1 #f9f9f9
+    border_color: 0x4084a0a1 #0x7f0a51f9
+    hilited_text_color: 0xffffff
+    hilited_back_color: *hilited_color   #0x0a51f9
+    hilited_candidate_text_color:  0xffffff
+    hilited_comment_text_color:   0xffffff
+    hilited_label_color: 0xffffff
+    hilited_mark_color: 0xfafafa
+    hilited_candidate_back_color: *hilited_color #0x0a51f9
+    hilited_candidate_border_color: 0xefefef
+    hilited_candidate_shadow_color: 0x70000000
+    shadow_color: 0x2084a0a1
+
   preset_color_schemes/win11light:
     name: "Win11light"
     candidate_text_color: 0x000000
@@ -30,7 +52,7 @@ my_color_schemes:
     shadow_color: 0x00000000
 
   preset_color_schemes/win11dark:
-    name: "Win11Dark"
+    name: "Win11暗色 | Win11Dark"
     border_color:  0xc202020
     back_color: 0x303030
     hilited_back_color: 0x20202020
@@ -52,7 +74,7 @@ my_color_schemes:
     shadow_color: 0x60000000
 
   preset_color_schemes/oldbook:
-    name: "oldbook"
+    name: "古书 | oldbook"
     border_color:  0x76a3c3 #0xc202020
     back_color: 0xdcf5f5
     hilited_back_color: 0x00202020
@@ -153,11 +175,45 @@ font_size_settings:
   style/label_font_point:   16
   style/comment_font_point: 16
 
-# set first font name an invalid font name, to make every valid font able to set unicode range, fontname:start_code_point: end_code_point or fontname:start_code_point
+# all font can be set with range
+# spaces around , and : are all ok
+# font name must be the first in every font set unit
+# start code point must before last code point, in hex 
+# to define start and end point like this 
+#   fontname : start_code_point : end_code_point
+# to define start code point only like this
+#   fontname : start_code_point
+# to define end code point only like this
+#   fontname : : end_code_point
+#
+# *** font weight / style must be set in the first font set unit 
+# font weight, you should check if your font support that weight
+# weight(defalt normal if not set, case insensitive):
+# 	thin
+# 	extra_light
+# 	ultra_light
+# 	light
+# 	semi_light
+# 	medium
+# 	demi_bold
+# 	semi_bold
+# 	bold
+# 	extra_bold
+# 	ultra_bold
+# 	black
+# 	heavy
+# 	extra_black
+# 	ultra_black
+# 	normal
+# 
+# style(defalt normal if not set, case insensitive):
+# 	italic
+# 	oblique
+# 	normal
 font_face_settings:
-  style/font_face:          "NotFont, Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
-  style/label_font_face:    "NotFont, Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
-  style/comment_font_face:  "NotFont, Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
+  style/font_face:          "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
+  style/label_font_face:    "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
+  style/comment_font_face:  "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
 
 _vertical_text:
   style/vertical_text: true
@@ -251,3 +307,26 @@ win11:
   style/layout/round_corner:    10
   style/layout/corner_radius:   10
 
+unnamed:    
+  #style/blur_window: true
+  style/horizontal: true
+  #style/inline_preedit: true
+  # color_scheme settings
+  style/color_scheme:  unnamed0 #win11dark
+  style/color_scheme_dark: win11light
+  #style/preedit_type: preview_all
+  # layout settings
+  style/layout/align_type: center
+  style/layout/min_height: 0
+  style/layout/border: 2
+  style/layout/spacing: 20
+  style/layout/candidate_spacing: 20
+  style/layout/shadow_radius:   3 
+  style/layout/shadow_offset_x: 0
+  style/layout/shadow_offset_y: 0
+  style/layout/hilite_padding:  5
+  style/layout/hilite_spacing: 20
+  style/layout/margin_x:  15
+  style/layout/margin_y:  15
+  style/layout/round_corner:    10
+  style/layout/corner_radius:   10
