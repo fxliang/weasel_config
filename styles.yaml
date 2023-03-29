@@ -1,45 +1,23 @@
 patch:
-  __include: unnamed
-  __include: font_face_settings
   __include: my_color_schemes
+  __include: font_face_settings
   __include: font_size_settings
-  __include: _vertical_text
+  __include: win10
+  #__include: _vertical_text
   style/mark_text: "|"
-  #style/capture_by_click: true
+  style/capture_by_click: true
   style/layout/max_width:  800
   style/layout/max_height: 600
  
 my_color_schemes:
-  preset_color_schemes/unnamed0:
-    name: "未命名 | unnamed0"
-    C: &hilited_color 0x0a51f9
-    label_color: 0x0a51f9
-    candidate_text_color: 0x0a51f9
-    comment_text_color: 0x0a51f9
-    candidate_back_color: 0x70ffffff
-    candidate_border_color: 0x200a51f9
-    text_color: 0x1a1a1a
-    back_color: 0x84a0a1 #f9f9f9
-    border_color: 0x4084a0a1 #0x7f0a51f9
-    hilited_text_color: 0xffffff
-    hilited_back_color: *hilited_color   #0x0a51f9
-    hilited_candidate_text_color:  0xffffff
-    hilited_comment_text_color:   0xffffff
-    hilited_label_color: 0xffffff
-    hilited_mark_color: 0xfafafa
-    hilited_candidate_back_color: *hilited_color #0x0a51f9
-    hilited_candidate_border_color: 0xefefef
-    hilited_candidate_shadow_color: 0x70000000
-    shadow_color: 0x2084a0a1
-
   preset_color_schemes/win11light:
-    name: "Win11light"
+    name: " Win11浅色/ Win11light"
     candidate_text_color: 0x000000
     comment_text_color: 0x666666
     comment_back_color: 0x00f9f9f9
     text_color: 0x1a1a1a
     back_color: 0x7ff9f9f9
-    border_color:  0x1f9f9f9f
+    border_color:  0xcff9f9f9
     hilited_text_color: 0x1a1a1a
     hilited_back_color: 0x1ff9f9f9
     hilited_candidate_text_color:  0x1a1a1a
@@ -52,7 +30,7 @@ my_color_schemes:
     shadow_color: 0x00000000
 
   preset_color_schemes/win11dark:
-    name: "Win11暗色 | Win11Dark"
+    name: "Win11暗色 / Win11Dark"
     border_color:  0xc202020
     back_color: 0x303030
     hilited_back_color: 0x20202020
@@ -74,7 +52,7 @@ my_color_schemes:
     shadow_color: 0x60000000
 
   preset_color_schemes/oldbook:
-    name: "古书 | oldbook"
+    name: "古书 / oldbook"
     border_color:  0x76a3c3 #0xc202020
     back_color: 0xdcf5f5
     hilited_back_color: 0x00202020
@@ -96,28 +74,10 @@ my_color_schemes:
     candidate_border_color: 0x205560c2 #0x20d07c3a
     shadow_color: 0x60000000
           
-  preset_color_schemes/fakemac:
-    name: "fakemac"
-    candidate_text_color: 0x000000
-    candidate_back_color: 0x0055555
-    comment_text_color: 0x000000
-    label_color: 0x000000
-    text_color: 0xf0f0f0
-    back_color: 0x5f555555
-    border_color:  0x00555555
-    hilited_text_color: 0xf0f0f0
-    hilited_back_color: 0xcf555555
-    hilited_candidate_text_color:  0xffffff
-    hilited_candidate_back_color: 0x5f555555
-    hilited_mark_color: 0xfa5f00
-    hilited_comment_text_color:   0xf0f0f0
-    hilited_label_color: 0xd0d0d0
-    shadow_color: 0x00000000
-
   preset_color_schemes/win10gray:
-    name: "Win10Gray"
+    name: "Win10灰色/ Win10Gray"
     text_color: 0x000000
-    back_color: 0x4ff4f4f4
+    back_color: 0xf4f4f4
     border_color:  0x4fcccccc
     hilited_text_color: 0x000000
     hilited_back_color: 0x4ff4f4f4
@@ -132,9 +92,9 @@ my_color_schemes:
     shadow_color: 0x20000000
 
   preset_color_schemes/win10blue:
-    name: "Win10Blue"
+    name: "Win10藍色 / Win10Blue"
     text_color: 0x000000
-    back_color: 0x1fffffff
+    back_color: 0xffffff
     shadow_color: 0x00000000
     border_color:  0xd77800
     hilited_text_color: 0x000000
@@ -155,7 +115,7 @@ my_color_schemes:
     #hilited_mark_color: 0xffffff
         
   preset_color_schemes/win10black:
-    name: "Win10Black"
+    name: "Win10黑色 / Win10Black"
     candidate_text_color: 0xffffff
     comment_text_color: 0x666666
     text_color: 0xffffff
@@ -285,11 +245,11 @@ win10:
 
 win11:    
   #style/blur_window: true
-  style/horizontal: true
+  #style/horizontal: true
   #style/inline_preedit: true
   # color_scheme settings
-  style/color_scheme:  oldbook #win11dark
   style/color_scheme_dark: win11light
+  style/color_scheme:  win11dark
   #style/preedit_type: preview_all
   # layout settings
   style/layout/align_type: center
