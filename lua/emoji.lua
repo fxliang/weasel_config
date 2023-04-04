@@ -6517,14 +6517,13 @@ function Emoji_Translator(input, seg, env)
 	if (not input:match("^" .. prefix)) and (not input:match("^" .. prefix2)) then return end
 	local segment = env.engine.context.composition:back()
 	local page_size = env.engine.schema.page_size
+	local fsprefix = ""
+	local fssbufix = ""
+	local datas = nil
 	if input:match("^" .. prefix) then
 		-- skin color subfix with start, prepare strings and datas
-		-- jq, zq, zd, zs,js
+		-- jq,	  zq,    zd,    zs,    js
 		-- 1f3fb, 1f3fc, 1f3fd, 1f3fe, 1f3ff
-		local datas
-		local fsprefix = ""
-		local fssbufix = ""
-
 		if input:match(prefix .. "(%w+)jq$") then
 			datas = ranges[ input:match(prefix .. "(%w+)jq$") ]
 			fsprefix = utf8.char(0x1f3fb)

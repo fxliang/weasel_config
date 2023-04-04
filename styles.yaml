@@ -3,9 +3,10 @@ patch:
   __include: font_face_settings
   __include: font_size_settings
   __include: win10
+  style/use_argb_value: true
   #__include: _vertical_text
   style/mark_text: "|"
-  style/capture_by_click: true
+  #style/capture_by_click: true
   style/layout/max_width:  800
   style/layout/max_height: 600
  
@@ -95,7 +96,7 @@ my_color_schemes:
     name: "Win10浅藍色 / Win10LightBlue"
     text_color: 0x000000
     back_color: 0xf5f5f5
-    shadow_color: 0x00000000
+    shadow_color: 0x10000000
     border_color:  0xdadada
     hilited_text_color: 0x000000
     hilited_back_color: 0xffd8a6
@@ -115,26 +116,26 @@ my_color_schemes:
 
   preset_color_schemes/win10blue:
     name: "Win10藍色 / Win10Blue"
+    # color format, argb:  0xaarrggbb; rgba: 0xrrggbbaa
+    color_format: rgba        # argb is also optional
     text_color: 0x000000
     back_color: 0xffffff
-    shadow_color: 0x00000000
-    border_color:  0xd77800
+    shadow_color: 0x00000020
+    border_color:  0x0078d7
     hilited_text_color: 0x000000
-    hilited_back_color: 0x00ffffff
-    hilited_shadow_color: 0x00d77800
+    hilited_back_color: 0xffffff00
+    hilited_shadow_color: 0xd7780000
     hilited_label_color: 0xffffff
     hilited_candidate_text_color: 0xffffff
-    hilited_candidate_back_color: 0xd77800
-    hilited_candidate_shadow_color:  0x00d77800
+    hilited_candidate_back_color: 0x0078d7
     hilited_comment_text_color:   0xffffff
-    #hilited_candidate_shadow_color: 0x40000000
-
+    hilited_candidate_shadow_color: 0x00000000
     label_color: 0x838383
     candidate_text_color: 0x000000
-    candidate_back_color: 0x00ffffff
-    candidate_shadow_color: 0x00ffffff
+    candidate_back_color: 0xffffff00
+    candidate_shadow_color: 0xffffff00
     comment_text_color: 0x222222
-    #hilited_mark_color: 0xffffff
+    hilited_mark_color: 0xd77800
         
   preset_color_schemes/unnamed:
     name: "未命名"
@@ -161,7 +162,7 @@ font_size_settings:
 # all font can be set with range
 # spaces around , and : are all ok
 # font name must be the first in every font set unit
-# start code point must before last code point, in hex 
+# start code point must before last code point, in HEX 
 # to define start and end point like this 
 #   fontname : start_code_point : end_code_point
 # to define start code point only like this
@@ -169,30 +170,15 @@ font_size_settings:
 # to define end code point only like this
 #   fontname : : end_code_point
 #
-# *** font weight / style must be set in the first font set unit 
+# *** font weight / style must be set in the first font set unit, with [: weight_set] [:style_set]
 # font weight, you should check if your font support that weight
 # weight(defalt normal if not set, case insensitive):
-# 	thin
-# 	extra_light
-# 	ultra_light
-# 	light
-# 	semi_light
-# 	medium
-# 	demi_bold
-# 	semi_bold
-# 	bold
-# 	extra_bold
-# 	ultra_bold
-# 	black
-# 	heavy
-# 	extra_black
-# 	ultra_black
-# 	normal
+# 	thin extra_light ultra_light light semi_light medium demi_bold semi_bold bold extra_bold ultra_bold black heavy extra_black ultra_black normal
 # 
 # style(defalt normal if not set, case insensitive):
-# 	italic
-# 	oblique
-# 	normal
+# 	italic oblique normal
+#
+# make main font after some symbol fonts, to ensure symbol show in the right font, if you want specify the symbol font
 font_face_settings:
   style/font_face:          "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
   style/label_font_face:    "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
@@ -244,11 +230,11 @@ lost_temple:
   preset_color_schemes/lost_temple/hilited_mark_color: 0xff4444
 
 win10:    
-  style/blur_window: true
+  #style/blur_window: true
   style/horizontal: true
   style/inline_preedit: true
   # color_scheme settings
-  style/color_scheme: win10lightblue
+  style/color_scheme: win10blue
   style/color_scheme_dark: win10gray
   #layout settings
   style/layout/align_type: center
@@ -256,15 +242,15 @@ win10:
   style/layout/border: 1
   style/layout/spacing: 20
   style/layout/candidate_spacing: 10
-  style/layout/shadow_radius:   0
-  style/layout/shadow_offset_x: 5
-  style/layout/shadow_offset_y: 5
+  style/layout/shadow_radius:   5
+  style/layout/shadow_offset_x: 0
+  style/layout/shadow_offset_y: 0
   style/layout/hilite_padding:  10
   style/layout/hilite_spacing:  15
   style/layout/margin_x:  10
   style/layout/margin_y:  10
-  style/layout/round_corner:    5
-  style/layout/corner_radius:   5
+  style/layout/round_corner:    0
+  style/layout/corner_radius:   0
 
 win11:
   #style/blur_window: true
