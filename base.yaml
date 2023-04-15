@@ -29,6 +29,9 @@ patch:
   key_binder/bindings:
     - { accept: semicolon, send: 2, when: has_menu}  #打字时，冒号选中第2个候选字发送
     - { accept: apostrophe, send: 3, when: has_menu} #打字时，引号选中第3个候选字发送
+    - { accept: slash, send: 4, when: has_menu} #打字时，引号选中第3个候选字发送
+    - { accept: Tab, send: Down, when: has_menu} #打字时，引号选中第3个候选字发送
+    - { accept: Shift+Tab, send: Up, when: has_menu} #打字时，引号选中第3个候选字发送
     - { accept: minus, send: Page_Up, when: paging} #减号向前翻页
     - { accept: equal, send: Page_Down, when: has_menu} #等于号向后翻页
     - { accept: Control+j, send: 4, when: has_menu}  #打字时，Ctrl+j选中第4个候选字发送

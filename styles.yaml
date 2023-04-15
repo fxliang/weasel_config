@@ -3,10 +3,9 @@ patch:
   __include: font_face_settings
   __include: font_size_settings
   __include: win11
-  style/use_argb_value: true
   __include: _vertical_text
   style/mark_text: "|"
-  style/capture_by_click: true
+  style/enable_mouse: true
   style/layout/max_width:  800
   style/layout/max_height: 600
  
@@ -14,9 +13,9 @@ my_color_schemes:
   preset_color_schemes/win11light:
     name: " Win11浅色/ Win11light"
     blur_window: true
-    candidate_text_color: 0x000000
+    #color_format: rgba
+    candidate_text_color: 0x000000 
     comment_text_color: 0x666666
-    comment_back_color: 0x00f9f9f9
     text_color: 0x1a1a1a
     back_color: 0x7ff9f9f9
     border_color:  0xcff9f9f9
@@ -183,9 +182,9 @@ font_size_settings:
 #
 # make main font after some symbol fonts, to ensure symbol show in the right font, if you want specify the symbol font
 font_face_settings:
-  style/font_face:          "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
-  style/label_font_face:    "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
-  style/comment_font_face:  "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow, Microsoft Yahei, 全宋体-1, 全宋体-2, 全宋体-3, 全宋体-F, 全宋体-X, 全宋体(调和), 全宋体(等宽)"
+  style/font_face:          "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow"
+  style/label_font_face:    "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow"
+  style/comment_font_face:  "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow"
 
 _vertical_text:
   style/vertical_text: true
@@ -227,7 +226,6 @@ lost_temple:
   preset_color_schemes/lost_temple/shadow_color: 0x50000000
   preset_color_schemes/lost_temple/border_color: 0x00444444
   preset_color_schemes/lost_temple/back_color: 0x444444
-  preset_color_schemes/lost_temple/candidate_back_color: 0x444444
   preset_color_schemes/lost_temple/hilited_label_color: 0x000000
   preset_color_schemes/lost_temple/hilited_mark_color: 0xff4444
 
@@ -266,7 +264,7 @@ win11:
   style/layout/border: 2
   style/layout/spacing: 20
   style/layout/candidate_spacing: 20
-  style/layout/shadow_radius:   0 
+  style/layout/shadow_radius:   10 
   style/layout/shadow_offset_x: 0
   style/layout/shadow_offset_y: 0
   style/layout/hilite_padding:  5
