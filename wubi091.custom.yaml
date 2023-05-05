@@ -12,14 +12,6 @@ patch:
     initial_quality: 1
 
   ###########################################################################
-  #engine/processors/+: 
-  #  - chord_composer
-  chord_composer:
-    alphabet: "qwertasdfgzxcvbyuiophjklnm"
-    algebra:
-      - "xform/^df$/2/"
-      - "xform/^([a-z])$/$1/"
-  ###########################################################################
   # 使用用户词典
   translator/enable_user_dict: false 
   # 允许句子

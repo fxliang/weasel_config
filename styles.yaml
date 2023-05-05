@@ -2,11 +2,10 @@ patch:
   __include: my_color_schemes
   __include: font_face_settings
   __include: font_size_settings
-  __include: win11
-  __include: _vertical_text
-  style/mark_text: "|"
-  style/enable_mouse: true
-  style/layout/max_width:  800
+  __include: win10
+  #__include: _vertical_text_wrap
+  #style/mark_text: "|"
+  style/layout/max_width:  1080
   style/layout/max_height: 600
  
 my_color_schemes:
@@ -16,10 +15,10 @@ my_color_schemes:
     #color_format: rgba
     candidate_text_color: 0x000000 
     comment_text_color: 0x666666
-    text_color: 0x1a1a1a
+    text_color: 0x777777
     back_color: 0x7ff9f9f9
     border_color:  0xcff9f9f9
-    hilited_text_color: 0x1a1a1a
+    hilited_text_color: 0x000000
     hilited_back_color: 0x1ff9f9f9
     hilited_candidate_text_color:  0x1a1a1a
     hilited_candidate_back_color: 0x2ff97979
@@ -94,11 +93,10 @@ my_color_schemes:
 
   preset_color_schemes/win10lightblue:
     name: "Win10浅藍色 / Win10LightBlue"
-    blur_window: true
     text_color: 0x000000
-    back_color: 0xf5f5f5
+    back_color: 0x20f5f5f5
     shadow_color: 0x10000000
-    border_color:  0xdadada
+    border_color:  0xffd8a6
     hilited_text_color: 0x000000
     hilited_back_color: 0xffd8a6
     hilited_shadow_color: 0x00ffd8a6
@@ -157,7 +155,7 @@ my_color_schemes:
     shadow_color: 0x60000000
 
 font_size_settings:
-  style/font_point:         22
+  style/font_point:         24
   style/label_font_point:   16
   style/comment_font_point: 16
 
@@ -182,9 +180,12 @@ font_size_settings:
 #
 # make main font after some symbol fonts, to ensure symbol show in the right font, if you want specify the symbol font
 font_face_settings:
-  style/font_face:          "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow"
-  style/label_font_face:    "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow"
-  style/comment_font_face:  "Segoe UI Emoji:20:39, Segoe UI Emoji:1f51f:1f51f, Noto Color Emoji SVG:80, Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow"
+  #style/font_face:          "Noto Color Emoji:80,Segoe UI Emoji:20:39, Segoe UI Emoji:80, Arial:600:6ff, LXGW Wenkai Narrow"
+  #style/label_font_face:    "Noto Color Emoji:80,Segoe UI Emoji:20:39, Segoe UI Emoji:80, Arial:600:6ff, LXGW Wenkai Narrow"
+  #style/comment_font_face:  "Noto Color Emoji:80,Segoe UI Emoji:20:39, Segoe UI Emoji:80, Arial:600:6ff, LXGW Wenkai Narrow"
+  style/font_face:          "Segoe UI Emoji:20:39, Noto Color Emoji SVG:80, Segoe UI Emoji:80, Arial:600:6ff, LXGW Wenkai Narrow"
+  style/label_font_face:    "Segoe UI Emoji:20:39, Noto Color Emoji SVG:80, Segoe UI Emoji:80, Arial:600:6ff, LXGW Wenkai Narrow"
+  style/comment_font_face:  "Segoe UI Emoji:20:39, Noto Color Emoji SVG:80, Segoe UI Emoji:80, Arial:600:6ff, LXGW Wenkai Narrow"
 
 _vertical_text:
   style/vertical_text: true
@@ -206,9 +207,9 @@ lost_temple:
   style/layout/border: 2
   style/layout/spacing: 15
   style/layout/candidate_spacing: 20
-  style/layout/shadow_radius:   6 
-  style/layout/shadow_offset_x: 5
-  style/layout/shadow_offset_y: 5
+  style/layout/shadow_radius:   10 
+  style/layout/shadow_offset_x: -10
+  style/layout/shadow_offset_y: 10
   style/layout/hilite_spacing:  10
   style/layout/hilite_padding:  4
   style/layout/margin_x:        25
@@ -222,8 +223,8 @@ lost_temple:
   #preset_color_schemes/lost_temple/candidate_border_color: 0x00444444
   preset_color_schemes/lost_temple/hilited_candidate_shadow_color: 0x80000000
   #preset_color_schemes/lost_temple/candidate_shadow_color: 0xc0000000
-  preset_color_schemes/lost_temple/hilited_shadow_color: 0x00000000
-  preset_color_schemes/lost_temple/shadow_color: 0x50000000
+  preset_color_schemes/lost_temple/hilited_shadow_color: 0x60000000
+  preset_color_schemes/lost_temple/shadow_color: 0x60000000
   preset_color_schemes/lost_temple/border_color: 0x00444444
   preset_color_schemes/lost_temple/back_color: 0x444444
   preset_color_schemes/lost_temple/hilited_label_color: 0x000000
@@ -232,6 +233,7 @@ lost_temple:
 win10:    
   style/horizontal: true
   style/inline_preedit: true
+  style/blur_window: true
   # color_scheme settings
   style/color_scheme: win10lightblue
   style/color_scheme_dark: win10gray
@@ -252,8 +254,8 @@ win10:
   style/layout/corner_radius:   0
 
 win11:
-  #style/horizontal: true
-  #style/inline_preedit: true
+  style/horizontal: true
+  style/blur_window: true
   # color_scheme settings
   style/color_scheme: win11light
   style/color_scheme_dark:  win11dark

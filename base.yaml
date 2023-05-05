@@ -21,17 +21,17 @@ patch:
   - lua_translator@Emoji_Translator
   - lua_translator@Lua_Tips
 
-  engine/processors/@before 0: lua_processor@init_env
   punctuator/import_preset: symbols
-  #recognizer/patterns/punct: '^/(([a-z]+)|(uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*|\d{0,8}[hq]?(\d+)?[^0-9]?|1?\d|dx\d+(\.\d{0,2})?|\d+[hq]|[1-7][sxz]))$'
-  recognizer/patterns/punct: '^/(([a-z]+)|\?|(uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*|\d{0,8}([hq]\d+)?[^0-9]?|\d{0,8}(g|n|nr)|1?\d|dx\d+(\.\d{0,2})?|\d{1,6}[hq]|[1-7][sxz]))$'
+  recognizer/patterns/punct: '^/(([a-z]+)|\?|(uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*|\d{0,8}([hq]\d+)?\D?|\d{0,8}(g|n|nr)|1?\d|dx\d+(\.\d{0,2})?|\d{1,6}[hq]|[1-7][sxz]))$'
 
   key_binder/bindings:
     - { accept: semicolon, send: 2, when: has_menu}  #打字时，冒号选中第2个候选字发送
     - { accept: apostrophe, send: 3, when: has_menu} #打字时，引号选中第3个候选字发送
     - { accept: slash, send: 4, when: has_menu} #打字时，引号选中第3个候选字发送
-    - { accept: Tab, send: Down, when: has_menu} #打字时，引号选中第3个候选字发送
-    - { accept: Shift+Tab, send: Up, when: has_menu} #打字时，引号选中第3个候选字发送
+    - { accept: Shift+parenleft, send: 5, when: has_menu} #打字时，左括号选中第5个候选字发送
+    - { accept: Shift+parenright, send: 6, when: has_menu} #打字时，右括号选中第6个候选字发送
+    - { accept: Tab, send: Down, when: has_menu} #打字时，Tab和Shift+Tab切换候选
+    - { accept: Shift+Tab, send: Up, when: has_menu} #打字时，Tab和Shift+Tab切换候选
     - { accept: minus, send: Page_Up, when: paging} #减号向前翻页
     - { accept: equal, send: Page_Down, when: has_menu} #等于号向后翻页
     - { accept: Control+j, send: 4, when: has_menu}  #打字时，Ctrl+j选中第4个候选字发送

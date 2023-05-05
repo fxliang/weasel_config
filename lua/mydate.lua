@@ -102,7 +102,7 @@ function Date_Translator(input, seg, env)
 		local gapstr =   tostring(math.floor(d:spandays()))
 		local cmt = "距离今天的日期间隔"
 		yield(Candidate("gap", seg.start, seg._end, gapstr, cmt ))
-	elseif input:match("/%d%d%d%d%d%d[0123]%d[hq]%d+[^0-9]$") then
+	elseif input:match("/%d%d%d%d%d%d[0123]%d[hq]%d+%D$") then
 		local of = 1
 		local yr=input:sub(of+1, of+4)
 		local mon=input:sub(of+5, of+6)
@@ -110,7 +110,7 @@ function Date_Translator(input, seg, env)
 		local offset = tonumber(input:sub(of+10, string.len(input)-1))
 		local subfix = CalcDateYmd(yr, mon, day).date
 		local dd = 0
-		if input:match("/%d%d%d%d%d%d[0123]%dh%d+d$") then
+		if input:match("/%d%d%d%d%d%d[0123]%dh%d+%w$") then
 			dd = day + offset
 			subfix = subfix .. '后第' .. offset .. '天'
 		else
@@ -125,14 +125,18 @@ function Date_Translator(input, seg, env)
 		yield(Candidate("weekday", seg.start, seg._end, res.lunarday.gz, ""))
 	elseif input:match('/%d+[hq]') then
 		local str = input:sub( 2, string.len(input)-1)
-		local subfix = (input:match( 'h$') and '天后') or '天前'
-		local dateinfo = input:match("h$") and {year = cy, month = cm, day = cd + tonumber(str)} or {year=cy, month=cm, day=cd-tonumber(str)} 
-		local res = CalcDateYmd(dateinfo.year, dateinfo.month, dateinfo.day)
-		yield(Candidate("dateoffset", seg.start, seg._end, res.date, str..subfix ))
-		yield(Candidate("dateoffset", seg.start, seg._end, res.dateweekday, "" ))
-		yield(Candidate("weekday", seg.start, seg._end, res.weekday, "" ))
-		yield(Candidate("dateoffset", seg.start, seg._end, res.lunarday.sz, ""))
-		yield(Candidate("dateoffset", seg.start, seg._end, res.lunarday.gz, ""))
+		if str:len() > 5 then return end
+		-- date offset limit
+		if tonumber(str) <= 28392 then
+			local subfix = (input:match( 'h$') and '天后') or '天前'
+			local dateinfo = input:match("h$") and {year = cy, month = cm, day = cd + tonumber(str)} or {year=cy, month=cm, day=cd-tonumber(str)} 
+			local res = CalcDateYmd(dateinfo.year, dateinfo.month, dateinfo.day)
+			yield(Candidate("dateoffset", seg.start, seg._end, res.date, str..subfix ))
+			yield(Candidate("dateoffset", seg.start, seg._end, res.dateweekday, "" ))
+			yield(Candidate("weekday", seg.start, seg._end, res.weekday, "" ))
+			yield(Candidate("dateoffset", seg.start, seg._end, res.lunarday.sz, ""))
+			yield(Candidate("dateoffset", seg.start, seg._end, res.lunarday.gz, ""))
+		end
 	elseif input:match('/[1-7][xsz]') then
 		local wd = tonumber(input:sub(2, string.len(input)-1))
 		local le = input:match('[sxz]')
