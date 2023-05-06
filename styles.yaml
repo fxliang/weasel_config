@@ -13,128 +13,123 @@ my_color_schemes:
     name: " Win11浅色/ Win11light"
     blur_window: true
     #color_format: rgba
-    candidate_text_color: 0x000000 
-    comment_text_color: 0x666666
-    text_color: 0x777777
-    back_color: 0x7ff9f9f9
-    border_color:  0xcff9f9f9
-    hilited_text_color: 0x000000
-    hilited_back_color: 0x1ff9f9f9
-    hilited_candidate_text_color:  0x1a1a1a
-    hilited_candidate_back_color: 0x2ff97979
-    candidate_back_color: 0x2ff9f9f9
-    hilited_mark_color: 0xfa5f00
-    hilited_comment_text_color:   0x1a1a1a
-    hilited_label_color: 0x1a1a1a
-    label_color: 0x1a1a1a
-    shadow_color: 0x00000000
+    candidate_text_color:           0x000000 
+    comment_text_color:             0x666666
+    text_color:                     0x777777
+    back_color:                     0x7ff9f9f9
+    border_color:                   0xcff9f9f9
+    hilited_text_color:             0x000000
+    hilited_back_color:             0x1ff9f9f9
+    hilited_candidate_text_color:   0x1a1a1a
+    hilited_candidate_back_color:   0x2ff97979
+    candidate_back_color:           0x2ff9f9f9
+    hilited_mark_color:             0xfa5f00
+    hilited_comment_text_color:     0x1a1a1a
+    hilited_label_color:            0x1a1a1a
+    label_color:                    0x1a1a1a
+    shadow_color:                   0x00000000
 
   preset_color_schemes/win11dark:
     name: "Win11暗色 / Win11Dark"
-    border_color:  0xc202020
-    back_color: 0x303030
-    hilited_back_color: 0x20202020
-    #hilited_candidate_back_color: 0x202020
-    hilited_candidate_back_color: 0x7fd07c3a
-    hilited_candidate_border_color: 0xd07c3a
-    candidate_back_color: 0x07d07c3a
-
-    hilited_text_color: 0xf9f9f9
-    hilited_label_color: 0xf9f9f9
-    hilited_candidate_text_color:  0xf9f9f9
-    hilited_comment_text_color:   0xf9f9f9
-    hilited_mark_color: 0x212fe6 #0xf07c3a
-
-    text_color: 0xc9c9c9
-    label_color: 0xc9c9c9
-    candidate_text_color: 0xc9c9c9
-    comment_text_color: 0xc9c9c9
-    shadow_color: 0x60000000
+    border_color:                     0x0c202020
+    back_color:                       0x303030
+    hilited_back_color:               0x20202020
+    #hilited_candidate_back_color:    0x202020
+    hilited_candidate_back_color:     0x7fd07c3a
+    hilited_candidate_border_color:   0xd07c3a
+    candidate_back_color:             0x07d07c3a
+    hilited_text_color:               0xf9f9f9
+    hilited_label_color:              0xf9f9f9
+    hilited_candidate_text_color:     0xf9f9f9
+    hilited_comment_text_color:       0xf9f9f9
+    hilited_mark_color:               0x212fe6 
+    text_color:                       0xc9c9c9
+    label_color:                      0xc9c9c9
+    candidate_text_color:             0xc9c9c9
+    comment_text_color:               0xc9c9c9
+    shadow_color:                     0x60000000
 
   preset_color_schemes/oldbook:
     name: "古书 / oldbook"
-    border_color:  0x76a3c3 #0xc202020
-    back_color: 0xdcf5f5
-    hilited_back_color: 0x00202020
-    #hilited_shadow_color: 0x50202020
-    hilited_candidate_back_color: 0x01d07c3a
-    hilited_candidate_border_color: 0xe05560d2  #0xd07c3a
-
-    hilited_text_color: 0x202020
-    hilited_label_color: 0x202020
-    hilited_candidate_text_color:  0x202020
-    hilited_comment_text_color:   0x202020
-    hilited_mark_color: 0x5560c2
-
-    text_color: 0x404040
-    label_color: 0x404040
-    candidate_text_color: 0x404040
-    candidate_back_color: 0x01d07c3a
-    comment_text_color: 0x404040
-    candidate_border_color: 0x205560c2 #0x20d07c3a
-    shadow_color: 0x60000000
+    border_color:                   0x76a3c3 #0x76a3c3
+    back_color:                     0xdcf5f5
+    hilited_back_color:             0x00202020
+    #hilited_shadow_color:          0x50202020
+    hilited_candidate_back_color:   0x01d07c3a
+    hilited_candidate_border_color: 0xe05560d2  #0xe05560d2
+    hilited_text_color:             0x202020
+    hilited_label_color:            0x202020
+    hilited_candidate_text_color:   0x202020
+    hilited_comment_text_color:     0x202020
+    hilited_mark_color:             0x5560c2
+    text_color:                     0x404040
+    label_color:                    0x404040
+    candidate_text_color:           0x404040
+    candidate_back_color:           0x01d07c3a
+    comment_text_color:             0x404040
+    candidate_border_color:         0x205560c2 #0x20d07c3a
+    shadow_color:                   0x60000000
           
   preset_color_schemes/win10gray:
     name: "Win10灰色/ Win10Gray"
-    text_color: 0x000000
-    back_color: 0xf4f4f4
-    border_color:  0x4fcccccc
-    hilited_text_color: 0x000000
-    hilited_back_color: 0x4ff4f4f4
-    hilited_candidate_text_color:  0x000000
+    text_color:                   0x000000
+    back_color:                   0xf4f4f4
+    border_color:                 0x4fcccccc
+    hilited_text_color:           0x000000
+    hilited_back_color:           0x4ff4f4f4
+    hilited_candidate_text_color: 0x000000
     hilited_candidate_back_color: 0x4fcccccc
     hilited_comment_text_color:   0x555555
-    hilited_label_color: 0x555555
-    hilited_mark_color: 0xd77800
-    label_color: 0x888888
-    candidate_text_color: 0x222222
-    comment_text_color: 0x888888
-    shadow_color: 0x20000000
+    hilited_label_color:          0x555555
+    hilited_mark_color:           0xd77800
+    label_color:                  0x888888
+    candidate_text_color:         0x222222
+    comment_text_color:           0x888888
+    shadow_color:                 0x20000000
 
   preset_color_schemes/win10lightblue:
     name: "Win10浅藍色 / Win10LightBlue"
-    text_color: 0x000000
-    back_color: 0x20f5f5f5
-    shadow_color: 0x10000000
-    border_color:  0xffd8a6
-    hilited_text_color: 0x000000
-    hilited_back_color: 0xffd8a6
-    hilited_shadow_color: 0x00ffd8a6
-    hilited_label_color: 0x000000
-    hilited_candidate_text_color: 0x000000
-    hilited_candidate_back_color: 0xffd8a6
-    hilited_candidate_shadow_color:  0x00d77800
-    hilited_comment_text_color:   0x000000
-    #hilited_candidate_shadow_color: 0x40000000
-
-    label_color: 0x838383
-    candidate_text_color: 0x000000
-    candidate_back_color: 0x00ffffff
-    candidate_shadow_color: 0x00ffffff
-    comment_text_color: 0x222222
+    text_color:                       0x000000
+    back_color:                       0x20f5f5f5
+    shadow_color:                     0x10000000
+    border_color:                     0xffd8a6
+    hilited_text_color:               0x000000
+    hilited_back_color:               0xffd8a6
+    hilited_shadow_color:             0x00ffd8a6
+    hilited_label_color:              0x000000
+    hilited_candidate_text_color:     0x000000
+    hilited_candidate_back_color:     0xffd8a6
+    hilited_candidate_shadow_color:   0x00d77800
+    hilited_comment_text_color:       0x000000
+    #hilited_candidate_shadow_color:  0x40000000
+    label_color:                      0x838383
+    candidate_text_color:             0x000000
+    candidate_back_color:             0x00ffffff
+    candidate_shadow_color:           0x00ffffff
+    comment_text_color:               0x222222
 
   preset_color_schemes/win10blue:
     # an example use rgba format color code
     # color format, argb:  0xaarrggbb; rgba: 0xrrggbbaa; if not set, 0xaabbggrr
     color_format: rgba        # argb is also optional
-    text_color: 0x000000
-    back_color: 0xffffff40
-    shadow_color: 0x00000000
-    border_color:  0x2000d7ff
-    hilited_text_color: 0x000000
-    hilited_back_color: 0xffffff00
-    hilited_shadow_color: 0xd7780000
-    hilited_label_color: 0xffffff
-    hilited_candidate_text_color: 0xffffff
-    hilited_candidate_back_color: 0x0078d7
-    hilited_comment_text_color:   0xffffff
-    hilited_candidate_shadow_color: 0x00000000
-    label_color: 0x838383
-    candidate_text_color: 0x000000
-    candidate_back_color: 0xffffff00
-    candidate_shadow_color: 0xffffff00
-    comment_text_color: 0x222222
-    hilited_mark_color: 0xd77800
+    text_color:                       0x000000
+    back_color:                       0xffffff40
+    shadow_color:                     0x00000000
+    border_color:                     0x2000d7ff
+    hilited_text_color:               0x000000
+    hilited_back_color:               0xffffff00
+    hilited_shadow_color:             0xd7780000
+    hilited_label_color:              0xffffff
+    hilited_candidate_text_color:     0xffffff
+    hilited_candidate_back_color:     0x0078d7
+    hilited_comment_text_color:       0xffffff
+    hilited_candidate_shadow_color:   0x00000000
+    label_color:                      0x838383
+    candidate_text_color:             0x000000
+    candidate_back_color:             0xffffff00
+    candidate_shadow_color:           0xffffff00
+    comment_text_color:               0x222222
+    hilited_mark_color:               0xd77800
     name: "Win10藍色 / Win10Blue"
         
   preset_color_schemes/unnamed:
@@ -152,7 +147,7 @@ my_color_schemes:
     hilited_comment_text_color:     0xeeeeee
     hilited_candidate_text_color:   0xffffff
     hilited_label_color:            0xeeeeee
-    shadow_color: 0x60000000
+    shadow_color:                   0x60000000
 
 font_size_settings:
   style/font_point:         24
