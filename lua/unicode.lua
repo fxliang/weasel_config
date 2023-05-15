@@ -1,6 +1,7 @@
+require("NumberConvert")
 -- Unicode quick input
 function Unicode_Translator(input, seg, env)
-	if not (input:match("^U") or input:match("^/uc") or input:match("^/ur")) then return end
+	if not (input:match("^U") or input:match("^/uc") or input:match("^/ur") or input:match("^/%x+u$")) then return end
 	local segment = env.engine.context.composition:back()
 	if input:match("^U$") or input:match("^/uc$") then
 		segment.prompt = "输入[0-9a-fA-F],以[^0-9a-fA-F]分割两个字符，Unicode"
@@ -39,6 +40,17 @@ function Unicode_Translator(input, seg, env)
 		local cmt = "\\u+" .. st_:upper() .. " ~ " .. "\\u+" .. end_:upper()
 		local cc = Candidate("Unicode", seg.start, seg._end, txt, cmt)
 		yield(cc)
+	elseif input:match("^/%x+u$") then
+		local st_ = input:match("^/(%x+)u$")
+		local st__ = tonumber(st_, 16)
+		local end__ = st__ + 0xff
+		if st__ < 0x20 then return end
+		for c = st__, end__ do 
+			local txt = utf8.char(c)
+			local cmt = '\\u+' .. ConvertDec2X(c, 16)
+			local cc = Candidate("Unicode", seg.start, seg._end, txt, cmt)
+			yield(cc)
+		end
 	end
 end
 

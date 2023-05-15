@@ -2,14 +2,13 @@ patch:
   __include: my_color_schemes
   __include: font_face_settings
   __include: font_size_settings
-  __include: win10
+  __include: lost_temple
   #__include: _vertical_text_wrap
   style/mark_text: "|"
   style/layout/max_width:  1080
   style/layout/max_height: 600
   app_options:
     gvim.exe:
-      inline_preedit: true
       ascii_mode: true
  
 my_color_schemes:
@@ -222,7 +221,7 @@ lost_temple:
   preset_color_schemes/lost_temple/hilited_candidate_shadow_color: 0x80000000
   #preset_color_schemes/lost_temple/candidate_shadow_color: 0xc0000000
   preset_color_schemes/lost_temple/hilited_shadow_color: 0x60000000
-  preset_color_schemes/lost_temple/shadow_color: 0x60000000
+  preset_color_schemes/lost_temple/shadow_color: 0x00000000
   preset_color_schemes/lost_temple/border_color: 0x00444444
   preset_color_schemes/lost_temple/back_color: 0x444444
   preset_color_schemes/lost_temple/hilited_label_color: 0x000000
