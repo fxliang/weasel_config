@@ -1,6 +1,7 @@
 patch:
   __include: base:/patch
-  schema/icon: 09wubi.ico
+  schema/icon: icons/09wubi.ico
+  #schema/zhung_icon: icons/09wubi.ico
   ###########################################################################
   # 用户词典规则设定
   custom_phrase:

@@ -3,6 +3,7 @@ require("unicode")
 require("number")
 require("emoji")
 require("basefunctions")
+require("wubi091_zg")
 --must after function definitions
 local english = require("english")()
 english_processor = english.processor

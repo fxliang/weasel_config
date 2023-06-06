@@ -1,2 +1,3 @@
 patch:
   __include: wubi86.custom:/patch
+  style/color_scheme: aqua
