@@ -5,6 +5,7 @@ patch:
   __include: lost_temple
   #__include: _vertical_text
   style/vertical_auto_reverse: true
+  style/ascii_tip_follow_cursor: true
   style/mark_text: "|"
   app_options:
     gvim.exe:
