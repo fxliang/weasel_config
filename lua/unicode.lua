@@ -1,6 +1,6 @@
 require("NumberConvert")
 -- Unicode quick input
-function Unicode_Translator(input, seg, env)
+local function Unicode_Translator(input, seg, env)
 	if not (input:match("^U") or input:match("^/uc") or input:match("^/ur") or input:match("^/%x+u$")) then return end
 	local segment = env.engine.context.composition:back()
 	if input:match("^U$") or input:match("^/uc$") then
@@ -54,6 +54,5 @@ function Unicode_Translator(input, seg, env)
 	end
 end
 
-function Unicode_Tips()
-	return "U\\x+\\X+\\x+ ...\tUnicode\r/uc\\x+\\X+\\x+ ...\tUnicode"
-end
+return {func = Unicode_Translator}
+

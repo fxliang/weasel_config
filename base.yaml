@@ -12,16 +12,16 @@ patch:
     inherit_comment: false
   menu/page_size: 6
   engine/filters/+:
-  - lua_filter@Multiline_filter
-  - lua_filter@Tip_Filter
+  - lua_filter@*basefunctions*Multiline_filter
+  - lua_filter@*basefunctions*Tip_Filter
   engine/translators/+:
   - table_translator@custom_phrase
-  - lua_translator@Date_Translator
-  - lua_translator@Daxie_Translator
-  - lua_translator@Unicode_Translator
-  - lua_translator@Emoji_Translator
-  - lua_translator@Lua_Tips
-  - lua_translator@Wubi091zg_Translator
+  - lua_translator@*number
+  - lua_translator@*mydate
+  - lua_translator@*unicode
+  - lua_translator@*wubi091_zg
+  - lua_translator@*emoji
+  - lua_translator@*basefunctions*Lua_Tips
 
   punctuator/import_preset: symbols
   #recognizer/patterns/punct: '^/(([a-z]+)|\?|(uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*|\d{0,8}([hq]\d+)?\D?|\d{0,8}(g|n|nr)|1?\d|dx\d+(\.\d{0,2})?|\d{1,6}[hq]|[1-7][sxz]))$'

@@ -85,7 +85,7 @@ local function prompt_str2(input, limit, datas)
 end
 
 -- not always work
-function AddSkinColor(emoji, skincode)
+local function AddSkinColor(emoji, skincode)
     local outemoji = ""
     local codes = {}
     for p, c in utf8.codes(emoji) do table.insert(codes, c) end
@@ -103,7 +103,7 @@ function AddSkinColor(emoji, skincode)
 end
 
 -- translator
-function Emoji_Translator(input, seg, env)
+local function Emoji_Translator(input, seg, env)
 	-- not start with prefix return 
 	if (not input:match("^" .. prefix)) and (not input:match("^" .. prefix2)) then return end
 	local segment = env.engine.context.composition:back()
@@ -161,7 +161,7 @@ function Emoji_Translator(input, seg, env)
 	end
 end
 
-function Emoji_Tips()
+local function Emoji_Tips()
 	local tips = ""
 	for k,v in pairs(ranges) do
 		tips = tips .. (prefix .. k) .. "\t" .. v.tip .. "\r"
@@ -169,3 +169,5 @@ function Emoji_Tips()
 	tips = string.sub(tips, 1, #tips - 1)
 	return tips
 end
+
+return {func = Emoji_Translator, emoji_tips = Emoji_Tips}

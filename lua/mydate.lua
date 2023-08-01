@@ -104,9 +104,9 @@ function Date_Translator(input, seg, env)
 		yield(Candidate("gap", seg.start, seg._end, gapstr, cmt ))
 	elseif input:match("/%d%d%d%d%d%d[0123]%d[hq]%d+%D$") then
 		local of = 1
-		local yr=input:sub(of+1, of+4)
-		local mon=input:sub(of+5, of+6)
-		local day=input:sub(of+7, of+8)
+		local yr =tonumber(input:sub(of+1, of+4))
+		local mon=tonumber(input:sub(of+5, of+6))
+		local day=tonumber(input:sub(of+7, of+8))
 		local offset = tonumber(input:sub(of+10, string.len(input)-1))
 		local subfix = CalcDateYmd(yr, mon, day).date
 		local dd = 0
@@ -149,20 +149,4 @@ function Date_Translator(input, seg, env)
 	end
 end
 
-function Date_Tips()
-	local res = "/date\t日期\r"
-	res = res .. "/time\t时间\r"
-	res = res .. "/[1-7]x\t下周x\r"
-	res = res .. "/[1-7]s\t上周x\r"
-	res = res .. "/[1-7]z\t这周x\r"
-	res = res .. "/\\d+h\tx天后\r"
-	res = res .. "/\\d+q\tx天前\r"
-	res = res .. "/20220906\t2022年9月6日的日期\r"
-	res = res .. "/20220906n\t二零二二年九月初六的反查\r"
-	res = res .. "/20200406nr\t二零二零年闰四月初六的反查\r"
-	res = res .. "/20220909g\t2022年9月9日到今天的间隔\r"
-	res = res .. "/20220906h\\d+[^0-9]\t2022年9月6日后x天\r"
-	res = res .. "/20220906q\\d+[^0-9]\t2022年9月6日前x天"
-
-	return res
-end
+return {func = Date_Translator}

@@ -1,4 +1,4 @@
-function single_char_first_filter(input)
+local function single_char_first_filter(input)
 	local l = {}
 	for cand in input:iter() do
 		if (utf8.len(cand.text) == 1) then
@@ -12,8 +12,34 @@ function single_char_first_filter(input)
 	end
 end
 
+local function Unicode_Tips()
+	return "U\\x+\\X+\\x+ ...\tUnicode\r/uc\\x+\\X+\\x+ ...\tUnicode"
+end
+
+local function Daxie_Tips()
+	return "/dx\\d+(.\\d\\d)?\t大写金额"
+end
+
+local function Date_Tips()
+	local res = "/date\t日期\r"
+	res = res .. "/time\t时间\r"
+	res = res .. "/[1-7]x\t下周x\r"
+	res = res .. "/[1-7]s\t上周x\r"
+	res = res .. "/[1-7]z\t这周x\r"
+	res = res .. "/\\d+h\tx天后\r"
+	res = res .. "/\\d+q\tx天前\r"
+	res = res .. "/20220906\t2022年9月6日的日期\r"
+	res = res .. "/20220906n\t二零二二年九月初六的反查\r"
+	res = res .. "/20200406nr\t二零二零年闰四月初六的反查\r"
+	res = res .. "/20220909g\t2022年9月9日到今天的间隔\r"
+	res = res .. "/20220906h\\d+[^0-9]\t2022年9月6日后x天\r"
+	res = res .. "/20220906q\\d+[^0-9]\t2022年9月6日前x天"
+	return res
+end
+
+local emoji_tips = require("emoji").emoji_tips()
 -- global lua help tips
-function Lua_Tips(input,seg, env)
+local function Lua_Tips(input,seg, env)
 	if input:match("^/$") then 
 		local segment = env.engine.context.composition:back()
 		segment.prompt = "~? [获得输入帮助]"
@@ -22,7 +48,6 @@ function Lua_Tips(input,seg, env)
 	if input:match("^/%?$") then
 		local segment = env.engine.context.composition:back()
 		segment.prompt = "Lua快捷输入帮助"
-		local emoji_tips = Emoji_Tips()
 		local daxie_tips = Daxie_Tips()
 		local unicode_tips = Unicode_Tips()
 		local date_tips = Date_Tips()
@@ -37,7 +62,7 @@ end
 -- 方案patch中要添加以下两行
 --  engine/filters/+:
 --  - lua_filter@Multiline_filter
-function Multiline_filter(input)
+local function Multiline_filter(input)
 	for cand in input:iter() do
 		local nt = cand.text
 		if nt:match("\\r\\n") or nt:match("\\r") or nt:match("\\n") or nt:match("<br>") or nt:match("&nbsp") then
@@ -54,7 +79,7 @@ function Multiline_filter(input)
 	end
 end
 
-function Tip_Filter(input, env, cands)
+local function Tip_Filter(input, env, cands)
 	for cand in input:iter() do
 		if cand.type:match("^tip") then
 			cand.comment = cand.text
@@ -63,3 +88,8 @@ function Tip_Filter(input, env, cands)
 		yield(cand)
 	end
 end
+
+return {Multiline_filter = Multiline_filter,
+	Tip_Filter = Tip_Filter,
+	Lua_Tips = Lua_Tips,
+}

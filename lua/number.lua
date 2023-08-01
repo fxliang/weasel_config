@@ -105,7 +105,7 @@ local function split(input, delimiter)
 	return arr
 end
 
-function Daxie_Translator(input, seg, env)
+local function Daxie_Translator(input, seg, env)
 	local segment = env.engine.context.composition:back()
 	if not input:match("^/dx") then return end
 	segment.prompt = "/dx\\d\\+(.\\d\\d)?大写金额" 
@@ -131,6 +131,5 @@ function Daxie_Translator(input, seg, env)
 	end
 end
 
-function Daxie_Tips()
-	return "/dx\\d+(.\\d\\d)?\t大写金额"
-end
+
+return {func = Daxie_Translator}

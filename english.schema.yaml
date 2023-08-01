@@ -28,7 +28,7 @@ switches:
     
 engine:
   processors:
-    - lua_processor@english_processor       # 本輸入法需要用到，需保留
+    - lua_processor@*english*processor       # 本輸入法需要用到，需保留
     - ascii_composer
     - recognizer
     - key_binder
@@ -38,14 +38,14 @@ engine:
     - navigator
     - fluency_editor                        # 按中文輸入法要求設置
   segmentors:
-    - lua_segmentor@english_segmentor       # 本輸入法需要用到，需保留
+    - lua_segmentor@*english*segmentor       # 本輸入法需要用到，需保留
     - ascii_segmentor
     - matcher
     - abc_segmentor
     - punct_segmentor
     - fallback_segmentor
   translators:
-    #- lua_translator@english_translator    # 暫時未使用
+    #- lua_translator@*english*translator    # 暫時未使用
     - punct_translator
     - table_translator
     - script_translator@luna_pinyin
@@ -53,8 +53,8 @@ engine:
     - simplifier
     - uniquifier
     # 以下兩個二選一
-    - lua_filter@english_filter             # 速度快，但詞議相同拼寫相近單詞可能會被Rime略去
-    #- lua_filter@english_filter0           # 速度稍慢，但詞典中允許出現拼寫或詞義相同單詞
+    - lua_filter@*english*filter             # 速度快，但詞議相同拼寫相近單詞可能會被Rime略去
+    #- lua_filter@*english*filter0           # 速度稍慢，但詞典中允許出現拼寫或詞義相同單詞
     
 speller:
   algebra:                                  # 本輸入法需要用到，不能增刪改
@@ -95,6 +95,5 @@ menu:
   page_size: 8                              # 可更改，最多10個
 
 style:
-  color_scheme: win10
   horizontal: false                         # 必須爲false
   inline_preedit: false                     # 必須爲false

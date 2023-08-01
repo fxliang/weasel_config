@@ -26,7 +26,7 @@ local Rngs = {
 	x = {_start = 0xe139, _end = 0xe145},
 	y = {_start = 0xe146, _end = 0xe14c}
 }
-function Wubi091zg_Translator(input, seg, eng)
+local function Wubi091zg_Translator(input, seg, eng)
 	if input:match("^/w[a-z]$") then
 		local data = Rngs[ input:match("^/w(.)$") ]
 		if not data then return end
@@ -36,3 +36,5 @@ function Wubi091zg_Translator(input, seg, eng)
 		end
 	end
 end
+
+return { func = Wubi091zg_Translator }
