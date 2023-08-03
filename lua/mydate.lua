@@ -104,9 +104,9 @@ function Date_Translator(input, seg, env)
 		yield(Candidate("gap", seg.start, seg._end, gapstr, cmt ))
 	elseif input:match("/%d%d%d%d%d%d[0123]%d[hq]%d+%D$") then
 		local of = 1
-		local yr=input:sub(of+1, of+4)
-		local mon=input:sub(of+5, of+6)
-		local day=input:sub(of+7, of+8)
+		local yr =tonumber(input:sub(of+1, of+4))
+		local mon=tonumber(input:sub(of+5, of+6))
+		local day=tonumber(input:sub(of+7, of+8))
 		local offset = tonumber(input:sub(of+10, string.len(input)-1))
 		local subfix = CalcDateYmd(yr, mon, day).date
 		local dd = 0
