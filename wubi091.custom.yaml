@@ -12,6 +12,14 @@ patch:
     enable_sentence: false
     initial_quality: 1
 
+  #switches/@after last:
+  #    name: prediction
+  #    states: [无联想, 联想]
+  #    reset: 1
+  #engine/processors/@before 0: predictor
+  #predictor/db: predict.db
+  #predictor/max_candidates: 8
+  #predictor/max_iterations: 4
   ###########################################################################
   # 使用用户词典
   translator/enable_user_dict: false 
@@ -26,4 +34,9 @@ patch:
     - "xform/^~//"
   #translator/preedit_format:
   #- xlit|abcdefghijklmnopqrstuvwxyz|🐭🐮🐅🐰🐉🐘🐎🐏🐒🐓🐕🐷🐫🦌🐂👻🐼🐞🦀🐢🐥🐸🦖🦋🐝🐍|
-
+  
+  #engine/filters/@next: lua_filter@*charcode-lua
+  #switches/@before0:
+  #  options: [ gbk, gb2312, cjk, utf8 ]
+  #  states: [ GBK汉字, GB2312汉字, CJK字符, UTF8字符 ]
+  #  reset: 3

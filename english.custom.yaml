@@ -14,7 +14,7 @@ patch:
       states: [ 漢字, 汉字 ]
     - name: num_selection
       states: [ 🔞引用 , 🔟數字]
-      reset: 0
+      reset: 1
     - name: fold_comments
       states: [ 展开, 叠起 ]
       reset: 1

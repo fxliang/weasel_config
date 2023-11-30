@@ -1,183 +1,26 @@
 patch:
-  __include: my_color_schemes
+  __include: color_schemes:/patch
   __include: font_face_settings
   __include: font_size_settings
   __include: win11
-  #style/color_scheme: 98wb-pink
   #__include: _vertical_text
+  #style/show_ascii_tip: false
   style/mouse_hover_ms: 0
-  style/antialias_mode: cleartype
+  style/click_to_capture: true
+  style/antialias_mode: grayscale
   style/vertical_auto_reverse: true
-  style/ascii_tip_follow_cursor: true
+  style/candidate_abbreviate_length: 30
+  #style/inline_preedit: false
+  #style/ascii_tip_follow_cursor: true
   style/layout/max_width: 1080
-  #style/mark_text: "|"
+  style/layout/max_height: 800
   app_options:
     gvim.exe:
       ascii_mode: true
-    notepad.exe:
+    notepad3.exe:
       inline_preedit: false
- 
-my_color_schemes:
-  preset_color_schemes/win11light:
-    name: " Win11浅色/ Win11light"
-    candidate_text_color:             0x000000 
-    comment_text_color:               0x666666
-    text_color:                       0x777777
-    back_color:                       0xf9f9f9
-    border_color:                     0xcff9f9f9
-    hilited_text_color:               0x000000
-    hilited_back_color:               0x1ff9f9f9
-    hilited_candidate_text_color:     0x1a1a1a
-    hilited_candidate_back_color:     0x2ff97979
-    candidate_back_color:             0x2ff9f9f9
-    hilited_mark_color:               0xfa5f00
-    hilited_comment_text_color:       0x1a1a1a
-    hilited_label_color:              0x1a1a1a
-    label_color:                      0x1a1a1a
-    shadow_color:                     0x00000000
-
-  preset_color_schemes/win11dark:
-    name: "Win11暗色 / Win11Dark"
-    border_color:                     0x0c202020
-    back_color:                       0x303030
-    hilited_back_color:               0x20202020
-    #hilited_candidate_back_color:    0x202020
-    hilited_candidate_back_color:     0x7fd07c3a
-    hilited_candidate_border_color:   0xd07c3a
-    candidate_back_color:             0x07d07c3a
-    hilited_text_color:               0xf9f9f9
-    hilited_label_color:              0xf9f9f9
-    hilited_candidate_text_color:     0xf9f9f9
-    hilited_comment_text_color:       0xf9f9f9
-    hilited_mark_color:               0x212fe6 
-    text_color:                       0xc9c9c9
-    label_color:                      0xc9c9c9
-    candidate_text_color:             0xc9c9c9
-    comment_text_color:               0xc9c9c9
-    shadow_color:                     0x60000000
-
-  preset_color_schemes/oldbook:
-    name: "古书 / oldbook"
-    border_color:                     0x76a3c3 #0x76a3c3
-    back_color:                       0xdcf5f5
-    hilited_back_color:               0x00202020
-    #hilited_shadow_color:            0x50202020
-    hilited_candidate_back_color:     0x01d07c3a
-    hilited_candidate_border_color:   0xe05560d2  #0xe05560d2
-    hilited_text_color:               0x202020
-    hilited_label_color:              0x202020
-    hilited_candidate_text_color:     0x202020
-    hilited_comment_text_color:       0x202020
-    hilited_mark_color:               0x5560c2
-    text_color:                       0x404040
-    label_color:                      0x404040
-    candidate_text_color:             0x404040
-    candidate_back_color:             0x01d07c3a
-    comment_text_color:               0x404040
-    candidate_border_color:           0x205560c2 #0x20d07c3a
-    shadow_color:                     0x60000000
-          
-  preset_color_schemes/win10gray:
-    name: "Win10灰色/ Win10Gray"
-    text_color:                       0x000000
-    back_color:                       0xf4f4f4
-    border_color:                     0x4fcccccc
-    hilited_text_color:               0x000000
-    hilited_back_color:               0x4ff4f4f4
-    hilited_candidate_text_color:     0x000000
-    hilited_candidate_back_color:     0x4fcccccc
-    hilited_comment_text_color:       0x555555
-    hilited_label_color:              0x555555
-    hilited_mark_color:               0xd77800
-    label_color:                      0x888888
-    candidate_text_color:             0x222222
-    comment_text_color:               0x888888
-    shadow_color:                     0x20000000
-
-  preset_color_schemes/win10lightblue:
-    name: "Win10浅藍色 / Win10LightBlue"
-    text_color:                       0x000000
-    back_color:                       0xffffff
-    shadow_color:                     0x10000000
-    border_color:                     0x7fffd8a6
-    hilited_text_color:               0x000000
-    hilited_back_color:               0x7fffd8a6
-    hilited_shadow_color:             0x00ffd8a6
-    hilited_label_color:              0x000000
-    hilited_candidate_text_color:     0x000000
-    hilited_candidate_back_color:     0x7fffd8a6
-    hilited_candidate_shadow_color:   0x00d77800
-    hilited_comment_text_color:       0x000000
-    #hilited_candidate_shadow_color:  0x40000000
-    hilited_mark_color:               0xa678ff
-    label_color:                      0x838383
-    candidate_text_color:             0x000000
-    candidate_back_color:             0x00ffffff
-    candidate_shadow_color:           0x00ffffff
-    comment_text_color:               0x222222
-
-  preset_color_schemes/win10blue:
-    # an example use rgba format color code
-    # color format, argb:  0xaarrggbb; rgba: 0xrrggbbaa; if not set, 0xaabbggrr
-    color_format: rgba        # argb is also optional
-    text_color:                       0x000000
-    back_color:                       0xffffff
-    shadow_color:                     0x00000000
-    border_color:                     0x0078d7
-    hilited_text_color:               0x000000
-    hilited_back_color:               0xff00007f
-    hilited_shadow_color:             0xd7780000
-    hilited_label_color:              0xffffff
-    hilited_candidate_text_color:     0xffffff
-    hilited_candidate_back_color:     0x0078d7
-    hilited_comment_text_color:       0xffffff
-    hilited_candidate_shadow_color:   0x00000000
-    label_color:                      0x838383
-    candidate_text_color:             0x000000
-    candidate_back_color:             0xffffff00
-    candidate_shadow_color:           0xffffff00
-    comment_text_color:               0x222222
-    hilited_mark_color:               0xd77800
-    name: "Win10藍色 / Win10Blue"
-        
-  preset_color_schemes/unnamed:
-    name: "未命名"
-    back_color:                       0xffffff
-    text_color:                       0x000000
-    border_color:                     0x666666
-    label_color:                      0xa9a9a9
-    candidate_text_color:             0x000000
-    comment_text_color:               0x666666
-    hilited_text_color:               0xffffff
-    hilited_back_color:               0x444444
-    hilited_candidate_back_color:     0x444444
-    hilited_candidate_shadow_color:   0x60000000
-    hilited_comment_text_color:       0xeeeeee
-    hilited_candidate_text_color:     0xffffff
-    hilited_label_color:              0xeeeeee
-    shadow_color:                     0x60000000
-
-  preset_color_schemes/98wb-pink:
-    name: 一品红／98wb-pink
-    author: 五笔小筑 <wubixiaozhu@126.com>
-    text_color: 0xffffff #默认文字颜色
-    back_color: 0xabE8CB3C #候选窗背景色
-    border_color: 0xE8CB3C #候选窗边框颜色
-    candidate_back_color: 0x00000000 #非高亮候选背景颜色    
-    comment_text_color: 0xffffff #opencc注解颜色
-    label_color: 0xffffff #非高亮候选序数值颜色
-    candidate_shadow_color: 0x00000000 #非高亮候选背景块阴影颜色
-    candidate_text_color: 0xffffff #非高亮候选文字颜色
-    hilited_candidate_border_color: 0xE82EE8 #高亮候选背景块描边色
-    hilited_candidate_shadow_color: 0x60E82EE8 #高亮候选背景块阴影颜色
-    hilited_label_color: 0xffffff #高亮候选的序数值颜色
-    hilited_mark_color: 0xDE33C1 #标记高亮的标签小竖块的颜色
-    hilited_shadow_color: 0xab187BDD #编码背景块阴影颜色
-    hilited_text_color: 0x82e6ca #编码文字颜色
-    hilited_back_color: 0x42BA2CDD #编码背景颜色
-    hilited_candidate_text_color: 0xffffff #高亮候选文字颜色
-    hilited_candidate_back_color: 0xa1E82EE8 #高亮候选背景颜色
-    shadow_color: 0xab13E868 #候选窗阴影色，默认全透明（无阴影）
+    firefox.exe:
+      inline_preedit: true
 
 font_size_settings:
   style/font_point:         24
@@ -205,15 +48,18 @@ font_size_settings:
 #
 # make main font after some symbol fonts, to ensure symbol show in the right font, if you want specify the symbol font
 font_face_settings:
-  style/font_face:          "LXGW Wenkai Narrow:7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai Narrow, Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
-  style/label_font_face:    "Segoe UI Emoji:30:39, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff, LXGW Wenkai Narrow"
-  style/comment_font_face:  "Segoe UI Emoji:30:39, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff, LXGW Wenkai Narrow"
+  style/font_face:          "Segoe UI Emoji:30:39, LXGW Wenkai :7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai , Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
+  style/label_font_face:    "Segoe UI Emoji:30:39, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff, LXGW Wenkai "
+  style/comment_font_face:  "Segoe UI Emoji:30:39, LXGW Wenkai :7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai , Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
 
 _vertical_text:
-  style/vertical_text: true
+  #style/vertical_text: true
+  style/text_orientation: vertical
   style/vertical_text_with_wrap: false
   style/vertical_text_left_to_right: false
   style/layout/max_height: 0
+  style/layout/hilite_padding_y:  10
+  style/layout/hilite_padding_x:  0
 
 _vertical_text_wrap:
   __include: _vertical_text
@@ -223,14 +69,14 @@ _vertical_text_wrap:
 lost_temple:
   style/color_scheme: lost_temple
   style/horizontal: true
-  #style/inline_preedit: true
+  style/inline_preedit: true
   style/layout/align_type: center
   style/layout/border: 2
   style/layout/spacing: 15
   style/layout/candidate_spacing: 20
-  style/layout/shadow_radius:   6 
-  style/layout/shadow_offset_x: -8
-  style/layout/shadow_offset_y: 8
+  style/layout/shadow_radius:   10 
+  style/layout/shadow_offset_x: 0
+  style/layout/shadow_offset_y: 0
   style/layout/hilite_spacing:  10
   #style/layout/hilite_padding:  15
   style/layout/hilite_padding_x:  10
@@ -242,20 +88,20 @@ lost_temple:
   # color_schemes customization
   preset_color_schemes/lost_temple/hilited_candidate_back_color: 0x82e6ca
   #preset_color_schemes/lost_temple/hilited_candidate_border_color: 0x82e6ca
-  preset_color_schemes/lost_temple/candidate_back_color: 0x00444444
+  #preset_color_schemes/lost_temple/candidate_back_color: 0x00444444
   #preset_color_schemes/lost_temple/candidate_border_color: 0x00444444
   preset_color_schemes/lost_temple/hilited_candidate_shadow_color: 0x90000000
   #preset_color_schemes/lost_temple/candidate_shadow_color: 0xc0000000
-  preset_color_schemes/lost_temple/hilited_shadow_color: 0x60000000
-  preset_color_schemes/lost_temple/shadow_color: 0x00000000
+  preset_color_schemes/lost_temple/hilited_shadow_color: 0x90000000
+  preset_color_schemes/lost_temple/shadow_color: 0x40000000
   preset_color_schemes/lost_temple/border_color: 0x00444444
-  preset_color_schemes/lost_temple/back_color: 0x444444
+  #preset_color_schemes/lost_temple/back_color: 0x444444
   preset_color_schemes/lost_temple/hilited_label_color: 0x000000
-  preset_color_schemes/lost_temple/hilited_mark_color: 0xff4444
+  preset_color_schemes/lost_temple/hilited_mark_color: 0x00ff4444
 
-win10:    
+win10:
   style/horizontal: true
-  style/inline_preedit: true
+  style/inline_preedi: true
   # color_scheme settings
   style/color_scheme: win10lightblue
   #layout settings
@@ -279,7 +125,6 @@ win11:
   style/inline_preedit: true
   # color_scheme settings
   style/color_scheme: win11light
-  #style/preedit_type: preview_all
   # layout settings
   style/layout/align_type: center
   style/layout/min_height: 0
@@ -290,10 +135,10 @@ win11:
   style/layout/shadow_offset_x: 0
   style/layout/shadow_offset_y: 0
   style/layout/hilite_spacing: 20
-  style/layout/hilite_padding_x:  5
+  style/layout/hilite_padding_x:  10
   style/layout/hilite_padding_y:  5
-  style/layout/margin_x:  10
-  style/layout/margin_y:  15
+  style/layout/margin_x:  20
+  style/layout/margin_y:  20
   style/layout/round_corner:    10
-  style/layout/corner_radius:   15
+  style/layout/corner_radius:   10
 

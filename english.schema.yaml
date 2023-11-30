@@ -22,7 +22,7 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ 英文 ]
+    states: [ 英文, 中文 ]
   - name: ascii_punct
     reset: 1
     
@@ -36,7 +36,8 @@ engine:
     - punctuator
     - selector
     - navigator
-    - fluency_editor                        # 按中文輸入法要求設置
+    #- fluency_editor                        # 按中文輸入法要求設置
+    - express_editor
   segmentors:
     - lua_segmentor@*english*segmentor       # 本輸入法需要用到，需保留
     - ascii_segmentor

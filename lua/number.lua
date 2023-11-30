@@ -131,5 +131,33 @@ local function Daxie_Translator(input, seg, env)
 	end
 end
 
+local function calc(input, seg, env)
+	if string.match(input, '^/=.*$') then
+		local exp = string.sub(input, 3)
+		local f, err = load('return ' .. exp)
+		if f then
+			local res = f()
+			if res then
+				yield(Candidate("calc", seg.start, seg._end, tostring(res), input:sub(3) .. '='))
+			end
+		end
+	end
+end
 
-return {func = Daxie_Translator}
+local function hex(input, seg, env)
+	if input:match('^/hex[0-9]+$') or input:match('^/Hex[0-9]+$') then
+		yield(Candidate("hex", seg.start, seg._end, string.format('%x', tonumber(input:sub(5))), 'hex('..input:sub(5) .. ')'))
+	elseif input:match('^H[0-9]+$') then
+		yield(Candidate("hex", seg.start, seg._end, string.format('%X', tonumber(input:sub(2))), 'hex('..input:sub(2) .. ')'))
+	end
+end
+
+local function dec(input, seg)
+	if input:match('^/dec[0-9a-fA-F]+$') or input:match('^/Dec[0-9a-fA-F]+$') then
+		yield(Candidate('dec', seg._start, seg._end, tonumber(input:sub(5), 16), 'dec(' .. input:sub(5) .. 'h)'))
+	elseif input:match('^D[0-9a-fA-F]+$') then
+		yield(Candidate('dec', seg._start, seg._end, tonumber(input:sub(2), 16), 'dec(' .. input:sub(2) .. 'h)'))
+	end
+end
+
+return {func = Daxie_Translator, calc = calc, hex=hex, dec=dec}
