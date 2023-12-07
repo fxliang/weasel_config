@@ -32,6 +32,7 @@ patch:
   speller/delimiter: "`"  #因为用了;'来做23词选择，所以原来的分词键要改成/
   translator/comment_format/+:
     - "xform/^~//"
+  engine/translators/@after last: table_translator@custom_phrase
   #translator/preedit_format:
   #- xlit|abcdefghijklmnopqrstuvwxyz|🐭🐮🐅🐰🐉🐘🐎🐏🐒🐓🐕🐷🐫🦌🐂👻🐼🐞🦀🐢🐥🐸🦖🦋🐝🐍|
   

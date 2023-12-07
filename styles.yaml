@@ -3,15 +3,13 @@ patch:
   __include: font_face_settings
   __include: font_size_settings
   __include: win11
-  #__include: _vertical_text
-  #style/show_ascii_tip: false
+  __include: _vertical_text
   style/mouse_hover_ms: 0
   style/click_to_capture: true
   style/antialias_mode: grayscale
   style/vertical_auto_reverse: true
   style/candidate_abbreviate_length: 30
-  #style/inline_preedit: false
-  #style/ascii_tip_follow_cursor: true
+
   style/layout/max_width: 1080
   style/layout/max_height: 800
   app_options:
@@ -23,7 +21,7 @@ patch:
       inline_preedit: true
 
 font_size_settings:
-  style/font_point:         24
+  style/font_point:         20
   style/label_font_point:   16
   style/comment_font_point: 16
 
@@ -131,14 +129,14 @@ win11:
   style/layout/border: 2
   style/layout/spacing: 20
   style/layout/candidate_spacing: 20
-  style/layout/shadow_radius:   0
-  style/layout/shadow_offset_x: 0
-  style/layout/shadow_offset_y: 0
-  style/layout/hilite_spacing: 20
-  style/layout/hilite_padding_x:  10
+  style/layout/shadow_radius:   10
+  style/layout/shadow_offset_x: -6
+  style/layout/shadow_offset_y: -6
+  style/layout/hilite_spacing: 10
+  style/layout/hilite_padding_x:  5
   style/layout/hilite_padding_y:  5
   style/layout/margin_x:  20
   style/layout/margin_y:  20
   style/layout/round_corner:    10
-  style/layout/corner_radius:   10
+  style/layout/corner_radius:   20
 

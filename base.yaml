@@ -15,7 +15,6 @@ patch:
   - lua_filter@*basefunctions*Multiline_filter
   - lua_filter@*basefunctions*Tip_Filter
   engine/translators/+:
-  - table_translator@custom_phrase
   - lua_translator@*number
   - lua_translator@*number*calc
   - lua_translator@*number*hex
