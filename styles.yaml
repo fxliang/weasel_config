@@ -9,6 +9,7 @@ patch:
   style/antialias_mode: grayscale
   style/vertical_auto_reverse: true
   style/candidate_abbreviate_length: 30
+  style/label_format: "%s"
 
   style/layout/max_width: 1080
   style/layout/max_height: 800
@@ -129,9 +130,9 @@ win11:
   style/layout/border: 2
   style/layout/spacing: 20
   style/layout/candidate_spacing: 20
-  style/layout/shadow_radius:   10
+  style/layout/shadow_radius:    8
   style/layout/shadow_offset_x: -6
-  style/layout/shadow_offset_y: -6
+  style/layout/shadow_offset_y:  6
   style/layout/hilite_spacing: 10
   style/layout/hilite_padding_x:  5
   style/layout/hilite_padding_y:  5
