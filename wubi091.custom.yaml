@@ -12,14 +12,6 @@ patch:
     enable_sentence: false
     initial_quality: 1
 
-  #switches/@after last:
-  #    name: prediction
-  #    states: [无联想, 联想]
-  #    reset: 1
-  #engine/processors/@before 0: predictor
-  #predictor/db: predict.db
-  #predictor/max_candidates: 8
-  #predictor/max_iterations: 4
   ###########################################################################
   # 使用用户词典
   translator/enable_user_dict: false 

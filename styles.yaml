@@ -1,4 +1,12 @@
 patch:
+  # notifications setting
+  # bool or list of{ schema options / 'schema'}
+  show_notifications: true
+  # how long a period notifications shows
+  show_notifications_time: 500
+  # use global ascii status
+  global_ascii: true
+
   __include: color_schemes:/patch
   __include: font_face_settings
   __include: font_size_settings
@@ -8,14 +16,21 @@ patch:
   style/click_to_capture: true
   style/antialias_mode: grayscale
   style/vertical_auto_reverse: true
-  style/candidate_abbreviate_length: 30
+  style/candidate_abbreviate_length: 100
   style/label_format: "%s"
 
   style/layout/max_width: 1080
   style/layout/max_height: 800
   app_options:
+    nvy.exe:
+      vim_mode: true
+    nvim-qt.exe:
+      vim_mode: true
+    neovide.exe:
+      vim_mode: true
     gvim.exe:
       ascii_mode: true
+      vim_mode: true
     notepad3.exe:
       inline_preedit: false
     firefox.exe:

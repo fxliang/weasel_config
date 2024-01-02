@@ -10,6 +10,30 @@ patch:
     option_name: emoji_suggestion
     tips: none
     inherit_comment: false
+  #############################################################################
+  # default prediction is in Traditional Chinese, add switch option to convert
+  # to Simplified Chinese
+  'engine/filters/@after last':
+    simplifier@predict_simp
+  predict_simp:
+    opencc_config: t2s.json
+    option_name: predict_simp_switch
+  switches/@next:
+    name: predict_simp_switch
+    reset: 1
+    states: [ "繁体联想", "简体联想" ]
+
+  switches/@after last:
+    name: prediction
+    states: [联想关闭, 联想打开]
+    reset: 0
+  'engine/processors/@before 0': predictor
+  'engine/translators/@before 0': predict_translator
+  predictor/db: predict.db
+  predictor/max_candidates: 6
+  predictor/max_iterations: 1
+  #############################################################################
+
   menu/page_size: 6
   engine/filters/+:
   - lua_filter@*basefunctions*Multiline_filter
@@ -29,10 +53,10 @@ patch:
   punctuator/import_preset: symbols
   recognizer/patterns/punct: '^/(([a-z]+)|(=.*)|H[0-9]+|D[0-9a-fA-F]+|\?|(uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*|ur[0-9a-fA-F]{0,6}(-[0-9a-fA-F]{0,6})?|[0-9a-fA-F]{0,6}u?|\d{0,8}([hq]\d+)?\D?|\d{0,8}(g|n|nr)|1?\d|dx\d+(\.\d{0,2})?|\d{1,6}[hq]|[1-7][sxz]))$'
 
-  key_binder/bindings:
+  key_binder/bindings/+:
     - { accept: semicolon, send: 2, when: has_menu}  #打字时，冒号选中第2个候选字发送
     - { accept: apostrophe, send: 3, when: has_menu} #打字时，引号选中第3个候选字发送
-    - { accept: slash, send: 4, when: has_menu} #打字时，引号选中第3个候选字发送
+    - { accept: slash, send: 4, when: has_menu} #打字时，引号选中第4个候选字发送
     - { accept: Shift+parenleft, send: 5, when: has_menu} #打字时，左括号选中第5个候选字发送
     - { accept: Shift+parenright, send: 6, when: has_menu} #打字时，右括号选中第6个候选字发送
     - { accept: Tab, send: Down, when: has_menu} #打字时，Tab和Shift+Tab切换候选
@@ -42,3 +66,4 @@ patch:
     - { accept: Control+j, send: 4, when: has_menu}  #打字时，Ctrl+j选中第4个候选字发送
     - { accept: Control+k, send: 5, when: has_menu}  #打字时，Ctrl+k选中第5个候选字发送
     - { accept: Control+l, send: 6, when: has_menu}  #打字时，Ctrl+l选中第6个候选字发送
+    - {accept: "Control+9", toggle: prediction, when: always}
