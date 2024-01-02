@@ -1,5 +1,5 @@
 patch:
-  switches/@next:
+  switches/@before 0:
     name: emoji_suggestion
     reset: 0
     states: [ "🈚︎", "🈶️" ]
