@@ -5,7 +5,7 @@ patch:
   # how long a period notifications shows
   show_notifications_time: 500
   # use global ascii status
-  global_ascii: true
+  global_ascii: false
 
   __include: color_schemes:/patch
   __include: font_face_settings
@@ -24,6 +24,7 @@ patch:
   app_options:
     nvy.exe:
       vim_mode: true
+      ascii_mode: true
     nvim-qt.exe:
       vim_mode: true
     neovide.exe:
