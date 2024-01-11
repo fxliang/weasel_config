@@ -1,8 +1,4 @@
 patch:
-  switches/@before 0:
-    name: emoji_suggestion
-    reset: 0
-    states: [ "🈚︎", "🈶️" ]
   'engine/filters/@before 0':
     simplifier@emoji_suggestion
   emoji_suggestion:
@@ -18,16 +14,24 @@ patch:
   predict_simp:
     opencc_config: t2s.json
     option_name: predict_simp_switch
-  switches/@next:
-    name: predict_simp_switch
-    reset: 1
-    states: [ "繁体联想", "简体联想" ]
 
-  switches/@after last:
-    name: prediction
-    states: [联想关闭, 联想打开]
-    reset: 0
+  engine/filters/@next: lua_filter@*charcode-lua
+  switches/+:
+    - name: prediction
+      states: [联想关闭, 联想打开]
+      reset: 0
+    - name: predict_simp_switch
+      reset: 1
+      states: [ "繁体联想", "简体联想" ]
+    - name: emoji_suggestion
+      reset: 0
+      states: [ "🈚︎", "🈶️" ]
+    - options: [ gbk, gb2312, cjk, utf8 ]
+      states: [ GBK汉字, GB2312汉字, CJK字符, UTF8字符 ]
+      reset: 3
   'engine/processors/@before 0': predictor
+  engine/processors/+:
+  - lua_processor@*init_env
   'engine/translators/@before 0': predict_translator
   predictor/db: predict.db
   predictor/max_candidates: 6
@@ -43,7 +47,7 @@ patch:
   - lua_translator@*number*calc
   - lua_translator@*number*hex
   - lua_translator@*number*dec
-
+  - lua_translator@*clipboard
   - lua_translator@*mydate
   - lua_translator@*unicode
   - lua_translator@*wubi091_zg

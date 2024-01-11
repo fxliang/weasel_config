@@ -11,7 +11,7 @@ patch:
   __include: font_face_settings
   __include: font_size_settings
   __include: win11
-  __include: _vertical_text
+  #__include: _vertical_text
   style/mouse_hover_ms: 0
   style/click_to_capture: true
   style/antialias_mode: grayscale
@@ -36,6 +36,7 @@ patch:
       inline_preedit: false
     firefox.exe:
       inline_preedit: true
+      ascii_mode: true
 
 font_size_settings:
   style/font_point:         20

@@ -1,2 +1,8 @@
 patch:
   __include: base:/patch
+  show_notifications:
+    - ascii_mode
+    - ascii_punct
+    - full_shape
+    - simplification
+    - schema

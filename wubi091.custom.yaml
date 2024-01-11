@@ -28,8 +28,3 @@ patch:
   #translator/preedit_format:
   #- xlit|abcdefghijklmnopqrstuvwxyz|🐭🐮🐅🐰🐉🐘🐎🐏🐒🐓🐕🐷🐫🦌🐂👻🐼🐞🦀🐢🐥🐸🦖🦋🐝🐍|
   
-  engine/filters/@next: lua_filter@*charcode-lua
-  switches/@before0:
-    options: [ gbk, gb2312, cjk, utf8 ]
-    states: [ GBK汉字, GB2312汉字, CJK字符, UTF8字符 ]
-    reset: 3
