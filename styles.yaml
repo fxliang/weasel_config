@@ -117,13 +117,13 @@ lost_temple:
 
 win10:
   style/horizontal: true
-  style/inline_preedi: true
+  style/inline_preedit: true
   # color_scheme settings
-  style/color_scheme: win10lightblue
+  style/color_scheme: win10blue
   #layout settings
   style/layout/align_type: center
   style/layout/min_height: 0
-  style/layout/border: 2
+  style/layout/border: 1
   style/layout/spacing: 20
   style/layout/candidate_spacing: 10
   style/layout/shadow_radius:   0

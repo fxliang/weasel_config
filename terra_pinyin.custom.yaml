@@ -1,0 +1,5 @@
+patch:
+  punctuator/import_preset: symbols
+  recognizer/patterns/custom_command: "^/.*$"
+  engine/processors/@before 0: lua_processor@quickstart
+  engine/translators/@before 0: lua_processor@quickstarthint

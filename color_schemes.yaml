@@ -92,7 +92,7 @@ patch:
     hilited_candidate_back_color:     0x4fcccccc
     hilited_comment_text_color:       0x555555
     hilited_label_color:              0x555555
-    hilited_mark_color:               0xd77800
+    hilited_mark_color:               0x00d77800
     label_color:                      0x888888
     candidate_text_color:             0x222222
     comment_text_color:               0x888888
@@ -113,7 +113,7 @@ patch:
     hilited_candidate_shadow_color:   0x00d77800
     hilited_comment_text_color:       0x000000
     #hilited_candidate_shadow_color:  0x40000000
-    hilited_mark_color:               0xa678ff
+    hilited_mark_color:               0x00a678ff
     label_color:                      0x838383
     candidate_text_color:             0x000000
     candidate_back_color:             0x00ffffff
@@ -141,7 +141,7 @@ patch:
     candidate_back_color:             0xffffff00
     candidate_shadow_color:           0xffffff00
     comment_text_color:               0x222222
-    hilited_mark_color:               0xd77800
+    hilited_mark_color:               0x00d77800
     name: "Win10藍色 / Win10Blue"
         
   preset_color_schemes/unnamed:
