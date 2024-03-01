@@ -1,6 +1,4 @@
 patch:
-  'engine/filters/@before 0':
-    simplifier@emoji_suggestion
   emoji_suggestion:
     opencc_config: emoji.json
     option_name: emoji_suggestion
@@ -9,19 +7,16 @@ patch:
   #############################################################################
   # default prediction is in Traditional Chinese, add switch option to convert
   # to Simplified Chinese
-  'engine/filters/@after last':
-    simplifier@predict_simp
   predict_simp:
     opencc_config: t2s.json
     option_name: predict_simp_switch
 
-  engine/filters/@next: lua_filter@*charcode-lua
   switches/+:
     - name: prediction
       states: [联想关闭, 联想打开]
       reset: 0
     - name: predict_simp_switch
-      reset: 1
+      reset: 0
       states: [ "繁体联想", "简体联想" ]
     - name: emoji_suggestion
       reset: 0
@@ -40,8 +35,11 @@ patch:
 
   menu/page_size: 6
   engine/filters/+:
+  - simplifier@predict_simp
+  - lua_filter@*charcode-lua
   - lua_filter@*basefunctions*Multiline_filter
   - lua_filter@*basefunctions*Tip_Filter
+  - simplifier@emoji_suggestion
   engine/translators/+:
   - lua_translator@*number
   - lua_translator@*number*calc
