@@ -8,12 +8,16 @@ patch:
   global_ascii: false
 
   __include: color_schemes:/patch
+  __include: app_options:/patch
   __include: font_face_settings
   __include: font_size_settings
   __include: win11
   #__include: _vertical_text
-  style/mouse_hover_ms: 0
-  style/click_to_capture: true
+  # positive to make hovering with highlight changed
+  # negative to make hovering without highlight changed
+  # 0 to make no hovering
+  #style/mouse_hover_ms: -20
+  style/click_to_capture: false
   style/antialias_mode: grayscale
   style/vertical_auto_reverse: true
   style/candidate_abbreviate_length: 100
@@ -21,25 +25,9 @@ patch:
 
   style/layout/max_width: 1080
   style/layout/max_height: 800
-  app_options:
-    nvy.exe:
-      vim_mode: true
-      ascii_mode: true
-    nvim-qt.exe:
-      vim_mode: true
-    neovide.exe:
-      vim_mode: true
-    gvim.exe:
-      ascii_mode: true
-      vim_mode: true
-    notepad3.exe:
-      inline_preedit: false
-    firefox.exe:
-      inline_preedit: true
-      ascii_mode: true
 
 font_size_settings:
-  style/font_point:         20
+  style/font_point:         30
   style/label_font_point:   16
   style/comment_font_point: 16
 
@@ -86,40 +74,28 @@ lost_temple:
   style/color_scheme: lost_temple
   style/horizontal: true
   style/inline_preedit: true
-  style/layout/align_type: center
-  style/layout/border: 2
-  style/layout/spacing: 15
-  style/layout/candidate_spacing: 20
-  style/layout/shadow_radius:   10 
-  style/layout/shadow_offset_x: 0
-  style/layout/shadow_offset_y: 0
-  style/layout/hilite_spacing:  10
-  #style/layout/hilite_padding:  15
-  style/layout/hilite_padding_x:  10
-  style/layout/hilite_padding_y:  2
-  style/layout/margin_x:        25
-  style/layout/margin_y:        20
-  style/layout/round_corner:    10
-  style/layout/corner_radius:   20
+  __include: layout_offset
   # color_schemes customization
-  preset_color_schemes/lost_temple/hilited_candidate_back_color: 0x82e6ca
-  #preset_color_schemes/lost_temple/hilited_candidate_border_color: 0x82e6ca
-  #preset_color_schemes/lost_temple/candidate_back_color: 0x00444444
-  #preset_color_schemes/lost_temple/candidate_border_color: 0x00444444
   preset_color_schemes/lost_temple/hilited_candidate_shadow_color: 0x90000000
-  #preset_color_schemes/lost_temple/candidate_shadow_color: 0xc0000000
   preset_color_schemes/lost_temple/hilited_shadow_color: 0x90000000
   preset_color_schemes/lost_temple/shadow_color: 0x40000000
-  preset_color_schemes/lost_temple/border_color: 0x00444444
-  #preset_color_schemes/lost_temple/back_color: 0x444444
   preset_color_schemes/lost_temple/hilited_label_color: 0x000000
-  preset_color_schemes/lost_temple/hilited_mark_color: 0x00ff4444
 
 win10:
   style/horizontal: true
   style/inline_preedit: true
-  # color_scheme settings
   style/color_scheme: win10blue
+  style/color_scheme: win10gray
+
+win11:
+  style/horizontal: true
+  style/inline_preedit: true
+  # color_scheme settings
+  style/color_scheme: win11light
+  style/color_scheme_dark: win11dark
+  __include: layout_offset
+
+layout_square:
   #layout settings
   style/layout/align_type: center
   style/layout/min_height: 0
@@ -136,11 +112,7 @@ win10:
   style/layout/round_corner:    0
   style/layout/corner_radius:   0
 
-win11:
-  style/horizontal: true
-  style/inline_preedit: true
-  # color_scheme settings
-  style/color_scheme: win11light
+layout_offset:
   # layout settings
   style/layout/align_type: center
   style/layout/min_height: 0
@@ -148,13 +120,13 @@ win11:
   style/layout/spacing: 20
   style/layout/candidate_spacing: 20
   style/layout/shadow_radius:    8
-  style/layout/shadow_offset_x: -6
-  style/layout/shadow_offset_y:  6
+  style/layout/shadow_offset_x: -3
+  style/layout/shadow_offset_y:  3
   style/layout/hilite_spacing: 10
-  style/layout/hilite_padding_x:  5
+  style/layout/hilite_padding_x:  10
   style/layout/hilite_padding_y:  5
   style/layout/margin_x:  20
-  style/layout/margin_y:  20
-  style/layout/round_corner:    10
-  style/layout/corner_radius:   20
+  style/layout/margin_y:  15
+  style/layout/round_corner:    5
+  style/layout/corner_radius:   15
 

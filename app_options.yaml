@@ -1,0 +1,23 @@
+patch:
+  app_options:
+    nvy.exe:
+      vim_mode: true
+      ascii_mode: true
+    nvim-qt.exe:
+      vim_mode: true
+    neovide.exe:
+      vim_mode: true
+    gvim.exe:
+      ascii_mode: true
+      vim_mode: true
+    firefox.exe:
+      inline_preedit: true
+      ascii_mode: true
+    mintty.exe:
+      ascii_mode: true
+    mintty.exe:
+      ascii_mode: true
+    vscodium.exe:
+      vim_mode: true
+    conhost.exe:
+      ascii_mode: true

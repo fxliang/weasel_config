@@ -27,6 +27,7 @@ patch:
   'engine/processors/@before 0': predictor
   engine/processors/+:
   - lua_processor@*init_env
+  #- lua_processor@*keymap
   'engine/translators/@before 0': predict_translator
   predictor/db: predict.db
   predictor/max_candidates: 6
@@ -45,7 +46,7 @@ patch:
   - lua_translator@*number*calc
   - lua_translator@*number*hex
   - lua_translator@*number*dec
-  - lua_translator@*clipboard
+  - lua_translator@*clipboard # with my clipboard librime-lua
   - lua_translator@*mydate
   - lua_translator@*unicode
   - lua_translator@*wubi091_zg
