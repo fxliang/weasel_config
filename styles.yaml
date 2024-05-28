@@ -11,23 +11,27 @@ patch:
   __include: app_options:/patch
   __include: font_face_settings
   __include: font_size_settings
-  __include: win11
+  __include: lost_temple
   #__include: _vertical_text
   # positive to make hovering with highlight changed
   # negative to make hovering without highlight changed
   # 0 to make no hovering
-  #style/mouse_hover_ms: -20
-  style/click_to_capture: false
+  style/hover_type: semi_hilite
+  style/click_to_capture: true
   style/antialias_mode: grayscale
   style/vertical_auto_reverse: true
-  style/candidate_abbreviate_length: 100
+  #style/candidate_abbreviate_length: 100
   style/label_format: "%s"
+  #
+  #style/layout/linespacing: 120
+  #style/layout/baseline: 60
 
   style/layout/max_width: 1080
   style/layout/max_height: 800
+  style/layout/min_width: 200
 
 font_size_settings:
-  style/font_point:         30
+  style/font_point:         16
   style/label_font_point:   16
   style/comment_font_point: 16
 
@@ -72,7 +76,7 @@ _vertical_text_wrap:
 
 lost_temple:
   style/color_scheme: lost_temple
-  style/horizontal: true
+  style/horizontal: false
   style/inline_preedit: true
   __include: layout_offset
   # color_schemes customization
@@ -82,18 +86,18 @@ lost_temple:
   preset_color_schemes/lost_temple/hilited_label_color: 0x000000
 
 win10:
-  style/horizontal: true
+  style/horizontal: false
   style/inline_preedit: true
-  style/color_scheme: win10blue
-  style/color_scheme: win10gray
+  style/color_scheme: win10lightblue
+  style/color_scheme_dark: win10gray
 
 win11:
   style/horizontal: true
   style/inline_preedit: true
   # color_scheme settings
+  style/color_scheme_dark: win11dark2
   style/color_scheme: win11light
-  style/color_scheme_dark: win11dark
-  __include: layout_offset
+  __include: layout_offset2
 
 layout_square:
   #layout settings
@@ -130,3 +134,20 @@ layout_offset:
   style/layout/round_corner:    5
   style/layout/corner_radius:   15
 
+layout_offset2:
+  # layout settings
+  style/layout/align_type: center
+  style/layout/min_height: 0
+  style/layout/border: 2
+  style/layout/spacing: 10
+  style/layout/candidate_spacing: 10
+  style/layout/shadow_radius:    0
+  style/layout/shadow_offset_x: -3
+  style/layout/shadow_offset_y:  3
+  style/layout/hilite_spacing: 5
+  style/layout/hilite_padding_x:  5
+  style/layout/hilite_padding_y:  5
+  style/layout/margin_x:  20
+  style/layout/margin_y:  15
+  style/layout/round_corner:    5
+  style/layout/corner_radius:   15

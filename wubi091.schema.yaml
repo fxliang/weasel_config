@@ -1,4 +1,30 @@
-customization: 3660603081
+schema:
+  author:
+    - "始创者 行走的风景"
+  dependencies:
+    - pinyin_simp
+  description: |
+    郁金香
+    码表源自 点儿词库
+    敲 z 键进入拼音反查
+    
+  name: "五笔091"
+  schema_id: wubi091
+  version: 0.20
+
+switches:
+  - name: ascii_mode
+    states: ["中", "英"]
+  - name: full_shape
+    states: ["半", "全"]
+  - name: ascii_punct
+    states: ["。", "．"]
+  - name: extended_charset
+    states: ["通", "扩"]
+  - name: zh_trad
+    reset: 0
+    states: ["简", "繁"]
+
 engine:
   filters:
     - simplifier
@@ -22,6 +48,7 @@ engine:
     - punct_translator
     - reverse_lookup_translator
     - table_translator
+
 key_binder:
   import_preset: default
 punctuator:
@@ -30,6 +57,7 @@ recognizer:
   import_preset: default
   patterns:
     reverse_lookup: "^z[a-z]*'?$"
+
 reverse_lookup:
   dictionary: pinyin_simp
   preedit_format:
@@ -38,38 +66,16 @@ reverse_lookup:
     - "xform/([jqxy])v/$1u/"
   prefix: z
   suffix: "'"
-schema:
-  author:
-    - "始创者 行走的风景"
-  dependencies:
-    - pinyin_simp
-  description: |
-    郁金香
-    码表源自 点儿词库
-    敲 z 键进入拼音反查
-    
-  name: "五笔091"
-  schema_id: wubi091
-  version: 0.20.custom.3660603081
+
 simplifier:
   opencc_config: s2t.json
   option_name: zh_trad
+
 speller:
   auto_select: true
   auto_select_unique_candidate: true
   delimiter: "`"
-switches:
-  - name: ascii_mode
-    states: ["中", "英"]
-  - name: full_shape
-    states: ["半", "全"]
-  - name: ascii_punct
-    states: ["。", "．"]
-  - name: extended_charset
-    states: ["通", "扩"]
-  - name: zh_trad
-    reset: 0
-    states: ["简", "繁"]
+
 translator:
   comment_format:
     "+": ["xform/^~//"]

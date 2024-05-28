@@ -15,9 +15,9 @@ patch:
       ascii_mode: true
     mintty.exe:
       ascii_mode: true
-    mintty.exe:
-      ascii_mode: true
     vscodium.exe:
       vim_mode: true
     conhost.exe:
+      ascii_mode: true
+    windowsterminal.exe:
       ascii_mode: true

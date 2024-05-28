@@ -25,8 +25,9 @@ patch:
       states: [ GBK汉字, GB2312汉字, CJK字符, UTF8字符 ]
       reset: 3
   'engine/processors/@before 0': predictor
-  engine/processors/+:
-  - lua_processor@*init_env
+  #engine/processors/+:
+  #- lua_processor@*init_env
+  #- lua_processor@*keyrepr
   #- lua_processor@*keymap
   'engine/translators/@before 0': predict_translator
   predictor/db: predict.db
