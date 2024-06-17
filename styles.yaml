@@ -11,7 +11,8 @@ patch:
   __include: app_options:/patch
   __include: font_face_settings
   __include: font_size_settings
-  __include: lost_temple
+  __include: win11
+  #style/inline_preedit: false
   #__include: _vertical_text
   # positive to make hovering with highlight changed
   # negative to make hovering without highlight changed
@@ -31,7 +32,7 @@ patch:
   style/layout/min_width: 200
 
 font_size_settings:
-  style/font_point:         16
+  style/font_point:         20
   style/label_font_point:   16
   style/comment_font_point: 16
 
@@ -92,7 +93,7 @@ win10:
   style/color_scheme_dark: win10gray
 
 win11:
-  style/horizontal: true
+  style/horizontal: false
   style/inline_preedit: true
   # color_scheme settings
   style/color_scheme_dark: win11dark2
@@ -141,7 +142,7 @@ layout_offset2:
   style/layout/border: 2
   style/layout/spacing: 10
   style/layout/candidate_spacing: 10
-  style/layout/shadow_radius:    0
+  style/layout/shadow_radius:    6
   style/layout/shadow_offset_x: -3
   style/layout/shadow_offset_y:  3
   style/layout/hilite_spacing: 5

@@ -18,7 +18,7 @@ patch:
     hilited_label_color:              0x1a1a1a
     label_color:                      0x1a1a1a
     shadow_color:                     0x20000000
-    hilited_candidate_shadow_color:   0x20000000
+    hilited_candidate_shadow_color:   0x209e5a00
 
   preset_color_schemes/test:
     name: " 测试/ test"
