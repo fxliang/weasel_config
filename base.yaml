@@ -25,9 +25,9 @@ patch:
       states: [ GBK汉字, GB2312汉字, CJK字符, UTF8字符 ]
       reset: 3
   'engine/processors/@before 0': predictor
+  # for Caps_Lock selecting, move key_binder before ascii_composer
+  'engine/processors/@before 1': key_binder
   #engine/processors/+:
-  #- lua_processor@*init_env
-  #- lua_processor@*keyrepr
   #- lua_processor@*keymap
   'engine/translators/@before 0': predict_translator
   predictor/db: predict.db
@@ -47,7 +47,6 @@ patch:
   - lua_translator@*number*calc
   - lua_translator@*number*hex
   - lua_translator@*number*dec
-  - lua_translator@*clipboard # with my clipboard librime-lua
   - lua_translator@*mydate
   - lua_translator@*unicode
   - lua_translator@*wubi091_zg
@@ -55,19 +54,35 @@ patch:
   - lua_translator@*basefunctions*Lua_Tips
 
   punctuator/import_preset: symbols
-  recognizer/patterns/punct: '^/(([a-z]+)|(=.*)|H[0-9]+|D[0-9a-fA-F]+|\?|(uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*|ur[0-9a-fA-F]{0,6}(-[0-9a-fA-F]{0,6})?|[0-9a-fA-F]{0,6}u?|\d{0,8}([hq]\d+)?\D?|\d{0,8}(g|n|nr)|1?\d|dx\d+(\.\d{0,2})?|\d{1,6}[hq]|[1-7][sxz]))$'
+  recognizer/patterns/punct: '^/(([a-z]+)|\?|N\d|N10)$'
+  recognizer/patterns/hex: '^/H[0-9]+$'
+  recognizer/patterns/hex: '^/D[0-9a-fA-F]+$'
+  recognizer/patterns/calc: '^/=.*$'
+  recognizer/patterns/unicode1: '^/[0-9a-fA-F]{0,6}u?$'
+  recognizer/patterns/unicode2: '^/uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*$'
+  recognizer/patterns/unicode3: '^/ur[0-9a-fA-F]{0,6}(-[0-9a-fA-F]{0,6})?$'
+  recognizer/patterns/date1: '^/\d{0,8}([hq]\d+)?\D?$'
+  recognizer/patterns/date2: '^/\d{0,8}(g|n|nr)$'
+  recognizer/patterns/date3: '^/\d{1,6}[hq]$'
+  recognizer/patterns/week: '^/[1-7][sxz]$'
+  recognizer/patterns/money: '^/dx\d+(\.\d{0,2})?$'
 
   key_binder/bindings/+:
-    - { accept: semicolon, send: 2, when: has_menu}  #打字时，冒号选中第2个候选字发送
-    - { accept: apostrophe, send: 3, when: has_menu} #打字时，引号选中第3个候选字发送
-    - { accept: slash, send: 4, when: has_menu} #打字时，引号选中第4个候选字发送
+    - { accept: semicolon, send: 2, when: has_menu}  #打字时，; 选中第2个候选字发送
+    - { accept: apostrophe, send: 3, when: has_menu} #打字时，' 选中第3个候选字发送
+    - { accept: slash, send: 4, when: has_menu} #打字时，/ 选中第4个候选字发送
+    # Caps_Lock selecting 4
+    - { accept: Caps_Lock, send: 4, when: has_menu} #打字时，Caps_Lock 选中第4个候选字发送
+    - { accept: Release+Caps_Lock, send: Release+4, when: has_menu} #打字时，Caps_Lock 选中第4个候选字发送
+    # other group binding of 456
+    - { accept: Control+j, send: 4, when: has_menu}  #打字时，Ctrl+j选中第4个候选字发送
+    - { accept: Control+k, send: 5, when: has_menu}  #打字时，Ctrl+k选中第5个候选字发送
+    - { accept: Control+l, send: 6, when: has_menu}  #打字时，Ctrl+l选中第6个候选字发送
+    # for my keybord binding, combo df get (, combo jk get )
     - { accept: Shift+parenleft, send: 5, when: has_menu} #打字时，左括号选中第5个候选字发送
     - { accept: Shift+parenright, send: 6, when: has_menu} #打字时，右括号选中第6个候选字发送
     - { accept: Tab, send: Down, when: has_menu} #打字时，Tab和Shift+Tab切换候选
     - { accept: Shift+Tab, send: Up, when: has_menu} #打字时，Tab和Shift+Tab切换候选
     - { accept: minus, send: Page_Up, when: paging} #减号向前翻页
     - { accept: equal, send: Page_Down, when: has_menu} #等于号向后翻页
-    - { accept: Control+j, send: 4, when: has_menu}  #打字时，Ctrl+j选中第4个候选字发送
-    - { accept: Control+k, send: 5, when: has_menu}  #打字时，Ctrl+k选中第5个候选字发送
-    - { accept: Control+l, send: 6, when: has_menu}  #打字时，Ctrl+l选中第6个候选字发送
-    - {accept: "Control+9", toggle: prediction, when: always}
+    - { accept: "Control+9", toggle: prediction, when: always}
