@@ -132,7 +132,7 @@ local function Daxie_Translator(input, seg, env)
 end
 
 local function calc(input, seg, env)
-	if string.match(input, '^/=.*$') then
+	if string.match(input, '^C=.*$') then
 		local exp = string.sub(input, 3)
 		local f, err = load('return ' .. exp)
 		if f then

@@ -52,17 +52,18 @@ patch:
   - lua_translator@*wubi091_zg
   - lua_translator@*emoji
   - lua_translator@*basefunctions*Lua_Tips
+  - lua_translator@*clipboard
 
   punctuator/import_preset: symbols
   recognizer/patterns/punct: '^/(([a-z]+)|\?|N\d|N10)$'
   recognizer/patterns/hex: '^/H[0-9]+$'
   recognizer/patterns/hex: '^/D[0-9a-fA-F]+$'
-  recognizer/patterns/calc: '^/=.*$'
+  recognizer/patterns/calc: '^C=.*$'
   recognizer/patterns/unicode1: '^/[0-9a-fA-F]{0,6}u?$'
   recognizer/patterns/unicode2: '^/uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*$'
   recognizer/patterns/unicode3: '^/ur[0-9a-fA-F]{0,6}(-[0-9a-fA-F]{0,6})?$'
-  recognizer/patterns/date1: '^/\d{0,8}([hq]\d+)?\D?$'
-  recognizer/patterns/date2: '^/\d{0,8}(g|n|nr)$'
+  recognizer/patterns/date1: '^/\d{1,8}([hq]\d+)?\D?$'
+  recognizer/patterns/date2: '^/\d{1,8}(g|n|nr)$'
   recognizer/patterns/date3: '^/\d{1,6}[hq]$'
   recognizer/patterns/week: '^/[1-7][sxz]$'
   recognizer/patterns/money: '^/dx\d+(\.\d{0,2})?$'
