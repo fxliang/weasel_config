@@ -55,11 +55,11 @@ patch:
   - lua_translator@*clipboard
 
   punctuator/import_preset: symbols
-  recognizer/patterns/punct: '^/(([a-z]+)|\?|N\d|N10)$'
+  recognizer/patterns/punct: '^/(([a-zA-Z]+)|\?|N\d|N10)$'
   recognizer/patterns/hex: '^/H[0-9]+$'
   recognizer/patterns/hex: '^/D[0-9a-fA-F]+$'
   recognizer/patterns/calc: '^C=.*$'
-  recognizer/patterns/unicode1: '^/[0-9a-fA-F]{0,6}u?$'
+  recognizer/patterns/unicode1: '^/un[0-9a-fA-F]{0,6}$'
   recognizer/patterns/unicode2: '^/uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*$'
   recognizer/patterns/unicode3: '^/ur[0-9a-fA-F]{0,6}(-[0-9a-fA-F]{0,6})?$'
   recognizer/patterns/date1: '^/\d{1,8}([hq]\d+)?\D?$'
