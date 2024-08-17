@@ -83,10 +83,10 @@ end
 
 local function read_digit(conf, jiao, fen)
 	local s = ""
-	if jiao ~= 0 then
+	if jiao and jiao ~= 0 then
 		s = s .. conf.number[jiao] .. '角'
 	end
-	if fen ~= 0 then
+	if fen and fen ~= 0 then
 		s = s .. conf.number[fen] .. '分'
 	end
 	return s

@@ -29,10 +29,10 @@ patch:
 
   style/layout/max_width: 1080
   style/layout/max_height: 800
-  style/layout/min_width: 200
+  style/layout/min_width: 20
 
 font_size_settings:
-  style/font_point:         20
+  style/font_point:         26
   style/label_font_point:   16
   style/comment_font_point: 16
 
@@ -57,9 +57,9 @@ font_size_settings:
 #
 # make main font after some symbol fonts, to ensure symbol show in the right font, if you want specify the symbol font
 font_face_settings:
-  style/font_face:          "Segoe UI Emoji:30:39, LXGW Wenkai :7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai , Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
-  style/label_font_face:    "Segoe UI Emoji:30:39, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff, LXGW Wenkai "
-  style/comment_font_face:  "Segoe UI Emoji:30:39, LXGW Wenkai :7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai , Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
+  style/font_face:          "Segoe UI Emoji:30:39, LXGW Wenkai:7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai, Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
+  style/label_font_face:    "Segoe UI Emoji:30:39, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff, LXGW Wenkai"
+  style/comment_font_face:  "Segoe UI Emoji:30:39, LXGW Wenkai :7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai, Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
 
 _vertical_text:
   #style/vertical_text: true
@@ -96,8 +96,8 @@ win11:
   style/horizontal: false
   style/inline_preedit: true
   # color_scheme settings
-  style/color_scheme_dark: win11dark2
-  style/color_scheme: win11light
+  style/color_scheme: win11dark2
+  style/color_scheme_dark: win11light
   __include: layout_offset2
 
 layout_square:
@@ -146,9 +146,9 @@ layout_offset2:
   style/layout/shadow_offset_x: -3
   style/layout/shadow_offset_y:  3
   style/layout/hilite_spacing: 5
-  style/layout/hilite_padding_x:  5
+  style/layout/hilite_padding_x:  10
   style/layout/hilite_padding_y:  5
   style/layout/margin_x:  20
   style/layout/margin_y:  15
-  style/layout/round_corner:    5
+  style/layout/round_corner:    10
   style/layout/corner_radius:   15

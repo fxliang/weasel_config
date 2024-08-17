@@ -1,5 +1,7 @@
 require("NumberConvert")
 -- Unicode quick input
+---@param input string
+---@param seg SegmentReg
 local function Unicode_Translator(input, seg, env)
 	if not (input:match("^U") or input:match("^/uc") or input:match("^/ur") or input:match("^/un%x+$")) then return end
 	local segment = env.engine.context.composition:back()

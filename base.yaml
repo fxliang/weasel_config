@@ -56,8 +56,8 @@ patch:
 
   punctuator/import_preset: symbols
   recognizer/patterns/punct: '^/(([a-zA-Z]+)|\?|N\d|N10)$'
-  recognizer/patterns/hex: '^/H[0-9]+$'
-  recognizer/patterns/hex: '^/D[0-9a-fA-F]+$'
+  recognizer/patterns/hex: '^H[0-9]+$'
+  recognizer/patterns/dec: '^D[0-9a-fA-F]+$'
   recognizer/patterns/calc: '^C=.*$'
   recognizer/patterns/unicode1: '^/un[0-9a-fA-F]{0,6}$'
   recognizer/patterns/unicode2: '^/uc[0-9a-fA-F]{0,6}([^0-9a-fA-F]+[0-9a-fA-F]{0,6})*$'
@@ -86,4 +86,4 @@ patch:
     - { accept: Shift+Tab, send: Up, when: has_menu} #打字时，Tab和Shift+Tab切换候选
     - { accept: minus, send: Page_Up, when: paging} #减号向前翻页
     - { accept: equal, send: Page_Down, when: has_menu} #等于号向后翻页
-    - { accept: "Control+9", toggle: prediction, when: always}
+    - { accept: Control+9, toggle: prediction, when: always}
