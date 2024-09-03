@@ -27,6 +27,9 @@ patch:
   'engine/processors/@before 0': predictor
   # for Caps_Lock selecting, move key_binder before ascii_composer
   'engine/processors/@before 1': key_binder
+  # for disabling soft_cursor
+  #engine/processors/+:
+  #  - lua_processor@*basefunctions*Disable_Soft_Cursor
   #engine/processors/+:
   #- lua_processor@*keymap
   'engine/translators/@before 0': predict_translator

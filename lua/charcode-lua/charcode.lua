@@ -988,7 +988,7 @@ local function native_string_from_utf8(ustr, charset)
 end
 
 local function check_dict_for_value(dict, target_value)
-  for key, value in pairs(dict) do
+  for _, value in pairs(dict) do
     if value == target_value then
       return true
     end

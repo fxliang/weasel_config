@@ -9,14 +9,14 @@ patch:
     border_color:                     0x009e5a00
     hilited_text_color:               0x000000
     hilited_back_color:               0x1ff9f9f9
-    hilited_candidate_text_color:     0x000000
+    hilited_candidate_text_color:     0x9e5a00 # 0x000000
     hilited_candidate_back_color:     0xf0f0f0
     candidate_back_color:             0x2ff9f9f9
     candidate_text_color:             0x3a3a3a
     hilited_mark_color:               0x9e5a00
     hilited_comment_text_color:       0x1a1a1a
-    hilited_label_color:              0x1a1a1a
-    label_color:                      0x1a1a1a
+    hilited_label_color:              0x666666
+    label_color:                      0x666666
     shadow_color:                     0x20000000
     hilited_candidate_shadow_color:   0x209e5a00
 

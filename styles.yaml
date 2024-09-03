@@ -17,7 +17,7 @@ patch:
   # positive to make hovering with highlight changed
   # negative to make hovering without highlight changed
   # 0 to make no hovering
-  style/hover_type: semi_hilite
+  #style/hover_type: semi_hilite
   style/click_to_capture: true
   style/antialias_mode: grayscale
   style/vertical_auto_reverse: true
@@ -93,11 +93,11 @@ win10:
   style/color_scheme_dark: win10gray
 
 win11:
-  style/horizontal: false
+  style/horizontal: true
   style/inline_preedit: true
   # color_scheme settings
-  style/color_scheme: win11dark2
-  style/color_scheme_dark: win11light
+  style/color_schem_darke: win11dark2
+  style/color_scheme: win11light
   __include: layout_offset2
 
 layout_square:
@@ -141,7 +141,7 @@ layout_offset2:
   style/layout/min_height: 0
   style/layout/border: 2
   style/layout/spacing: 10
-  style/layout/candidate_spacing: 10
+  style/layout/candidate_spacing: 15
   style/layout/shadow_radius:    6
   style/layout/shadow_offset_x: -3
   style/layout/shadow_offset_y:  3
