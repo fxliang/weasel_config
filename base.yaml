@@ -74,6 +74,7 @@ patch:
   key_binder/bindings/+:
     - { accept: semicolon, send: 2, when: has_menu}  #打字时，; 选中第2个候选字发送
     - { accept: apostrophe, send: 3, when: has_menu} #打字时，' 选中第3个候选字发送
+    - { accept: Shift+Shift_R, send: 3, when: has_menu } #打字时，选中第三个候选字发送
     - { accept: slash, send: 4, when: has_menu} #打字时，/ 选中第4个候选字发送
     # Caps_Lock selecting 4
     - { accept: Caps_Lock, send: 4, when: has_menu} #打字时，Caps_Lock 选中第4个候选字发送
