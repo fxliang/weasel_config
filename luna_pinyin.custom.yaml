@@ -6,7 +6,7 @@ patch:
     - full_shape
     - simplification
     - schema
-  #'engine/processors/@before 1': lua_processor@*switch_ascii
+  'engine/processors/@before 1': lua_processor@*shift_ascii_enhanced
   #key_binder/bindings/+:
   #  - { accept: Shift+Shift_R, set_option: ascii_mode, when: always}
   #  - { accept: Shift+Shift_L, unset_option: ascii_mode, when: always}
