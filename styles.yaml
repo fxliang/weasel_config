@@ -57,7 +57,7 @@ font_size_settings:
 #
 # make main font after some symbol fonts, to ensure symbol show in the right font, if you want specify the symbol font
 font_face_settings:
-  style/font_face:          "Segoe UI Emoji:30:39, LXGW Wenkai:7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai, Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
+  style/font_face:          "Segoe UI Emoji:30:39, LXGW Wenkai:7c:7c, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai,Twitter Color Emoji, Noto Color Emoji, Noto Color Emoji SVG, Segoe UI Emoji, WB091:E000:E200, Arial:600:6ff"
   style/label_font_face:    "Segoe UI Emoji:30:39, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff, LXGW Wenkai"
   style/comment_font_face:  "Segoe UI Emoji:30:39, LXGW Wenkai :7c:7c, Segoe UI Emoji:30:39, Segoe UI Emoji:23:23, Segoe UI Emoji:2a:2a, Segoe UI Emoji:fe0f:fe0f, Segoe UI Emoji:20e3:20e3, LXGW Wenkai, Segoe UI Emoji, WB091:E000:E200, Noto Color Emoji SVG, Arial:600:6ff"
 

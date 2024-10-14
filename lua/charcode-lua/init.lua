@@ -8,7 +8,6 @@ local FilterText = charcode.FilterText
 --local conv_from_utf = charcode.conv_from_utf
 
 local function init(env)
-	local engine = env.engine
 end
 
 local function filter(input, env)
